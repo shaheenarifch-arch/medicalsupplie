@@ -1,0 +1,105 @@
+{
+  "faqs": [
+    {
+      "topic": "General \u2022 medicalsupplie.com",
+      "items": [
+        {
+          "q": "What is medicalsupplie.com?",
+          "a": "medicalsupplie.com is an independent product discovery platform that helps you find everyday care and comfort products from six verified vendors. We provide curated information and direct you to the vendor's own website to complete your purchase. We do not sell products directly, operate a cart, or provide medical advice."
+        },
+        {
+          "q": "Do you sell products or provide medical advice?",
+          "a": "No. We are an affiliate discovery site. You browse here and purchase on the vendor's official website. All product information is for general informational purposes only and is not a substitute for professional medical advice. Always consult a qualified healthcare professional for medical questions."
+        },
+        {
+          "q": "How do affiliate links work?",
+          "a": "When you click a 'Shop at' link, you go to the vendor's website via an affiliate link. If you make a purchase, we may earn a commission at no extra cost to you. Affiliate links are marked with rel=\"sponsored\" and we disclose this near recommendations and in our Affiliate Disclosure."
+        },
+        {
+          "q": "Do you show prices or inventory?",
+          "a": "We do not display live prices, discounts, or inventory because they change frequently. The vendor's website always shows the most current pricing, availability, shipping, and return information."
+        }
+      ]
+    },
+    {
+      "topic": "Brookwood Med",
+      "items": [
+        {
+          "q": "What does Brookwood Med offer?",
+          "a": "Brookwood Med (Brookwood Medical) is a US-based, family-owned company in New Jersey (brookwoodmed.com). Their verified catalog focuses on personal protection products including KN95 and KF94 face masks, 3-ply surgical masks, sports masks with filters, and mask accessories like filters and ear protectors. They note products are designed in the USA and produced in carefully chosen factories with certifications."
+        },
+        {
+          "q": "Where do I buy Brookwood Med products?",
+          "a": "Purchases are completed on brookwoodmed.com via our affiliate link. Official site: https://brookwoodmed.com. Verified 2026-05-13."
+        }
+      ]
+    },
+    {
+      "topic": "Revo (Revomadic)",
+      "items": [
+        {
+          "q": "What is Revo?",
+          "a": "Revo refers to REVO Smart Cupping by Revomadic (revomadic.com). Verified products include the 4-in-1 smart cupping therapy massager that combines dynamic suction, heat, red-light therapy, and massage for at-home wellness use. The vendor states it is HSA/FSA eligible and advises consulting a medical professional before use if you have health conditions."
+        },
+        {
+          "q": "Is Revo a medical device?",
+          "a": "Revo is marketed as a wellness and recovery device for muscle tension and related comfort. It is not a substitute for professional medical treatment. Review the vendor's instructions and consult your provider for personal medical questions. Official site: https://revomadic.com."
+        }
+      ]
+    },
+    {
+      "topic": "Finitex",
+      "items": [
+        {
+          "q": "What is Finitex?",
+          "a": "Finitex is the flagship nitrile gloves brand of Titans Medicare, Inc. (titansmedicare.com), a manufacturer with operations in North America, EU, China and Thailand. Verified catalog includes premium disposable nitrile exam gloves in various thicknesses (3.2mil to 8mil), colors (blue, black, ice blue, green, purple, rose red), and uses including exam grade, industrial heavy-duty with diamond texture, chemo-rated, tattoo, food prep, and cleaning."
+        },
+        {
+          "q": "Where do I buy Finitex gloves?",
+          "a": "Directly from the official Finitex store at titansmedicare.com via our affiliate link. Official site: https://www.titansmedicare.com. Verified 2026-05-13."
+        }
+      ]
+    },
+    {
+      "topic": "WalkHero (Wingood)",
+      "items": [
+        {
+          "q": "What is the relationship between WalkHero and Wingood?",
+          "a": "WalkHero is a consumer brand for orthopedic footwear. Public trademark records show GECKO MAN POWERED BY WALK HERO is owned by Fuzhou Winggood Technology Co., Ltd. WalkHero's official website is walkhero.com and focuses on arch-support shoes for men and women. Wingood appears to be the manufacturing/parent entity behind the WalkHero brand."
+        },
+        {
+          "q": "What products does WalkHero offer?",
+          "a": "Verified catalog on walkhero.com includes orthopedic shoes with targeted arch support and orthotic insoles, walking shoes, slippers, sandals, and models marketed for plantar fasciitis, flat feet, heel pain, and all-day comfort. The vendor emphasizes cushioning, stability, and alignment support."
+        }
+      ]
+    },
+    {
+      "topic": "Eydology",
+      "items": [
+        {
+          "q": "What does Eydology sell?",
+          "a": "Eydology (eydology.com) is an eyewear retailer based at 244 Madison Ave, NY 10016 (operated by MATCH PLUS INC). Verified categories include optical glasses, prescription glasses, blue-light glasses, cat-eye, aviator, and AI smart glasses with camera and audio, photochromic lenses, and sunglasses. They offer virtual try-on and PD measurement tools."
+        },
+        {
+          "q": "Do they provide prescription lenses?",
+          "a": "Eydology allows selection of lenses with prescription information including PD. Prescription details are personal health information handled per their Privacy Policy. Always confirm your prescription with your eye care provider. Official site: https://eydology.com."
+        }
+      ]
+    },
+    {
+      "topic": "FullscopeMD",
+      "items": [
+        {
+          "q": "What is FullscopeMD?",
+          "a": "FullscopeMD (fullscopemd.com) describes itself as a U.S. telehealth patient-support platform connecting patients with independent licensed providers. It does not diagnose, prescribe, manufacture, or dispense itself. Verified programs listed include branded GLP-1 medications information, hormone therapy, medical weight management, hair loss evaluation, wellness therapy, sexual health evaluation, and acute care support."
+        },
+        {
+          "q": "How does FullscopeMD work?",
+          "a": "According to their site, the process moves from online request to independent provider review, pharmacy fulfillment when prescribed, and follow-up support. Clinical decisions are made by independent licensed providers, and licensed pharmacies handle fulfillment. Address: 30 N Gould St Ste N, Sheridan, WY 82801. Official site: https://www.fullscopemd.com. This information is general and not medical advice."
+        }
+      ]
+    }
+  ],
+  "last_updated": "2026-05-13",
+  "source": "Verified against official vendor websites on 2026-05-13"
+}
