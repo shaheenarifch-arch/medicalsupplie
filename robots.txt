@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /krabby/
+Disallow: /*?q=*
+Sitemap: https://medicalsupplie.com/sitemap.xml
