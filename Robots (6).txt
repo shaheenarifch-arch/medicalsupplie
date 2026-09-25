@@ -1,0 +1,25 @@
+# robots.txt for medicalsupplie.com
+# New version: products-first layout with fancy FullScopeMD hero
+# Last updated: 2026-09-26
+
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /blog/
+Allow: /faqs.json
+
+# Disallow admin / draft paths if any
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$ 
+Allow: /faqs.json
+
+# Sitemap location
+Sitemap: https://medicalsupplie.com/sitemap.xml
+
+# Crawl-delay optional (be nice to bots)
+# Crawl-delay: 1
+
+# Affiliate disclosure note for crawlers:
+# All outbound vendor links use rel="sponsored" and are marked as affiliate (Awin awinaffid 3067297)
+# Official vendor domains verified 2026-05-13: brookwoodmed.com, revomadic.com, titansmedicare.com, walkhero.com, eydology.com, fullscopemd.com
