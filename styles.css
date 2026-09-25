@@ -323,3 +323,8 @@ img[loading="lazy"]{content-visibility:auto}
 
 /* Accessibility */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Keep in-page destinations visible beneath the sticky navigation. */
+[id] { scroll-margin-top: 100px; }
+.product-placeholder { display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; min-height:200px; padding:24px; text-align:center; color:var(--text-soft); background:var(--bg-soft); }
+.product-placeholder small { display:block; margin-top:12px; color:var(--text-muted); }
