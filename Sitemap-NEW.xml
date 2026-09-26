@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage — FullScopeMD featured at top, exact vendor photos -->
+  <url>
+    <loc>https://medicalsupplie.com/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://medicalsupplie.com/images/hero-fullscopemd.webp</image:loc>
+      <image:title>FullScopeMD — Featured at Top</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://medicalsupplie.com/images/fullscopemd-glp1.jpg</image:loc>
+      <image:title>FullScopeMD GLP-1 Program</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product discovery anchor -->
+  <url>
+    <loc>https://medicalsupplie.com/#products</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- VENDORS — New order: FullScopeMD at TOP, then others, WalkHero fixed separate Awin -->
+  <url>
+    <loc>https://medicalsupplie.com/#vendor-fullscopemd</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://medicalsupplie.com/images/hero-fullscopemd.jpg</image:loc><image:title>FullScopeMD Hero</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/fullscopemd-hormone.jpg</image:loc><image:title>Hormone Therapy</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/fullscopemd-weight.jpg</image:loc><image:title>Weight Management</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/fullscopemd-wellness.jpg</image:loc><image:title>Wellness Therapy</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://medicalsupplie.com/#vendor-brookwood-med</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://medicalsupplie.com/images/brookwood-kn95.jpg</image:loc><image:title>Brookwood KN95 White</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/brookwood-white.jpg</image:loc><image:title>FuturePPE 3-Ply Surgical</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/brookwood-kids-kf94.jpg</image:loc><image:title>Kids KF94 Colorful</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://medicalsupplie.com/#vendor-revo</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://medicalsupplie.com/images/revo-kit.jpg</image:loc><image:title>REVO Smart Cup 4-in-1</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/revo-original.jpg</image:loc><image:title>REVO Kit 2-Pack</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/revo-face-genie.jpg</image:loc><image:title>REVO Face Genie LED</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://medicalsupplie.com/#vendor-finitex</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://medicalsupplie.com/images/finitex-blue.jpg</image:loc><image:title>Finitex Blue Nitrile</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/finitex-black.jpg</image:loc><image:title>Finitex Black Heavy-Duty 8mil</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/finitex-rose.jpg</image:loc><image:title>Finitex Rose Red</image:title></image:image>
+  </url>
+
+  <!-- WalkHero — FIXED: separate from Finitex, own Awin 18221, 5 unique exact photos -->
+  <url>
+    <loc>https://medicalsupplie.com/#vendor-walkhero</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://medicalsupplie.com/images/walkhero-shoes.jpg</image:loc><image:title>WalkHero Men's Arch Support</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/walkhero-women.jpg</image:loc><image:title>WalkHero Women's Arch Support</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/walkhero-insoles.jpg</image:loc><image:title>Heavy Duty Insoles 220+ lbs</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/walkhero-canvas-slippers.jpg</image:loc><image:title>Canvas Slippers</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/walkhero-allpurpose-insoles.jpg</image:loc><image:title>All-Purpose Plantar Fasciitis Insoles</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://medicalsupplie.com/#vendor-eydology</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://medicalsupplie.com/images/eydology-ai.jpg</image:loc><image:title>Eydology AI Smart Glasses</image:title></image:image>
+    <image:image><image:loc>https://medicalsupplie.com/images/eydology-cateye.jpg</image:loc><image:title>Cat-Eye Transparent Grey</image:title></image:image>
+  </url>
+
+  <!-- Informational sections -->
+  <url><loc>https://medicalsupplie.com/#categories</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://medicalsupplie.com/#about</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://medicalsupplie.com/#affiliate-disclosure</loc><lastmod>2026-09-26</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+
+  <!-- Data -->
+  <url><loc>https://medicalsupplie.com/faqs.json</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://medicalsupplie.com/robots.txt</loc><lastmod>2026-09-26</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Blog / Buying Guides -->
+  <url><loc>https://medicalsupplie.com/blog/</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://medicalsupplie.com/blog/2026-09-24-mobility-aids-for-seniors.html</loc><lastmod>2026-09-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://medicalsupplie.com/blog/2026-09-24-seo-keywords-for-medical-supplies.html</loc><lastmod>2026-09-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://medicalsupplie.com/blog/2026-09-24-wound-care-supplies-online.html</loc><lastmod>2026-09-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
