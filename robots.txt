@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://medicalsupplie.com/sitemap.xml
