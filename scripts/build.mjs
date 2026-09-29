@@ -148,7 +148,6 @@ ${preload}
 function header(active = '') {
   return `<body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="topbar">Independent buying guide · We may earn a commission from partner links · <a href="/affiliate-disclosure.html">How we earn</a></div>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="${site.name} home">${logo}<span>Medical<b>Supplie</b></span></a>
@@ -173,10 +172,10 @@ function newsletter() {
         <p>One short email a month: new partner offers, restocks and our latest buying guides. No spam, unsubscribe anytime.</p>
       </div>
       <div>
-        <form class="nl-form" action="${attr(action)}" method="${n.method || 'post'}" data-newsletter data-fallback="${attr(site.email)}"${n.action ? ' target="_blank"' : ''}>
+        <form class="nl-form" action="${attr(action)}" method="${n.method || 'post'}" data-newsletter data-fallback="${attr(site.email)}">${Object.entries(n.hidden || {}).map(([k, v]) => `<input type="hidden" name="${attr(k)}" value="${attr(v)}">`).join('')}
           <label class="sr-only" for="nl-email">Email address</label>
           <input id="nl-email" type="email" name="${attr(n.emailField || 'email')}" placeholder="you@example.com" autocomplete="email" required>
-          <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="hp" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
           <button class="btn" type="submit">${icon.mail} Subscribe</button>
         </form>
         <p class="nl-note">By subscribing you agree to our <a href="/privacy.html" style="color:#fff">privacy policy</a>.</p>
@@ -197,6 +196,7 @@ function footer() {
       <div class="social" aria-label="Follow us">
         ${soc.map(([k, v]) => `<a href="${attr(v)}" target="_blank" rel="noopener me" aria-label="${socialLabel[k]}">${social[k]}</a>`).join('\n        ')}
       </div>
+      <p class="footer-contact"><a href="mailto:${attr(site.email)}">${esc(site.email)}</a><a href="tel:${attr(site.phoneTel || '')}">${esc(site.phone || '')}</a></p>
     </div>
     <div>
       <h4>Shop by category</h4>
@@ -294,7 +294,8 @@ function postCard(a) {
 }
 
 function crumbs(list) {
-  return `<nav class="crumbs" aria-label="Breadcrumb"><ol>${list.map(([h, t], i) => `<li>${i < list.length - 1 ? `<a href="${h}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`}</li>`).join('')}</ol></nav>`;
+  const back = list.length > 1 ? `<a class="back-link" href="${list[list.length - 2][0]}" onclick="if(document.referrer&&document.referrer.indexOf(location.host)>-1&&history.length>1){history.back();return false}"><span aria-hidden="true">&larr;</span> Back</a>` : '';
+  return back + `<nav class="crumbs" aria-label="Breadcrumb"><ol>${list.map(([h, t], i) => `<li>${i < list.length - 1 ? `<a href="${h}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`}</li>`).join('')}</ol></nav>`;
 }
 const crumbSchema = (list) => ({ '@type': 'BreadcrumbList', itemListElement: list.map(([h, t], i) => ({ '@type': 'ListItem', position: i + 1, name: t, item: abs(h) })) });
 function faqBlock(faqs, heading = 'Frequently asked questions') {

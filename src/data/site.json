@@ -4,12 +4,18 @@
   "url": "https://medicalsupplie.com",
   "tagline": "Trusted medical supplies & telehealth, reviewed in one place",
   "description": "MedicalSupplie is an independent buying guide to medical supplies, PPE, foot health, wellness devices and U.S. telehealth, with plain-English guides and hand-picked partner products.",
-  "email": "hello@medicalsupplie.com",
+  "email": "agents@getservices.ai",
   "newsletter": {
-    "_help": "Paste the form action URL from Mailchimp, Buttondown, ConvertKit, Brevo or Formspree. Leave empty to use the email fallback (opens the visitor's mail app).",
-    "action": "",
+    "_help": "Free FormSubmit form: signups are emailed to agents@getservices.ai. The first signup triggers a one-time activation email.",
+    "action": "https://formsubmit.co/agents@getservices.ai",
     "emailField": "email",
-    "method": "post"
+    "method": "post",
+    "hidden": {
+      "_subject": "MedicalSupplie - New newsletter signup",
+      "_next": "https://medicalsupplie.com/",
+      "_captcha": "true",
+      "_template": "table"
+    }
   },
   "social": {
     "_help": "Replace each URL with your real profile. Remove a line to hide that icon.",
@@ -19,5 +25,7 @@
     "pinterest": "https://www.pinterest.com/",
     "youtube": "https://www.youtube.com/",
     "linkedin": "https://www.linkedin.com/"
-  }
+  },
+  "phone": "313-729-1534",
+  "phoneTel": "+13137291534"
 }
