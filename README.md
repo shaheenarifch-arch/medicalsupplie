@@ -18,6 +18,7 @@ Then commit and push. GitHub Pages publishes automatically.
 | Site name, email, **newsletter form URL**, **social profile links** | `src/data/site.json` |
 | Partners and hand-picked products (affiliate links) | `src/data/products.json` |
 | Awin product feed (e.g. all FullScopeMD treatments) | `python3 scripts/import-awin-feed.py feed.csv`, which writes to `src/data/feeds/` |
+| Extra partner-store products (Shopify stores, Awin deep links) | `src/data/feeds/<partner>.json` (`source: store`) |
 | Awin banner creatives | `python3 scripts/add-banner.py < banner-snippet.html` |
 | Guides and blog posts | `src/content/articles.mjs` |
 | About / disclosure / privacy pages, old-URL redirects | `src/content/pages.mjs` |

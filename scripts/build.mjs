@@ -53,6 +53,16 @@ function mixed(items, n) {
 }
 const money = (v, c = 'USD') => (v == null ? '' : new Intl.NumberFormat('en-US', { style: 'currency', currency: c }).format(v));
 const catalogPath = (id) => `/shop/${id}.html`;
+const isRx = (id) => partners[id]?.category === 'Telehealth';
+const noun = (id) => (isRx(id) ? 'treatments' : 'products');
+const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+// Hand-picked cards first, then store/feed items (deduped), capped at n
+function partnerItems(id, n = 14) {
+  const picks = byPartner(id).map((p) => ({ html: productCard(p), key: norm(p.name) }));
+  const seen = new Set(picks.map((p) => p.key));
+  const extra = feedItems(id).filter((p) => { const k = norm(p.name); if (seen.has(k)) return false; seen.add(k); return true; });
+  return [...picks.map((p) => p.html), ...mixed(extra, Math.max(0, n - picks.length)).map(feedCard)].slice(0, n);
+}
 const rel = (aff) => (aff ? 'sponsored noopener' : 'noopener');
 
 function img(file, { alt = '', sizes = '(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px', eager = false, cls = '' } = {}) {
@@ -200,7 +210,7 @@ function footer() {
     </div>
     <div>
       <h4>Shop by category</h4>
-      <ul>${Object.keys(feeds).filter((id) => partners[id]).map((id) => `<li><a href="${catalogPath(id)}">All ${esc(partners[id].name)} treatments</a></li>`).join('')}${feed.partners.map((p) => `<li><a href="/#partner-${p.id}">${esc(p.category)}</a></li>`).join('')}</ul>
+      <ul>${Object.keys(feeds).filter((id) => partners[id]).map((id) => `<li><a href="${catalogPath(id)}">${esc(partners[id].category)}</a></li>`).join('')}</ul>
     </div>
     <div>
       <h4>Guides</h4>
@@ -248,16 +258,16 @@ function productCard(p, { eager = false } = {}) {
 function feedCard(p) {
   const short = p.description.length > 110 ? p.description.slice(0, 107).replace(/\s+\S*$/, '') + '…' : p.description;
   return `<article class="card feed">
-  <a class="card-media" href="${attr(p.url)}" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+  <a class="card-media" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate !== false)}" tabindex="-1" aria-hidden="true">
     <img src="${attr(p.image)}" alt="${attr(p.name)}" width="400" height="400" loading="lazy" decoding="async"${p.imageFallback ? ` onerror="this.onerror=null;this.src='${attr(p.imageFallback)}'"` : ''}>
     <span class="badge">${esc(p.category)}</span>
   </a>
   <div class="card-body">
     <span class="card-partner">${esc(p.partnerObj.name)}</span>
     <h3>${esc(p.name)}</h3>
-    <p>${esc(short)}</p>
-    <div class="price-row">${p.price != null ? `<span class="price"><small>From</small> ${money(p.price, p.currency)}</span>` : ''}<span class="rx">Clinician review</span></div>
-    <a class="btn btn-primary btn-sm" href="${attr(p.url)}" target="_blank" rel="sponsored noopener">View details ${icon.ext}</a>
+    ${short ? `<p>${esc(short)}</p>` : '<p></p>'}
+    <div class="price-row">${p.price != null ? `<span class="price"><small>From</small> ${money(p.price, p.currency)}</span>` : ''}${isRx(p.partner || p.partnerObj.id) ? '<span class="rx">Clinician review</span>' : ''}</div>
+    <a class="btn btn-primary btn-sm" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate !== false)}">${isRx(p.partner || p.partnerObj.id) ? 'View details' : 'View deal'} ${icon.ext}</a>
   </div>
 </article>`;
 }
@@ -369,7 +379,7 @@ function homePage() {
 
 <section class="cats" aria-label="Shop by category">
   <div class="container cat-row">
-    ${feed.partners.map((p) => `<a class="cat" href="#partner-${p.id}"><span class="ic">${catIcon[p.category] || icon.heart}</span>${esc(p.category)}</a>`).join('\n    ')}
+    ${feed.partners.map((p) => `<a class="cat" href="${feeds[p.id] ? catalogPath(p.id) : '#partner-' + p.id}"><span class="ic">${catIcon[p.category] || icon.heart}</span>${esc(p.category)}</a>`).join('\n    ')}
   </div>
 </section>
 
@@ -378,7 +388,7 @@ function homePage() {
     <div class="section-head">
       <div><span class="kicker">Top picks</span><h2 id="shop-title">Trending across every category</h2><p>A quick look at our most-clicked products this month. Tap any card to see today's price at the partner store.</p></div>
     </div>
-    ${carousel(feed.partners.flatMap((pt) => byPartner(pt.id).slice(0, 2)).map((p, i) => productCard(p, { eager: false })), 'Top picks', 'car-top')}
+    ${carousel(feed.partners.flatMap((pt) => partnerItems(pt.id, 4)), 'Top picks', 'car-top')}
   </div>
 </section>
 
@@ -403,7 +413,8 @@ function homePage() {
         <div><h3>${esc(pt.name)} <span class="chip">${esc(pt.category)}</span></h3><p>${esc(pt.tagline)}</p></div>
         <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="${attr(pt.url)}" target="_blank" rel="${rel(pt.affiliate)}">${esc(pt.cta)} ${icon.ext}</a></div>
       </div>
-      ${carousel(byPartner(pt.id).map((p) => productCard(p)), pt.name + ' products', 'car-' + pt.id)}
+      ${carousel(partnerItems(pt.id, 14), pt.name + ' products', 'car-' + pt.id)}
+      ${feedItems(pt.id).length ? `<p class="center" style="margin:18px 0 0"><a class="btn btn-ghost btn-sm" href="${catalogPath(pt.id)}">Browse all ${esc(pt.name)} products ${icon.arrow}</a></p>` : ''}
       ${banners(pt.id)}
     </div>`).join('\n    ')}
   </div>
@@ -412,11 +423,17 @@ function homePage() {
 <section class="section" aria-labelledby="why-title">
   <div class="container">
     <div class="section-head"><div><span class="kicker">Why MedicalSupplie</span><h2 id="why-title">Buy with confidence</h2></div></div>
-    <div class="props">
+    <div class="carousel props-car" data-carousel>
+    <div class="section-head" style="margin-bottom:12px;justify-content:flex-end"><div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous" aria-controls="car-props">${icon.left}</button><button class="car-btn" type="button" data-next aria-label="Next" aria-controls="car-props">${icon.right}</button></div></div>
+    <div class="track props" id="car-props" role="region" aria-roledescription="carousel" aria-label="Why MedicalSupplie" tabindex="0">
       <div class="prop"><span class="ic">${icon.shield}</span><h3>Vetted partners</h3><p>We only list stores with clear specs, secure checkout and real customer support.</p></div>
       <div class="prop"><span class="ic">${icon.book}</span><h3>Plain-English guides</h3><p>Standards like ASTM, NIOSH and mil thickness, explained simply.</p></div>
       <div class="prop"><span class="ic">${icon.heart}</span><h3>Independent picks</h3><p>Commissions never change our recommendations or your price.</p></div>
       <div class="prop"><span class="ic">${icon.bolt}</span><h3>Fast & private</h3><p>No account, no tracking pop-ups. Just pick and go.</p></div>
+      <div class="prop"><span class="ic">${icon.steth}</span><h3>Licensed telehealth</h3><p>Online care partners use licensed U.S. clinicians.</p></div>
+      <div class="prop"><span class="ic">${icon.star}</span><h3>Real prices</h3><p>Starting prices pulled from partner stores and refreshed often.</p></div>
+    </div>
+    <div class="car-progress" aria-hidden="true"><span></span></div>
     </div>
   </div>
 </section>
@@ -431,7 +448,7 @@ function homePage() {
 <section class="section" aria-labelledby="blog-title">
   <div class="container">
     <div class="section-head"><div><span class="kicker">From the blog</span><h2 id="blog-title">Health-at-home tips</h2></div><a class="btn btn-ghost btn-sm" href="/blog/">All articles ${icon.arrow}</a></div>
-    <div class="grid-3">${posts.slice(0, 3).map(postCard).join('')}</div>
+    ${carousel(posts.map(postCard), 'Blog articles', 'car-blog')}
   </div>
 </section>
 
@@ -447,7 +464,7 @@ ${newsletter()}
 function articlePage(a) {
   const section = a.type === 'guide' ? ['/guides/', 'Guides'] : ['/blog/', 'Blog'];
   const list = [['/', 'Home'], section, [a.path, a.short || a.title]];
-  const related = (a.partners || []).flatMap((id) => byPartner(id)).slice(0, 4);
+  const related = (a.partners || []).flatMap((id) => [...byPartner(id), ...feedItems(id).filter((f) => !byPartner(id).some((b) => norm(b.name) === norm(f.name))).map((f) => ({ ...f, affiliate: f.affiliate !== false, remote: true }))]).slice(0, 5);
   const toc = [...a.body.matchAll(/<h2 id="([^"]+)">([^<]+)<\/h2>/g)].map((m) => [m[1], m[2]]);
   const more = articles.filter((x) => x !== a).sort((x, y) => (y.type === a.type) - (x.type === a.type)).slice(0, 3);
   const articleSchema = {
@@ -481,7 +498,7 @@ function articlePage(a) {
   <aside>
     <div class="aside-box">
       ${toc.length ? `<h4>On this page</h4><ol class="toc">${toc.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join('')}</ol>` : ''}
-      ${related.length ? `<div class="aside-products"><h4 style="margin:0">Recommended</h4>${related.map((p) => `<a class="mini" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}">${img(p.image, { alt: '', sizes: '56px' })}<span><small>${esc(p.partnerObj.name)}</small>${esc(p.name)}</span></a>`).join('')}</div>` : ''}
+      ${related.length ? `<div class="aside-products"><h4 style="margin:0">Recommended</h4>${related.map((p) => `<a class="mini" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}">${p.remote ? `<img src="${attr(p.image)}" alt="" width="56" height="56" loading="lazy" decoding="async">` : img(p.image, { alt: '', sizes: '56px' })}<span><small>${esc(p.partnerObj.name)}</small>${esc(p.name)}</span></a>`).join('')}</div>` : ''}
       ${fsBanners}
     </div>
   </aside>
@@ -489,7 +506,7 @@ function articlePage(a) {
 <section class="section">
   <div class="container">
     <div class="section-head"><div><span class="kicker">Keep reading</span><h2>Related articles</h2></div></div>
-    <div class="grid-3">${more.map(postCard).join('')}</div>
+    ${carousel(articles.filter((x) => x !== a).map(postCard), 'Related articles', 'car-related')}
   </div>
 </section>
 ${newsletter()}
@@ -511,7 +528,7 @@ function listPage(type) {
   return head({ title: `${title} | ${site.name}`, description: desc, canonical: pathName, schema }) + header(isGuide ? 'Guides' : 'Blog') + `
 <main id="main">
 <header class="page-hero"><div class="container">${crumbs(list)}<h1>${title}</h1><p class="lead">${desc}</p></div></header>
-<section class="section"><div class="container"><div class="grid-3">${items.map(postCard).join('')}</div></div></section>
+<section class="section"><div class="container">${carousel(items.map(postCard), isGuide ? 'Guides' : 'Articles', 'car-list')}</div></section>
 <section class="section soft"><div class="container">
   <div class="section-head"><div><span class="kicker">${isGuide ? 'From the blog' : 'Buying guides'}</span><h2>${isGuide ? 'More reading' : 'Know what to buy'}</h2></div><a class="btn btn-ghost btn-sm" href="${isGuide ? '/blog/' : '/guides/'}">View all ${icon.arrow}</a></div>
   ${carousel(other.map(postCard), isGuide ? 'Blog posts' : 'Guides', 'car-more')}
@@ -540,16 +557,16 @@ function catalogPage(id) {
   const cats = Object.keys(groups).sort((a, b) => groups[b].length - groups[a].length);
   const list = [['/', 'Home'], ['/#partners', 'Partners'], [catalogPath(id), pt.name]];
   const prices = items.map((i) => i.price).filter((v) => v != null);
-  const title = `${pt.name} Treatments & Prices (${items.length} options)`;
-  const description = `Browse ${items.length} ${pt.name} telehealth treatments: ${cats.slice(0, 4).join(', ').toLowerCase()} and more, with prices from ${money(Math.min(...prices))}. Every treatment requires a licensed clinician review.`;
+  const title = isRx(id) ? `${pt.name} Treatments & Prices (${items.length} options)` : `${pt.name} ${pt.category}: ${items.length} Products & Prices`;
+  const description = isRx(id) ? `Browse ${items.length} ${pt.name} telehealth treatments: ${cats.slice(0, 4).join(', ').toLowerCase()} and more, with prices from ${money(Math.min(...prices))}. Every treatment requires a licensed clinician review.` : `Shop ${items.length} ${pt.name} products: ${cats.slice(0, 4).join(', ').toLowerCase()} and more, from ${money(Math.min(...prices))}. Compare and buy at ${pt.domain}.`;
   const schema = [crumbSchema(list), { '@type': 'ItemList', name: title, numberOfItems: items.length, itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: p.url })) }];
   const bannersHtml = banners(id);
   return head({ title: `${title} | ${site.name}`, description, canonical: catalogPath(id), schema }) + header('Shop') + `
 <main id="main">
 <header class="page-hero"><div class="container">${crumbs(list)}
-  <span class="kicker">${esc(pt.category)} · ${items.length} treatments</span>
-  <h1>${esc(pt.name)} treatments</h1>
-  <p class="lead">${esc(pt.tagline)} Prices shown are the starting price listed by ${esc(pt.name)} and may change. Every prescription is subject to review by a licensed U.S. clinician.</p>
+  <span class="kicker">${esc(pt.category)} · ${items.length} ${noun(id)}</span>
+  <h1>${esc(pt.name)} ${noun(id)}</h1>
+  <p class="lead">${esc(pt.tagline)} Prices shown are the starting price listed by ${esc(pt.name)} and may change.${isRx(id) ? ' Every prescription is subject to review by a licensed U.S. clinician.' : ''}</p>
   <ul class="pill-list" style="margin-top:18px">${cats.map((c) => `<li><a href="#${c.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${esc(c)} (${groups[c].length})</a></li>`).join('')}</ul>
 </div></header>
 ${cats.map((c, i) => `<section class="section${i % 2 ? ' soft' : ''}" id="${c.toLowerCase().replace(/[^a-z0-9]+/g, '-')}" style="padding:44px 0">
@@ -559,9 +576,9 @@ ${cats.map((c, i) => `<section class="section${i % 2 ? ' soft' : ''}" id="${c.to
   </div>
 </section>`).join('\n')}
 ${bannersHtml ? `<section class="section"><div class="container"><p class="banners-label" style="color:var(--muted)">Current ${esc(pt.name)} offers</p>${bannersHtml}</div></section>` : ''}
-<section class="section soft"><div class="container">
+${isRx(id) ? `<section class="section soft"><div class="container">
   <p class="med-note" style="border:0;margin:0 auto;max-width:80ch;text-align:center"><strong>Important:</strong> ${site.name} is not a pharmacy or medical provider. Treatment eligibility, prescriptions and pricing are decided by ${esc(pt.name)} and its licensed clinicians. Read <a href="/guides/telehealth-weight-loss-what-to-expect.html">what to expect from telehealth</a>.</p>
-</div></section>
+</div></section>` : ''}
 ${newsletter()}
 </main>
 ` + footer();
@@ -655,7 +672,7 @@ ${articles.filter((a) => a.type === 'guide').map((a) => `- [${a.title}](${abs(a.
 ${articles.filter((a) => a.type === 'blog').map((a) => `- [${a.title}](${abs(a.path)}): ${a.description}`).join('\n')}
 
 ## Catalogs
-${Object.keys(feeds).filter((id) => partners[id]).map((id) => `- [All ${partners[id].name} treatments](${abs(catalogPath(id))}): ${feeds[id].products.length} options with starting prices`).join('\n')}
+${Object.keys(feeds).filter((id) => partners[id]).map((id) => `- [All ${partners[id].name} ${noun(id)}](${abs(catalogPath(id))}): ${feeds[id].products.length} ${partners[id].category.toLowerCase()} options with starting prices`).join('\n')}
 
 ## Partners
 ${feed.partners.map((p) => `- ${p.name} (${p.domain}), ${p.category}: ${p.tagline}`).join('\n')}
