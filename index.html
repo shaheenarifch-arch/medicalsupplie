@@ -1,152 +1,1086 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Medical Supplie</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-.featured-badge{display:inline-flex;align-items:center;gap:6px;background:#0E1A2F;color:#fff;padding:6px 12px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.Partner-section.featured{border:2px solid #3A7BD5;background:linear-gradient(180deg,#F0F6FF 0%,#FFFFFF 100%);border-radius:16px}
-.exact-note{font-size:11px;color:#6B7280;margin-top:6px}
-.hero-fancy{padding:40px 20px;background:linear-gradient(180deg,#F0F6FF 0%,#FFFEFB 100%)}
-.hero-fancy-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-@media(max-width:800px){.hero-fancy-inner{grid-template-columns:1fr}}
-.btn{padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;display:inline-flex;font-size:14px}
-.btn-primary{background:#0E1A2F;color:#fff}
-.btn-secondary{background:#fff;border:1px solid #E5E7EB;color:#1A1A1A}
-.Partner-section{max-width:1200px;margin:0 auto;padding:24px 20px;border-top:1px solid #F3F4F6}
-.product-card-v2{min-width:280px;max-width:300px;border:1px solid #E5E7EB;border-radius:12px;background:#fff;overflow:hidden;flex-shrink:0}
-.pc-media{height:200px;background:#F9FAFB;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.pc-media img{width:100%;height:100%;object-fit:cover}
-.pc-body{padding:14px}
-.slider-row{display:flex;gap:16px;overflow-x:auto;scroll-behavior:smooth;padding-bottom:12px}
-.slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:#fff;border:1px solid #E5E7EB;width:32px;height:32px;border-radius:50%;cursor:pointer;z-index:2}
-.slider-wrap{position:relative}
-.header{background:#fff;border-bottom:1px solid #E5E7EB;position:sticky;top:0;z-index:50}
-.header-inner{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:700;text-decoration:none;color:#0E1A2F;display:flex;align-items:center;gap:8px}
-.logo-mark{background:#0E1A2F;color:#fff;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:800}
-</style>
-</head>
-<body>
-<header class="header">
-<div class="header-inner">
-<a href="/" class="logo"><span class="logo-mark">m</span> medicalsupplie.com</a>
-<nav>
-<a href="#Partner-fullscopemd" style="font-weight:700;color:#3A7BD5;text-decoration:none;margin-right:12px">★ FullScopeMD</a>
-<a href="#Partner-brookwood-med" style="text-decoration:none;margin-right:8px">Brookwood</a>
-<a href="#Partner-revo" style="text-decoration:none;margin-right:8px">Revo</a>
-<a href="#Partner-finitex" style="text-decoration:none;margin-right:8px">Finitex</a>
-<a href="#Partner-walkhero" style="text-decoration:none;margin-right:8px">WalkHero</a>
-<a href="#Partner-eydology" style="text-decoration:none">Eydology</a>
-</nav>
-</div>
+<title>MedicalSupplie — Medical Supplies, PPE &amp; Telehealth Buying Guide</title>
+<meta name="description" content="Compare trusted medical supplies: nitrile gloves, KN95 &amp; KF94 masks, arch-support insoles, wellness devices, eyewear and U.S. telehealth. Plain-English guides and hand-picked partner deals.">
+<link rel="canonical" href="https://medicalsupplie.com/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0e7c78">
+<meta property="og:site_name" content="MedicalSupplie">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MedicalSupplie — Medical Supplies, PPE &amp; Telehealth Buying Guide">
+<meta property="og:description" content="Compare trusted medical supplies: nitrile gloves, KN95 &amp; KF94 masks, arch-support insoles, wellness devices, eyewear and U.S. telehealth. Plain-English guides and hand-picked partner deals.">
+<meta property="og:url" content="https://medicalsupplie.com/">
+<meta property="og:image" content="https://medicalsupplie.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MedicalSupplie — Medical Supplies, PPE &amp; Telehealth Buying Guide">
+<meta name="twitter:description" content="Compare trusted medical supplies: nitrile gloves, KN95 &amp; KF94 masks, arch-support insoles, wellness devices, eyewear and U.S. telehealth. Plain-English guides and hand-picked partner deals.">
+<meta name="twitter:image" content="https://medicalsupplie.com/images/og-image.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="MedicalSupplie blog" href="/feed.xml">
+<link rel="preload" as="image" imagesrcset="/images/opt/hero-fullscopemd-640.webp 640w, /images/opt/hero-fullscopemd-1280.webp 1280w, /images/opt/hero-fullscopemd-1920.webp 1920w" imagesizes="(max-width:900px) 100vw, 560px" fetchpriority="high">
+<link rel="stylesheet" href="/assets/site.css?v=2026-09-29">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://medicalsupplie.com/#org","name":"MedicalSupplie","url":"https://medicalsupplie.com/","logo":"https://medicalsupplie.com/apple-touch-icon.png","email":"hello@medicalsupplie.com","sameAs":["Replace each URL with your real profile. Remove a line to hide that icon."]},{"@type":"WebSite","@id":"https://medicalsupplie.com/#website","url":"https://medicalsupplie.com/","name":"MedicalSupplie","description":"MedicalSupplie is an independent buying guide to medical supplies, PPE, foot health, wellness devices and U.S. telehealth, with plain-English guides and hand-picked partner products.","publisher":{"@id":"https://medicalsupplie.com/#org"},"inLanguage":"en-US"},{"@type":"ItemList","name":"Featured medical supplies and telehealth services","itemListElement":[{"@type":"ListItem","position":1,"name":"U.S. Telehealth Patient Support","url":"https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297"},{"@type":"ListItem","position":2,"name":"Branded GLP-1 Medications Program","url":"https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297"},{"@type":"ListItem","position":3,"name":"Hormone Therapy Patient Support","url":"https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297"},{"@type":"ListItem","position":4,"name":"Medical Weight Management","url":"https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297"},{"@type":"ListItem","position":5,"name":"Wellness Therapy & Acute Care","url":"https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297"},{"@type":"ListItem","position":6,"name":"KN95 CE Certified 5-Ply White","url":"https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297"},{"@type":"ListItem","position":7,"name":"FuturePPE 3-Ply Surgical Masks","url":"https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297"},{"@type":"ListItem","position":8,"name":"Kids KF94 Pink Rainbow Panda","url":"https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297"},{"@type":"ListItem","position":9,"name":"Blue Nitrile Exam Gloves 3.2 mil, 600 pcs","url":"https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297"},{"@type":"ListItem","position":10,"name":"Black Heavy-Duty Nitrile 8 mil, Diamond Grip","url":"https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297"},{"@type":"ListItem","position":11,"name":"Rose Red Nitrile Gloves 3 mil","url":"https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297"},{"@type":"ListItem","position":12,"name":"Men's Ultimate Arch Support Shoes","url":"https://walkhero.com/collections/mens-arch-support-shoes"},{"@type":"ListItem","position":13,"name":"Women's Ultimate Arch Support Shoes","url":"https://walkhero.com/collections/womens-arch-support-shoes"},{"@type":"ListItem","position":14,"name":"Heavy Duty Orthotic Insoles (220+ lbs)","url":"https://walkhero.com/products/heavy-duty-orthotic-insoles"},{"@type":"ListItem","position":15,"name":"Canvas Arch Support Slippers","url":"https://walkhero.com/products/canvas-slippers"},{"@type":"ListItem","position":16,"name":"All-Purpose Plantar Fasciitis Insoles","url":"https://walkhero.com/products/plantar-fasciitis-insoles"},{"@type":"ListItem","position":17,"name":"REVO Smart Cup 4-in-1 Relief Bundle","url":"https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297"},{"@type":"ListItem","position":18,"name":"REVO Kit 2-Pack with Case","url":"https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297"},{"@type":"ListItem","position":19,"name":"REVO Face Genie LED (Pink)","url":"https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297"},{"@type":"ListItem","position":20,"name":"AI Smart Glasses, Black, 4K HD","url":"https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297"},{"@type":"ListItem","position":21,"name":"Cat-Eye Frames, Transparent Grey Silver","url":"https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is MedicalSupplie?","acceptedAnswer":{"@type":"Answer","text":"MedicalSupplie is an independent buying guide. We research medical supplies, PPE, foot-health products, wellness devices, eyewear and U.S. telehealth services, then link you to trusted partner stores. We don't sell or ship products ourselves."}},{"@type":"Question","name":"Do you earn money from the links?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most partner links are affiliate links, so we may earn a small commission if you buy, at no extra cost to you. It never changes the price you pay. Read our affiliate disclosure."}},{"@type":"Question","name":"Which gloves are best for everyday clinical use?","acceptedAnswer":{"@type":"Answer","text":"For most clinics and home carers, powder-free nitrile exam gloves around 3–4 mil thick are the best all-rounder: latex-free, puncture-resistant and comfortable. Choose 6–8 mil textured nitrile for cleaning or heavy-duty work. See our glove guide."}},{"@type":"Question","name":"What is the difference between N95, KN95 and KF94 masks?","acceptedAnswer":{"@type":"Answer","text":"All three are filtering respirators rated for about 94–95% filtration of small particles. N95 is the U.S. NIOSH standard, KN95 is China's GB2626 standard and KF94 is South Korea's standard. Fit matters most. Details are in our mask guide."}},{"@type":"Question","name":"Is telehealth safe for weight loss or hormone therapy?","acceptedAnswer":{"@type":"Answer","text":"Reputable telehealth services use licensed U.S. clinicians who review your history, may order labs and decide whether a treatment is appropriate. Ask about clinician licensing, follow-up and total costs before you start. Read what to expect."}},{"@type":"Question","name":"Can arch-support insoles help plantar fasciitis?","acceptedAnswer":{"@type":"Answer","text":"Supportive footwear and orthotic insoles are among the first-line self-care options for heel pain, alongside stretching and rest. Persistent pain should be checked by a clinician. See our insole guide."}}]}]}</script>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar">Independent buying guide · We may earn a commission from partner links · <a href="/affiliate-disclosure.html">How we earn</a></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="MedicalSupplie home"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#0e7c78"/><path d="M16.5 9h7v7.5H31v7h-7.5V31h-7v-7.5H9v-7h7.5z" fill="#fff"/><circle cx="31" cy="9" r="4" fill="#2fb3aa" stroke="#fff" stroke-width="2"/></svg><span>Medical<b>Supplie</b></span></a>
+    <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" data-menu-btn><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#shop">Shop</a>
+      <a href="/#partners">Partners</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about.html">About</a>
+      <a class="btn btn-primary btn-sm" href="/#newsletter">Get deals</a>
+    </nav>
+  </div>
 </header>
+<main id="main">
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Clinician-informed · Updated September 2026</span>
+      <h1>Medical supplies & telehealth, <em>made simple.</em></h1>
+      <p class="lead">Compare trusted gloves, masks, foot-health gear and wellness devices, or see a licensed U.S. clinician online. Honest guides, hand-picked partners, zero jargon.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#shop">Shop top picks <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a class="btn btn-ghost" href="/guides/">Read buying guides</a>
+      </div>
+      <ul class="hero-trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> Vetted partner stores</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg> Clinician-informed guides</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 9.38A1 1 0 0 0 17.52 9H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg> U.S.-focused partners</li>
+      </ul>
+    </div>
+    <div class="hero-media">
+      <picture>
+        <img src="/images/opt/hero-fullscopemd-1280.webp" srcset="/images/opt/hero-fullscopemd-640.webp 640w, /images/opt/hero-fullscopemd-1280.webp 1280w, /images/opt/hero-fullscopemd-1920.webp 1920w" sizes="(max-width:900px) 100vw, 560px" width="1280" height="720" alt="Clinician smiling during a telehealth video visit on a tablet" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero-card c1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.2 3.1a.5.5 0 0 0 .8-.4V8.3a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span><div><strong>See a clinician online</strong><small>Telehealth via FullScopeMD</small></div></div>
+      <div class="hero-card c2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><div><strong>21+ vetted picks</strong><small>6 trusted partners</small></div></div>
+    </div>
+  </div>
+</section>
 
-<main>
-<section class="hero-fancy">
-<div class="hero-fancy-inner">
-<div>
-<div style="background:#0E1A2F;color:#fff;padding:6px 12px;border-radius:999px;font-size:11px;display:inline-flex;gap:6px">● Exact Partner photos • Verified 2026</div>
-<h1 style="font-size:42px;line-height:1.1;margin:16px 0">Every product has its exact <span style="color:#3A7BD5">Partner photo.</span></h1>
-<p style="color:#6B7280">All images from official Partner CDNs. FullScopeMD at top, WalkHero fixed with direct links (Awin 18221 was placeholder - now direct walkhero.com so links work).</p>
-<div style="display:flex;gap:12px;margin-top:20px">
-<a href="#Partner-fullscopemd" class="btn btn-primary">Start with FullScopeMD</a>
-<a href="#products" class="btn btn-secondary">All Partners</a>
+<section class="cats" aria-label="Shop by category">
+  <div class="container cat-row">
+    <a class="cat" href="#partner-fullscopemd"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.2 3.1a.5.5 0 0 0 .8-.4V8.3a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span>Telehealth</a>
+    <a class="cat" href="#partner-brookwood-med"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8c3-2 6-2 9 0s6 2 9 0v5c0 4-4 7-9 7s-9-3-9-7z"/><path d="M8 12h8M9 15h6"/></svg></span>Masks &amp; PPE</a>
+    <a class="cat" href="#partner-finitex"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-4 0v0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span>Gloves</a>
+    <a class="cat" href="#partner-walkhero"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4M4 13h4"/></svg></span>Foot Health</a>
+    <a class="cat" href="#partner-revo"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.94 14.06 4 20M14 4l.5 2.5L17 7l-2.5.5L14 10l-.5-2.5L11 7l2.5-.5zM19 11l.3 1.2 1.2.3-1.2.3L19 14l-.3-1.2-1.2-.3 1.2-.3z"/><path d="m4 20 2-2"/></svg></span>Wellness Devices</a>
+    <a class="cat" href="#partner-eydology"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/><path d="M14 15a2 2 0 0 0-4 0M2.5 13 5 7c.7-1.3 1.4-2 3-2M21.5 13 19 7c-.7-1.3-1.5-2-3-2"/></svg></span>Eyewear</a>
+  </div>
+</section>
+
+<section class="section" id="shop" aria-labelledby="shop-title">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="kicker">Top picks</span><h2 id="shop-title">Trending across every category</h2><p>A quick look at our most-clicked products this month. Tap any card to see today's price at the partner store.</p></div>
+    </div>
+    <div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous Top picks" aria-controls="car-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="car-btn" type="button" data-next aria-label="Next Top picks" aria-controls="car-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+  </div>
+  <div class="track" id="car-top" role="region" aria-roledescription="carousel" aria-label="Top picks" tabindex="0">
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=130233&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/fullscopemd-telehealth-480.webp" srcset="/images/opt/fullscopemd-telehealth-480.webp 480w, /images/opt/fullscopemd-telehealth-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="320" alt="U.S. Telehealth Patient Support from FullScopeMD" loading="lazy" decoding="async">
+    <span class="badge hot">Featured</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>U.S. Telehealth Patient Support</h3>
+    <p>Video visits with licensed U.S. clinicians, without the waiting room.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=130233&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=130233&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/fullscopemd-glp1-480.webp" srcset="/images/opt/fullscopemd-glp1-480.webp 480w, /images/opt/fullscopemd-glp1-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="270" alt="Branded GLP-1 Medications Program from FullScopeMD" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Branded GLP-1 Medications Program</h3>
+    <p>Clinician-led weight program; eligibility is decided by your provider.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=130233&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/brookwood-kn95-480.webp" srcset="/images/opt/brookwood-kn95-480.webp 480w, /images/opt/brookwood-kn95-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="423" alt="KN95 CE Certified 5-Ply White from Brookwood Med" loading="lazy" decoding="async">
+    <span class="badge hot">Best seller</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Brookwood Med</span>
+    <h3>KN95 CE Certified 5-Ply White</h3>
+    <p>Five-layer filtration with a snug nose bridge for all-day wear.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/brookwood-white-480.webp" srcset="/images/opt/brookwood-white-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="422" alt="FuturePPE 3-Ply Surgical Masks from Brookwood Med" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Brookwood Med</span>
+    <h3>FuturePPE 3-Ply Surgical Masks</h3>
+    <p>Everyday disposable masks for clinics, travel and home care.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/finitex-blue-480.webp" srcset="/images/opt/finitex-blue-480.webp 480w, /images/opt/finitex-blue-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Blue Nitrile Exam Gloves 3.2 mil, 600 pcs from Finitex by Titans Medicare" loading="lazy" decoding="async">
+    <span class="badge">Clinic pick</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Finitex by Titans Medicare</span>
+    <h3>Blue Nitrile Exam Gloves 3.2 mil, 600 pcs</h3>
+    <p>Latex-free, powder-free everyday exam gloves by the case.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/finitex-black-480.webp" srcset="/images/opt/finitex-black-480.webp 480w, /images/opt/finitex-black-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Black Heavy-Duty Nitrile 8 mil, Diamond Grip from Finitex by Titans Medicare" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Finitex by Titans Medicare</span>
+    <h3>Black Heavy-Duty Nitrile 8 mil, Diamond Grip</h3>
+    <p>Thick, textured gloves for cleaning, auto and industrial work.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://walkhero.com/collections/mens-arch-support-shoes" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/walkhero-shoes-480.webp" srcset="/images/opt/walkhero-shoes-480.webp 480w, /images/opt/walkhero-shoes-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Men's Ultimate Arch Support Shoes from WalkHero" loading="lazy" decoding="async">
+    <span class="badge">Popular</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">WalkHero</span>
+    <h3>Men's Ultimate Arch Support Shoes</h3>
+    <p>Built-in arch support and cushioning for long days on your feet.</p>
+    <a class="btn btn-primary btn-sm" href="https://walkhero.com/collections/mens-arch-support-shoes" target="_blank" rel="noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://walkhero.com/collections/womens-arch-support-shoes" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/walkhero-women-480.webp" srcset="/images/opt/walkhero-women-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Women's Ultimate Arch Support Shoes from WalkHero" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">WalkHero</span>
+    <h3>Women's Ultimate Arch Support Shoes</h3>
+    <p>Supportive everyday sneakers with a lightweight, breathable upper.</p>
+    <a class="btn btn-primary btn-sm" href="https://walkhero.com/collections/womens-arch-support-shoes" target="_blank" rel="noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/revo-kit-480.webp" srcset="/images/opt/revo-kit-480.webp 480w, /images/opt/revo-kit-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="576" alt="REVO Smart Cup 4-in-1 Relief Bundle from REVO by Revomadic" loading="lazy" decoding="async">
+    <span class="badge">Bundle</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">REVO by Revomadic</span>
+    <h3>REVO Smart Cup 4-in-1 Relief Bundle</h3>
+    <p>Rechargeable smart cupping with heat and vibration modes.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/revo-original-480.webp" srcset="/images/opt/revo-original-480.webp 438w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="438" height="500" alt="REVO Kit 2-Pack with Case from REVO by Revomadic" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">REVO by Revomadic</span>
+    <h3>REVO Kit 2-Pack with Case</h3>
+    <p>Two smart cups plus a travel case for back and shoulders.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/eydology-ai-480.webp" srcset="/images/opt/eydology-ai-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="360" alt="AI Smart Glasses, Black, 4K HD from Eydology" loading="lazy" decoding="async">
+    <span class="badge">New</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Eydology</span>
+    <h3>AI Smart Glasses, Black, 4K HD</h3>
+    <p>Camera and audio smart glasses in a classic black frame.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/eydology-cateye-480.webp" srcset="/images/opt/eydology-cateye-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="346" alt="Cat-Eye Frames, Transparent Grey Silver from Eydology" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Eydology</span>
+    <h3>Cat-Eye Frames, Transparent Grey Silver</h3>
+    <p>Lightweight cat-eye frames, ready for prescription lenses.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+  </div>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
 </div>
+  </div>
+</section>
+
+<section class="section soft" id="partners" aria-labelledby="partners-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">Our partners</span><h2 id="partners-title">Shop by trusted partner</h2><p>Every partner is checked for clear product information, secure checkout and U.S. availability.</p></div></div>
+
+    <div class="featured-band partner" id="partner-fullscopemd">
+      <div class="partner-head">
+        <div><h3>FullScopeMD <span class="chip">★ Featured · Telehealth</span></h3><p>U.S. telehealth with licensed clinicians: weight care, hormone therapy and everyday acute care from home.</p></div>
+        <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="/guides/telehealth-weight-loss-what-to-expect.html">How telehealth works</a><a class="btn btn-primary btn-sm" style="background:#fff;color:var(--teal-900)" href="https://www.awin1.com/cread.php?awinmid=130233&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">Visit FullScopeMD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div>
+      </div>
+      <div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous FullScopeMD: 30 popular treatments" aria-controls="car-fullscopemd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="car-btn" type="button" data-next aria-label="Next FullScopeMD: 30 popular treatments" aria-controls="car-fullscopemd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+  </div>
+  <div class="track" id="car-fullscopemd" role="region" aria-roledescription="carousel" aria-label="FullScopeMD: 30 popular treatments" tabindex="0">
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953014&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/albuterol/main/albuterol-main-02eee71c37a7.webp" alt="Albuterol (HFA Inhaler)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Falbuterol%2Fmain%2Falbuterol-main-02eee71c37a7.webp&amp;feedId=117881&amp;k=30fa25ab57d5427cbd6139916c3087ec24dbd7e1'">
+    <span class="badge">Acute Care &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Albuterol (HFA Inhaler)</h3>
+    <p>Albuterol inhalation is a prescription bronchodilator used to treat or prevent bronchospasm in patients…</p>
+    <div class="price-row"><span class="price"><small>From</small> $159.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953014&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953017&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/b12-injectable/main/b12-injectable-main.webp" alt="B12 (Injectable)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fb12-injectable%2Fmain%2Fb12-injectable-main.webp&amp;feedId=117881&amp;k=ac593c28876e03ad31dcd421bc34c468c29f8067'">
+    <span class="badge">Wellness Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>B12 (Injectable)</h3>
+    <p>Vitamin B12 injection may be used to treat certain vitamin B12 deficiencies when clinically appropriate. A…</p>
+    <div class="price-row"><span class="price"><small>From</small> $159.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953017&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953019&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/bi-est-progesterone-gentle-start/main/bi-est-progesterone-gentle-start-main.webp" alt="Bi-Est / Progesterone Gentle Start" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fbi-est-progesterone-gentle-start%2Fmain%2Fbi-est-progesterone-gentle-start-main.webp&amp;feedId=117881&amp;k=018f270e820e8942366b0bb16ae7e14cc640c278'">
+    <span class="badge">Hormone Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Bi-Est / Progesterone Gentle Start</h3>
+    <p>Bi Est and Progesterone Gentle Start is a provider guided hormone therapy option that uses a more gradual…</p>
+    <div class="price-row"><span class="price"><small>From</small> $349.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953019&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953022&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/biotin-finasteride-minoxidil-capsule/main/biotin-finasteride-minoxidil-capsule-main.webp" alt="Biotin / Finasteride / Minoxidil (Capsule)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fbiotin-finasteride-minoxidil-capsule%2Fmain%2Fbiotin-finasteride-minoxidil-capsule-main.webp&amp;feedId=117881&amp;k=b7d7a2c1852b3237a6f3641d6bf4445469428b41'">
+    <span class="badge">Hair Loss Evaluation &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Biotin / Finasteride / Minoxidil (Capsule)</h3>
+    <p>Biotin / Finasteride / Minoxidil Capsule is a provider-reviewed hair support option designed to help…</p>
+    <div class="price-row"><span class="price"><small>From</small> $249.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953022&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953024&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/bremelanotide-nasal-spray/main/bremelanotide-nasal-spray-main-4762d5c1b72e.webp" alt="Bremelanotide (Nasal Spray)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fbremelanotide-nasal-spray%2Fmain%2Fbremelanotide-nasal-spray-main-4762d5c1b72e.webp&amp;feedId=117881&amp;k=631f17ee2883b98c430bdd6d614a8afd01167899'">
+    <span class="badge">Sexual Health Evaluation</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Bremelanotide (Nasal Spray)</h3>
+    <p>Bremelanotide nasal spray is a compounded prescription formulation. FDA approved bremelanotide is…</p>
+    <div class="price-row"><span class="price"><small>From</small> $199.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953024&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953041&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/liraglutide/main/liraglutide-main_yjBu7NL.webp" alt="Liraglutide (Injectable)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fliraglutide%2Fmain%2Fliraglutide-main_yjBu7NL.webp&amp;feedId=117881&amp;k=3caabf586d3c60e06b4e61625b61149f19b667c4'">
+    <span class="badge">Medical Weight Management</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Liraglutide (Injectable)</h3>
+    <p>Liraglutide is a prescription injectable medication that works with GLP 1 pathways involved in appetite…</p>
+    <div class="price-row"><span class="price"><small>From</small> $499.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953041&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953048&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/mounjaro-prefilled-syringe/main/mounjaro-prefilled-syringe-main.webp" alt="Mounjaro® (Prefilled Syringe)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fmounjaro-prefilled-syringe%2Fmain%2Fmounjaro-prefilled-syringe-main.webp&amp;feedId=117881&amp;k=6d9a1097ec54459158fe6b0d823da1dc8ed2d46f'">
+    <span class="badge">Branded GLP-1 Medications</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Mounjaro® (Prefilled Syringe)</h3>
+    <p>Mounjaro Prefilled Syringe (tirzepatide) is a prescription medication indicated for adults with type 2…</p>
+    <div class="price-row"><span class="price"><small>From</small> $1,399.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953048&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953015&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/amoxicillin/main/amoxicillin-main-6d1bd6b4871a.webp" alt="Amoxicillin (Capsule)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Famoxicillin%2Fmain%2Famoxicillin-main-6d1bd6b4871a.webp&amp;feedId=117881&amp;k=d22097ec0b26fd3fa1abf4ed97204400a978cfef'">
+    <span class="badge">Acute Care &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Amoxicillin (Capsule)</h3>
+    <p>Amoxicillin is a prescription penicillin class antibiotic used for certain bacterial infections. It should…</p>
+    <div class="price-row"><span class="price"><small>From</small> $119.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953015&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953032&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/glutathione-capsule/main/glutathione-capsule-main.webp" alt="Glutathione (Capsule)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fglutathione-capsule%2Fmain%2Fglutathione-capsule-main.webp&amp;feedId=117881&amp;k=e3440416beefef0c7da73b87edddd4cf8ad85672'">
+    <span class="badge">Wellness Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Glutathione (Capsule)</h3>
+    <p>Glutathione is a naturally occurring substance in the body. An oral compounded glutathione capsule is not…</p>
+    <div class="price-row"><span class="price"><small>From</small> $239.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953032&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953020&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/bi-est-progesterone-standard-start/main/bi-est-progesterone-standard-start-main_DEJ9Rtr.webp" alt="Bi-Est / Progesterone Standard Start" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fbi-est-progesterone-standard-start%2Fmain%2Fbi-est-progesterone-standard-start-main_DEJ9Rtr.webp&amp;feedId=117881&amp;k=a506047e8de6c7e27491c93da96b66ddfbeaf11c'">
+    <span class="badge">Hormone Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Bi-Est / Progesterone Standard Start</h3>
+    <p>Bi Est and Progesterone Standard Start is a provider guided hormone therapy option for patients who may be…</p>
+    <div class="price-row"><span class="price"><small>From</small> $549.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953020&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953023&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/biotin-minoxidil-capsule/main/biotin-minoxidil-capsule-main.webp" alt="Biotin / Minoxidil (Capsule)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fbiotin-minoxidil-capsule%2Fmain%2Fbiotin-minoxidil-capsule-main.webp&amp;feedId=117881&amp;k=a7130a7324d460a6d080a8e8cf40efcbe0951142'">
+    <span class="badge">Hair Loss Evaluation &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Biotin / Minoxidil (Capsule)</h3>
+    <p>A compounded oral combination of finasteride, minoxidil, and biotin that may be considered for selected…</p>
+    <div class="price-row"><span class="price"><small>From</small> $199.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953023&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953053&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/pt-141-injectables/main/pt-141-injectables-main.webp" alt="PT-141 (Injectable)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fpt-141-injectables%2Fmain%2Fpt-141-injectables-main.webp&amp;feedId=117881&amp;k=e2e5a63199b59f1e3b5e1a8bec143268212f718a'">
+    <span class="badge">Sexual Health Evaluation</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>PT-141 (Injectable)</h3>
+    <p>PT 141 is another name used for bremelanotide. FDA approved bremelanotide injection exists for a specific…</p>
+    <div class="price-row"><span class="price"><small>From</small> $199.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953053&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953058&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/semaglutide-injectables/main/semaglutide-injectables-main.webp" alt="Semaglutide (Injectable)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fsemaglutide-injectables%2Fmain%2Fsemaglutide-injectables-main.webp&amp;feedId=117881&amp;k=1dbd263a15a4c46938aaad39fc3d3c09f71b8cab'">
+    <span class="badge">Medical Weight Management</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Semaglutide (Injectable)</h3>
+    <p>Semaglutide is a prescription injectable medication that may be considered for eligible patients as part…</p>
+    <div class="price-row"><span class="price"><small>From</small> $229.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953058&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953052&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/ozempic-prefilled-syringe/main/ozempic-prefilled-syringe-main.webp" alt="Ozempic® (Prefilled Syringe)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fozempic-prefilled-syringe%2Fmain%2Fozempic-prefilled-syringe-main.webp&amp;feedId=117881&amp;k=6fe35d6a0645e16408acb5832f49277cf4d111a1'">
+    <span class="badge">Branded GLP-1 Medications</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Ozempic® (Prefilled Syringe)</h3>
+    <p>Ozempic® (semaglutide) is a prescription GLP-1 medication used along with diet and exercise to help…</p>
+    <div class="price-row"><span class="price"><small>From</small> $599.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953052&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953016&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/azithromycin-z-pack/main/azithromycin-z-pack-main-552b44c7efbf.webp" alt="Azithromycin (Z-Pack) (Tablet)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fazithromycin-z-pack%2Fmain%2Fazithromycin-z-pack-main-552b44c7efbf.webp&amp;feedId=117881&amp;k=4dd6b39eca0f5d15e92540e654ca44ebb2b76e7f'">
+    <span class="badge">Acute Care &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Azithromycin (Z-Pack) (Tablet)</h3>
+    <p>Azithromycin is a prescription antibiotic used for certain bacterial infections. It should only be…</p>
+    <div class="price-row"><span class="price"><small>From</small> $119.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953016&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953033&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/glutathione-injectable/main/glutathione-injectable-main.webp" alt="Glutathione (Injectable)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fglutathione-injectable%2Fmain%2Fglutathione-injectable-main.webp&amp;feedId=117881&amp;k=dd39884cc2f1c74b9c39de9925065dac7064cec5'">
+    <span class="badge">Wellness Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Glutathione (Injectable)</h3>
+    <p>Glutathione injectable is a compounded medication that is not FDA approved. FDA has reported serious…</p>
+    <div class="price-row"><span class="price"><small>From</small> $239.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953033&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953021&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/bi-estrogen-topical-cream/main/bi-estrogen-topical-cream-main-b2a1a5412fc9.webp" alt="Bi-Estrogen (Topical Cream)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fbi-estrogen-topical-cream%2Fmain%2Fbi-estrogen-topical-cream-main-b2a1a5412fc9.webp&amp;feedId=117881&amp;k=f46c555cb15eddcc1fe202690ca274d35056c3c9'">
+    <span class="badge">Hormone Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Bi-Estrogen (Topical Cream)</h3>
+    <p>Bi Estrogen topical cream is a provider reviewed hormone therapy option that combines estrogen hormones in…</p>
+    <div class="price-row"><span class="price"><small>From</small> $319.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953021&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953028&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/finasteride-tablet/main/finasteride-tablet-main-4adbc0fa3207.webp" alt="Finasteride (Tablet)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Ffinasteride-tablet%2Fmain%2Ffinasteride-tablet-main-4adbc0fa3207.webp&amp;feedId=117881&amp;k=f9e33850257f529cbce51c1e7f63be6a5d6e5ed8'">
+    <span class="badge">Hair Loss Evaluation &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Finasteride (Tablet)</h3>
+    <p>Finasteride is an FDA approved prescription tablet for male pattern hair loss in men. It works by reducing…</p>
+    <div class="price-row"><span class="price"><small>From</small> $199.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953028&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953060&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/sildenafil-tablet/main/sildenafil-tablet-main.webp" alt="Sildenafil (Tablet)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fsildenafil-tablet%2Fmain%2Fsildenafil-tablet-main.webp&amp;feedId=117881&amp;k=0429df7b4908bed52918cda630138382b123007b'">
+    <span class="badge">Sexual Health Evaluation</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Sildenafil (Tablet)</h3>
+    <p>Sildenafil is an FDA approved prescription medication for erectile dysfunction. It helps improve erectile…</p>
+    <div class="price-row"><span class="price"><small>From</small> $239.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953060&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953059&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/semaglutide-odt/main/semaglutide-odt-main.webp" alt="Semaglutide (ODT)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fsemaglutide-odt%2Fmain%2Fsemaglutide-odt-main.webp&amp;feedId=117881&amp;k=f83e96742142298970315957fa7a958ee4daf821'">
+    <span class="badge">Medical Weight Management</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Semaglutide (ODT)</h3>
+    <p>Semaglutide ODT is a prescription weight management option that dissolves in the mouth and may be…</p>
+    <div class="price-row"><span class="price"><small>From</small> $249.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953059&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953067&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/wegovy/main/wegovy-main.webp" alt="Wegovy® (Prefilled Syringe)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fwegovy%2Fmain%2Fwegovy-main.webp&amp;feedId=117881&amp;k=180280e037bd25f78e8d9eae3c8f8548985d99d5'">
+    <span class="badge">Branded GLP-1 Medications</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Wegovy® (Prefilled Syringe)</h3>
+    <p>Wegovy® (semaglutide) is a prescription GLP-1 medication used with a reduced-calorie diet and increased…</p>
+    <div class="price-row"><span class="price"><small>From</small> $499.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953067&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953018&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/benzonatate-tessalon-perles/main/benzonatate-tessalon-perles-main-569a03fcc1c1.webp" alt="Benzonatate (Tessalon Perles) (Capsule)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fbenzonatate-tessalon-perles%2Fmain%2Fbenzonatate-tessalon-perles-main-569a03fcc1c1.webp&amp;feedId=117881&amp;k=3c381d15fd47a04404a73f934d0183e69ffea7fd'">
+    <span class="badge">Acute Care &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Benzonatate (Tessalon Perles) (Capsule)</h3>
+    <p>Benzonatate is a prescription medication used for temporary relief of cough. The capsules must be…</p>
+    <div class="price-row"><span class="price"><small>From</small> $119.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953018&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953034&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/glutathione-nasal-spray/main/glutathione-nasal-spray-main.webp" alt="Glutathione (Nasal Spray)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fglutathione-nasal-spray%2Fmain%2Fglutathione-nasal-spray-main.webp&amp;feedId=117881&amp;k=60790cc961c850e519f2ac0702faf8cc7d49d56a'">
+    <span class="badge">Wellness Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Glutathione (Nasal Spray)</h3>
+    <p>Glutathione nasal spray is a compounded formulation that may be considered after provider evaluation. It…</p>
+    <div class="price-row"><span class="price"><small>From</small> $239.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953034&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953025&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/dhea-capsule/main/dhea-capsule-main_Ploie80.webp" alt="DHEA (Capsule)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fdhea-capsule%2Fmain%2Fdhea-capsule-main_Ploie80.webp&amp;feedId=117881&amp;k=1da378df678525b017597777c6581654d66241fc'">
+    <span class="badge">Hormone Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>DHEA (Capsule)</h3>
+    <p>DHEA is a hormone support option that may be considered when clinically appropriate. A licensed provider…</p>
+    <div class="price-row"><span class="price"><small>From</small> $399.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953025&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953029&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/finasteride-minoxidil-foam/main/finasteride-minoxidil-foam-main.webp" alt="Finasteride / Minoxidil (Foam)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Ffinasteride-minoxidil-foam%2Fmain%2Ffinasteride-minoxidil-foam-main.webp&amp;feedId=117881&amp;k=dd013e2124ef96856a6614c50766da5b0ba993da'">
+    <span class="badge">Hair Loss Evaluation &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Finasteride / Minoxidil (Foam)</h3>
+    <p>A compounded topical combination of finasteride and minoxidil that may be considered for certain patients…</p>
+    <div class="price-row"><span class="price"><small>From</small> $199.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953029&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953062&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/tadalafil-tablets/main/tadalafil-tablets-main.webp" alt="Tadalafil (Tablets)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Ftadalafil-tablets%2Fmain%2Ftadalafil-tablets-main.webp&amp;feedId=117881&amp;k=d1a0bfe44cff99fe949cd44751541af64da2fbc5'">
+    <span class="badge">Sexual Health Evaluation</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Tadalafil (Tablets)</h3>
+    <p>Tadalafil is an FDA approved prescription medication for erectile dysfunction. It supports erectile…</p>
+    <div class="price-row"><span class="price"><small>From</small> $159.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953062&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953065&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/tirzepatide-injectables/main/tirzepatide-injectables-main.webp" alt="Tirzepatide (Injectable)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Ftirzepatide-injectables%2Fmain%2Ftirzepatide-injectables-main.webp&amp;feedId=117881&amp;k=3823d31d50d702a2f4d81a0f6677ac54222e4015'">
+    <span class="badge">Medical Weight Management</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Tirzepatide (Injectable)</h3>
+    <p>Tirzepatide is a prescription injectable medication that may be considered as part of a provider guided…</p>
+    <div class="price-row"><span class="price"><small>From</small> $249.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953065&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953069&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/zepbound-prefilled-syringe/main/zepbound-prefilled-syringe-main_vQKlTHf.webp" alt="Zepbound® (Prefilled Syringe)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fzepbound-prefilled-syringe%2Fmain%2Fzepbound-prefilled-syringe-main_vQKlTHf.webp&amp;feedId=117881&amp;k=3bab1461efd110453d77f2ff3e6e17feee4fd969'">
+    <span class="badge">Branded GLP-1 Medications</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Zepbound® (Prefilled Syringe)</h3>
+    <p>Zepbound (tirzepatide) is a prescription once-weekly injection indicated as an adjunct to a…</p>
+    <div class="price-row"><span class="price"><small>From</small> $649.00</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953069&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953031&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/fluticasone/main/fluticasone-main-f83cc79d0806.webp" alt="Fluticasone (Steroid Inhaler)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Ffluticasone%2Fmain%2Ffluticasone-main-f83cc79d0806.webp&amp;feedId=117881&amp;k=afe29e0f6df16b3acbd12aa88b5d6112e90fd86c'">
+    <span class="badge">Acute Care &amp; Treatment</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Fluticasone (Steroid Inhaler)</h3>
+    <p>Fluticasone propionate nasal spray is a corticosteroid used to manage certain nasal symptoms. A licensed…</p>
+    <div class="price-row"><span class="price"><small>From</small> $359.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953031&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card feed">
+  <a class="card-media" href="https://www.awin1.com/pclick.php?p=45991953035&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="https://www.fullscopemd.com/media/products/glutathione-nad-sermorelin/main/glutathione-nad-sermorelin-main-a2538be0e0c3.webp" alt="Glutathione / NAD+ / Sermorelin (Injectable)" width="400" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images2.productserve.com/?w=200&amp;h=200&amp;bg=white&amp;trim=5&amp;t=letterbox&amp;url=ssl%3Awww.fullscopemd.com%2Fmedia%2Fproducts%2Fglutathione-nad-sermorelin%2Fmain%2Fglutathione-nad-sermorelin-main-a2538be0e0c3.webp&amp;feedId=117881&amp;k=bb752683e6f17af84f3cb84c04edbd6219e881d9'">
+    <span class="badge">Wellness Therapy</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">FullScopeMD</span>
+    <h3>Glutathione / NAD+ / Sermorelin (Injectable)</h3>
+    <p>A compounded combination of glutathione, NAD+, and sermorelin that requires individualized provider…</p>
+    <div class="price-row"><span class="price"><small>From</small> $359.20</span><span class="rx">Clinician review</span></div>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/pclick.php?p=45991953035&amp;a=3067297&amp;m=130233" target="_blank" rel="sponsored noopener">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+  </div>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
+</div><p class="center" style="margin:18px 0 0"><a class="btn btn-ghost btn-sm" href="/shop/fullscopemd.html">Browse all 55 FullScopeMD treatments <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></p>
+      <p class="banners-label">Current FullScopeMD offers</p><div class="banners"><a rel="sponsored noopener" target="_blank" href="https://www.awin1.com/cread.php?s=4896831&amp;v=130233&amp;q=615511&amp;r=3067297"><img src="https://www.awin1.com/cshow.php?s=4896831&amp;v=130233&amp;q=615511&amp;r=3067297" alt="FullScopeMD offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a><a rel="sponsored noopener" target="_blank" href="https://www.awin1.com/cread.php?s=4896838&amp;v=130233&amp;q=615515&amp;r=3067297"><img src="https://www.awin1.com/cshow.php?s=4896838&amp;v=130233&amp;q=615515&amp;r=3067297" alt="FullScopeMD offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a><a rel="sponsored noopener" target="_blank" href="https://www.awin1.com/cread.php?s=4896833&amp;v=130233&amp;q=615513&amp;r=3067297"><img src="https://www.awin1.com/cshow.php?s=4896833&amp;v=130233&amp;q=615513&amp;r=3067297" alt="FullScopeMD offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a><a rel="sponsored noopener" target="_blank" href="https://www.awin1.com/cread.php?s=4896839&amp;v=130233&amp;q=615516&amp;r=3067297"><img src="https://www.awin1.com/cshow.php?s=4896839&amp;v=130233&amp;q=615516&amp;r=3067297" alt="FullScopeMD offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a></div>
+    </div>
+
+    <div class="partner" id="partner-brookwood-med">
+      <div class="partner-head">
+        <div><h3>Brookwood Med <span class="chip">Masks &amp; PPE</span></h3><p>Certified respirators and surgical masks for adults and kids, in bulk and small packs.</p></div>
+        <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">Shop Brookwood Med <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div>
+      </div>
+      <div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous Brookwood Med products" aria-controls="car-brookwood-med"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="car-btn" type="button" data-next aria-label="Next Brookwood Med products" aria-controls="car-brookwood-med"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+  </div>
+  <div class="track" id="car-brookwood-med" role="region" aria-roledescription="carousel" aria-label="Brookwood Med products" tabindex="0">
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/brookwood-kn95-480.webp" srcset="/images/opt/brookwood-kn95-480.webp 480w, /images/opt/brookwood-kn95-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="423" alt="KN95 CE Certified 5-Ply White from Brookwood Med" loading="lazy" decoding="async">
+    <span class="badge hot">Best seller</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Brookwood Med</span>
+    <h3>KN95 CE Certified 5-Ply White</h3>
+    <p>Five-layer filtration with a snug nose bridge for all-day wear.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/brookwood-white-480.webp" srcset="/images/opt/brookwood-white-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="422" alt="FuturePPE 3-Ply Surgical Masks from Brookwood Med" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Brookwood Med</span>
+    <h3>FuturePPE 3-Ply Surgical Masks</h3>
+    <p>Everyday disposable masks for clinics, travel and home care.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/brookwood-kids-kf94-480.webp" srcset="/images/opt/brookwood-kids-kf94-480.webp 480w, /images/opt/brookwood-kids-kf94-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Kids KF94 Pink Rainbow Panda from Brookwood Med" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Brookwood Med</span>
+    <h3>Kids KF94 Pink Rainbow Panda</h3>
+    <p>Child-sized 4-layer masks with a fun print kids will wear.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124250&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+  </div>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
 </div>
-<div>
-<div style="border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,0.08)">
-<img src="images/hero-fullscopemd.webp" alt="FullScopeMD hero" style="width:100%;display:block" onerror="this.src='images/hero-fullscopemd.jpg'">
-<div style="padding:12px;font-size:12px;color:#6B7280">FullScopeMD • Exact telehealth imagery</div>
+      
+    </div>
+    <div class="partner" id="partner-finitex">
+      <div class="partner-head">
+        <div><h3>Finitex by Titans Medicare <span class="chip">Gloves</span></h3><p>Nitrile exam and heavy-duty gloves by the case, for clinics, labs and home care.</p></div>
+        <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">Shop Finitex <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div>
+      </div>
+      <div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous Finitex by Titans Medicare products" aria-controls="car-finitex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="car-btn" type="button" data-next aria-label="Next Finitex by Titans Medicare products" aria-controls="car-finitex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+  </div>
+  <div class="track" id="car-finitex" role="region" aria-roledescription="carousel" aria-label="Finitex by Titans Medicare products" tabindex="0">
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/finitex-blue-480.webp" srcset="/images/opt/finitex-blue-480.webp 480w, /images/opt/finitex-blue-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Blue Nitrile Exam Gloves 3.2 mil, 600 pcs from Finitex by Titans Medicare" loading="lazy" decoding="async">
+    <span class="badge">Clinic pick</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Finitex by Titans Medicare</span>
+    <h3>Blue Nitrile Exam Gloves 3.2 mil, 600 pcs</h3>
+    <p>Latex-free, powder-free everyday exam gloves by the case.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/finitex-black-480.webp" srcset="/images/opt/finitex-black-480.webp 480w, /images/opt/finitex-black-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Black Heavy-Duty Nitrile 8 mil, Diamond Grip from Finitex by Titans Medicare" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Finitex by Titans Medicare</span>
+    <h3>Black Heavy-Duty Nitrile 8 mil, Diamond Grip</h3>
+    <p>Thick, textured gloves for cleaning, auto and industrial work.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/finitex-rose-480.webp" srcset="/images/opt/finitex-rose-480.webp 480w, /images/opt/finitex-rose-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Rose Red Nitrile Gloves 3 mil from Finitex by Titans Medicare" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Finitex by Titans Medicare</span>
+    <h3>Rose Red Nitrile Gloves 3 mil</h3>
+    <p>Colour-coded nitrile gloves for salons, labs and home care.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=117741&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+  </div>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
 </div>
+      <div class="banners"><a rel="sponsored noopener" target="_blank" href="https://www.awin1.com/cread.php?s=4022681&amp;v=117741&amp;q=528186&amp;r=3067297"><img src="https://www.awin1.com/cshow.php?s=4022681&amp;v=117741&amp;q=528186&amp;r=3067297" alt="Finitex by Titans Medicare offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a></div>
+    </div>
+    <div class="partner" id="partner-walkhero">
+      <div class="partner-head">
+        <div><h3>WalkHero <span class="chip">Foot Health</span></h3><p>Arch-support shoes, orthotic insoles and slippers designed for all-day comfort.</p></div>
+        <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="https://walkhero.com" target="_blank" rel="noopener">Shop WalkHero <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div>
+      </div>
+      <div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous WalkHero products" aria-controls="car-walkhero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="car-btn" type="button" data-next aria-label="Next WalkHero products" aria-controls="car-walkhero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+  </div>
+  <div class="track" id="car-walkhero" role="region" aria-roledescription="carousel" aria-label="WalkHero products" tabindex="0">
+    <article class="card">
+  <a class="card-media" href="https://walkhero.com/collections/mens-arch-support-shoes" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/walkhero-shoes-480.webp" srcset="/images/opt/walkhero-shoes-480.webp 480w, /images/opt/walkhero-shoes-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Men's Ultimate Arch Support Shoes from WalkHero" loading="lazy" decoding="async">
+    <span class="badge">Popular</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">WalkHero</span>
+    <h3>Men's Ultimate Arch Support Shoes</h3>
+    <p>Built-in arch support and cushioning for long days on your feet.</p>
+    <a class="btn btn-primary btn-sm" href="https://walkhero.com/collections/mens-arch-support-shoes" target="_blank" rel="noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://walkhero.com/collections/womens-arch-support-shoes" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/walkhero-women-480.webp" srcset="/images/opt/walkhero-women-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Women's Ultimate Arch Support Shoes from WalkHero" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">WalkHero</span>
+    <h3>Women's Ultimate Arch Support Shoes</h3>
+    <p>Supportive everyday sneakers with a lightweight, breathable upper.</p>
+    <a class="btn btn-primary btn-sm" href="https://walkhero.com/collections/womens-arch-support-shoes" target="_blank" rel="noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://walkhero.com/products/heavy-duty-orthotic-insoles" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/walkhero-insoles-480.webp" srcset="/images/opt/walkhero-insoles-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="400" alt="Heavy Duty Orthotic Insoles (220+ lbs) from WalkHero" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">WalkHero</span>
+    <h3>Heavy Duty Orthotic Insoles (220+ lbs)</h3>
+    <p>Firm arch support for heavier users and work boots.</p>
+    <a class="btn btn-primary btn-sm" href="https://walkhero.com/products/heavy-duty-orthotic-insoles" target="_blank" rel="noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://walkhero.com/products/canvas-slippers" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/walkhero-canvas-slippers-480.webp" srcset="/images/opt/walkhero-canvas-slippers-480.webp 480w, /images/opt/walkhero-canvas-slippers-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="Canvas Arch Support Slippers from WalkHero" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">WalkHero</span>
+    <h3>Canvas Arch Support Slippers</h3>
+    <p>House slippers with a contoured, supportive footbed.</p>
+    <a class="btn btn-primary btn-sm" href="https://walkhero.com/products/canvas-slippers" target="_blank" rel="noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://walkhero.com/products/plantar-fasciitis-insoles" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/walkhero-allpurpose-insoles-480.webp" srcset="/images/opt/walkhero-allpurpose-insoles-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="All-Purpose Plantar Fasciitis Insoles from WalkHero" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">WalkHero</span>
+    <h3>All-Purpose Plantar Fasciitis Insoles</h3>
+    <p>Slip-in insoles that fit most everyday and athletic shoes.</p>
+    <a class="btn btn-primary btn-sm" href="https://walkhero.com/products/plantar-fasciitis-insoles" target="_blank" rel="noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+  </div>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
 </div>
+      
+    </div>
+    <div class="partner" id="partner-revo">
+      <div class="partner-head">
+        <div><h3>REVO by Revomadic <span class="chip">Wellness Devices</span></h3><p>Smart cupping and LED devices for at-home muscle recovery and skincare routines.</p></div>
+        <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">Shop REVO <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div>
+      </div>
+      <div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous REVO by Revomadic products" aria-controls="car-revo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="car-btn" type="button" data-next aria-label="Next REVO by Revomadic products" aria-controls="car-revo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+  </div>
+  <div class="track" id="car-revo" role="region" aria-roledescription="carousel" aria-label="REVO by Revomadic products" tabindex="0">
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/revo-kit-480.webp" srcset="/images/opt/revo-kit-480.webp 480w, /images/opt/revo-kit-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="576" alt="REVO Smart Cup 4-in-1 Relief Bundle from REVO by Revomadic" loading="lazy" decoding="async">
+    <span class="badge">Bundle</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">REVO by Revomadic</span>
+    <h3>REVO Smart Cup 4-in-1 Relief Bundle</h3>
+    <p>Rechargeable smart cupping with heat and vibration modes.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/revo-original-480.webp" srcset="/images/opt/revo-original-480.webp 438w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="438" height="500" alt="REVO Kit 2-Pack with Case from REVO by Revomadic" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">REVO by Revomadic</span>
+    <h3>REVO Kit 2-Pack with Case</h3>
+    <p>Two smart cups plus a travel case for back and shoulders.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/revo-face-genie-480.webp" srcset="/images/opt/revo-face-genie-480.webp 480w, /images/opt/revo-face-genie-960.webp 960w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="480" alt="REVO Face Genie LED (Pink) from REVO by Revomadic" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">REVO by Revomadic</span>
+    <h3>REVO Face Genie LED (Pink)</h3>
+    <p>Handheld LED device for an at-home skincare routine.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=127003&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+  </div>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
 </div>
-</section>
-
-<section class="Partner-section" id="products" style="border:none">
-<h2>FullScopeMD at top, every product has its own exact Partner photo</h2>
-<p style="color:#6B7280">6 Partners = 21 products, each with unique exact image. Images fixed to relative path images/ (not /images/) so GitHub Pages works. WalkHero links fixed to direct walkhero.com.</p>
-</section>
-
-<!-- FULLSCOPEMD AT TOP -->
-<section class="Partner-section featured" id="Partner-fullscopemd">
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px">
-<div><h3>★ FullScopeMD <small>fullscopemd.com</small> — Featured at Top</h3></div>
-<a href="https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297" target="_blank" rel="sponsored noopener" style="background:#3A7BD5;color:#fff;padding:8px 14px;border-radius:999px;text-decoration:none">Visit FullScopeMD →</a>
+      
+    </div>
+    <div class="partner" id="partner-eydology">
+      <div class="partner-head">
+        <div><h3>Eydology <span class="chip">Eyewear</span></h3><p>Prescription-ready frames and smart glasses with modern, lightweight designs.</p></div>
+        <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">Shop Eydology <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div>
+      </div>
+      <div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous Eydology products" aria-controls="car-eydology"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="car-btn" type="button" data-next aria-label="Next Eydology products" aria-controls="car-eydology"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+  </div>
+  <div class="track" id="car-eydology" role="region" aria-roledescription="carousel" aria-label="Eydology products" tabindex="0">
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/eydology-ai-480.webp" srcset="/images/opt/eydology-ai-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="360" alt="AI Smart Glasses, Black, 4K HD from Eydology" loading="lazy" decoding="async">
+    <span class="badge">New</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Eydology</span>
+    <h3>AI Smart Glasses, Black, 4K HD</h3>
+    <p>Camera and audio smart glasses in a classic black frame.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+    <article class="card">
+  <a class="card-media" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+    <img src="/images/opt/eydology-cateye-480.webp" srcset="/images/opt/eydology-cateye-480.webp 480w" sizes="(max-width:520px) 78vw, (max-width:1100px) 33vw, 290px" width="480" height="346" alt="Cat-Eye Frames, Transparent Grey Silver from Eydology" loading="lazy" decoding="async">
+    
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Eydology</span>
+    <h3>Cat-Eye Frames, Transparent Grey Silver</h3>
+    <p>Lightweight cat-eye frames, ready for prescription lenses.</p>
+    <a class="btn btn-primary btn-sm" href="https://www.awin1.com/cread.php?awinmid=124966&amp;awinaffid=3067297" target="_blank" rel="sponsored noopener">View deal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+  </div>
+</article>
+  </div>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
 </div>
-<div class="slider-wrap"><button class="slider-btn" style="left:-10px" onclick="this.nextElementSibling.scrollBy({left:-320,behavior:'smooth'})">‹</button>
-<div class="slider-row">
-<article class="product-card-v2" style="border-color:#3A7BD540"><div class="pc-media"><img src="images/hero-fullscopemd.webp" alt="FullScopeMD Featured" loading="eager" onerror="this.src='images/hero-fullscopemd.jpg'"></div><div class="pc-body"><div style="font-size:11px;text-transform:uppercase;color:#6B7280;font-weight:700">FullScopeMD • Featured</div><h4>FullScopeMD | U.S. Telehealth Patient Support</h4><a href="https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Visit FullScopeMD</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/fullscopemd-glp1.jpg" alt="GLP-1" loading="lazy"></div><div class="pc-body"><h4>Branded GLP-1 Medications Program</h4><a href="https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Visit FullScopeMD</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/fullscopemd-hormone.jpg" alt="Hormone" loading="lazy"></div><div class="pc-body"><h4>Hormone Therapy Patient Support</h4><a href="https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Visit FullScopeMD</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/fullscopemd-weight.jpg" alt="Weight" loading="lazy"></div><div class="pc-body"><h4>Medical Weight Management</h4><a href="https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Visit FullScopeMD</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/fullscopemd-wellness.jpg" alt="Wellness" loading="lazy"></div><div class="pc-body"><h4>Wellness Therapy & Acute Care</h4><a href="https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Visit FullScopeMD</a></div></article>
-</div><button class="slider-btn" style="right:-10px" onclick="this.previousElementSibling.scrollBy({left:320,behavior:'smooth'})">›</button></div>
+      <div class="banners"><a rel="sponsored noopener" target="_blank" href="https://www.awin1.com/cread.php?s=4742695&amp;v=124966&amp;q=601644&amp;r=3067297"><img src="https://www.awin1.com/cshow.php?s=4742695&amp;v=124966&amp;q=601644&amp;r=3067297" alt="Eydology offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a></div>
+    </div>
+  </div>
 </section>
 
-<!-- BROOKWOOD -->
-<section class="Partner-section" id="Partner-brookwood-med">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><h3>Brookwood Med <small>brookwoodmed.com</small></h3><a href="https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297" target="_blank" rel="sponsored noopener">Shop all at Brookwood Med →</a></div>
-<div class="slider-wrap"><button class="slider-btn" style="left:-10px" onclick="this.nextElementSibling.scrollBy({left:-320,behavior:'smooth'})">‹</button>
-<div class="slider-row">
-<article class="product-card-v2"><div class="pc-media"><img src="images/brookwood-kn95.jpg" alt="Brookwood KN95 exact" loading="lazy"></div><div class="pc-body"><h4>KN95 CE Certified 5PLY White</h4><a href="https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Brookwood Med</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/brookwood-white.jpg" alt="Brookwood Surgical exact" loading="lazy"></div><div class="pc-body"><h4>FuturePPE 3-Ply Surgical Masks</h4><a href="https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Brookwood Med</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/brookwood-kids-kf94.jpg" alt="Brookwood Kids KF94 exact" loading="lazy"></div><div class="pc-body"><h4>Kids KF94 Pink Rainbow Panda</h4><a href="https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Brookwood Med</a></div></article>
-</div><button class="slider-btn" style="right:-10px" onclick="this.previousElementSibling.scrollBy({left:320,behavior:'smooth'})">›</button></div>
+<section class="section" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">Why MedicalSupplie</span><h2 id="why-title">Buy with confidence</h2></div></div>
+    <div class="props">
+      <div class="prop"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Vetted partners</h3><p>We only list stores with clear specs, secure checkout and real customer support.</p></div>
+      <div class="prop"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><h3>Plain-English guides</h3><p>Standards like ASTM, NIOSH and mil thickness, explained simply.</p></div>
+      <div class="prop"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span><h3>Independent picks</h3><p>Commissions never change our recommendations or your price.</p></div>
+      <div class="prop"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><h3>Fast & private</h3><p>No account, no tracking pop-ups. Just pick and go.</p></div>
+    </div>
+  </div>
 </section>
 
-<!-- REVO -->
-<section class="Partner-section" id="Partner-revo">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><h3>REVO / Revomadic <small>revomadic.com</small></h3><a href="https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297" target="_blank" rel="sponsored noopener">Shop all at Revo →</a></div>
-<div class="slider-wrap"><button class="slider-btn" style="left:-10px" onclick="this.nextElementSibling.scrollBy({left:-320,behavior:'smooth'})">‹</button>
-<div class="slider-row">
-<article class="product-card-v2"><div class="pc-media"><img src="images/revo-kit.jpg" alt="Revo exact" loading="lazy"></div><div class="pc-body"><h4>REVO Smart Cup 4-in-1 Relief Bundle</h4><a href="https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Revo</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/revo-original.jpg" alt="Revo 2PK exact" loading="lazy"></div><div class="pc-body"><h4>REVO Kit 2-Pack with Case</h4><a href="https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Revo</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/revo-face-genie.jpg" alt="Revo Face Genie exact" loading="lazy"></div><div class="pc-body"><h4>REVO Face Genie LED Pink</h4><a href="https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Revo</a></div></article>
-</div><button class="slider-btn" style="right:-10px" onclick="this.previousElementSibling.scrollBy({left:320,behavior:'smooth'})">›</button></div>
-</section>
-
-<!-- FINITEX -->
-<section class="Partner-section" id="Partner-finitex">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><h3>Finitex / Titans Medicare <small>titansmedicare.com</small></h3><a href="https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297" target="_blank" rel="sponsored noopener">Shop all at Finitex →</a></div>
-<div class="slider-wrap"><button class="slider-btn" style="left:-10px" onclick="this.nextElementSibling.scrollBy({left:-320,behavior:'smooth'})">‹</button>
-<div class="slider-row">
-<article class="product-card-v2"><div class="pc-media"><img src="images/finitex-blue.jpg" alt="Finitex Blue exact" loading="lazy"></div><div class="pc-body"><h4>Blue Nitrile 3.2mil 600pcs</h4><a href="https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Finitex</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/finitex-black.jpg" alt="Finitex Black exact" loading="lazy"></div><div class="pc-body"><h4>Black Heavy-Duty 8mil Diamond</h4><a href="https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Finitex</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/finitex-rose.jpg" alt="Finitex Rose exact" loading="lazy"></div><div class="pc-body"><h4>Rose Red Nitrile 3mil L 61713</h4><a href="https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Finitex</a></div></article>
-</div><button class="slider-btn" style="right:-10px" onclick="this.previousElementSibling.scrollBy({left:320,behavior:'smooth'})">›</button></div>
-</section>
-
-<!-- WALK HERO FIXED - DIRECT LINKS SO THEY WORK -->
-<section class="Partner-section" id="Partner-walkhero" style="border:2px solid #C67C3E20;border-radius:16px">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px">
-<div><h3>WalkHero <small>walkhero.com</small> • Fixed links • Direct (Awin 18221 was placeholder)</h3><p style="margin:0;color:#6B7280;font-size:13px">Links fixed to direct walkhero.com — replace with your real Awin MID from Awin dashboard > WalkHero program</p></div>
-<a href="https://walkhero.com" target="_blank" rel="noopener" style="background:#C67C3E;color:#fff;padding:8px 14px;border-radius:999px;text-decoration:none">Shop all at WalkHero →</a>
+<section class="section soft" id="guides" aria-labelledby="guides-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">Buying guides</span><h2 id="guides-title">Know exactly what to buy</h2><p>Short, practical guides that answer the questions people actually ask.</p></div><a class="btn btn-ghost btn-sm" href="/guides/">All guides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+    <div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous Buying guides" aria-controls="car-guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="car-btn" type="button" data-next aria-label="Next Buying guides" aria-controls="car-guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+  </div>
+  <div class="track" id="car-guides" role="region" aria-roledescription="carousel" aria-label="Buying guides" tabindex="0">
+    <a class="post-card" href="/guides/how-to-choose-medical-gloves.html">
+  <div class="post-thumb"><img src="/images/opt/finitex-blue-480.webp" srcset="/images/opt/finitex-blue-480.webp 480w, /images/opt/finitex-blue-960.webp 960w" sizes="(max-width:600px) 100vw, 380px" width="480" height="480" alt="Nitrile vs Latex vs Vinyl: How to Choose Medical Gloves" loading="lazy" decoding="async"></div>
+  <div class="post-body">
+    <div class="post-meta"><span class="chip">Guide</span><span>Gloves</span><span>· 3 min read</span></div>
+    <h3>Nitrile vs Latex vs Vinyl: How to Choose Medical Gloves</h3>
+    <p>Compare nitrile, latex and vinyl exam gloves, what mil thickness and ASTM ratings mean, and how to pick the right size and grade for clinics, home care and cleaning.</p>
+  </div>
+</a>
+    <a class="post-card" href="/guides/n95-vs-kn95-vs-kf94-masks.html">
+  <div class="post-thumb"><img src="/images/opt/brookwood-kn95-480.webp" srcset="/images/opt/brookwood-kn95-480.webp 480w, /images/opt/brookwood-kn95-960.webp 960w" sizes="(max-width:600px) 100vw, 380px" width="480" height="423" alt="N95 vs KN95 vs KF94 vs Surgical Masks: What's the Difference?" loading="lazy" decoding="async"></div>
+  <div class="post-body">
+    <div class="post-meta"><span class="chip">Guide</span><span>Masks &amp; PPE</span><span>· 3 min read</span></div>
+    <h3>N95 vs KN95 vs KF94 vs Surgical Masks: What's the Difference?</h3>
+    <p>A clear comparison of N95, KN95, KF94 and surgical masks: filtration standards, fit, which to choose for kids, and how to spot counterfeits.</p>
+  </div>
+</a>
+    <a class="post-card" href="/guides/arch-support-insoles-plantar-fasciitis.html">
+  <div class="post-thumb"><img src="/images/opt/walkhero-shoes-480.webp" srcset="/images/opt/walkhero-shoes-480.webp 480w, /images/opt/walkhero-shoes-960.webp 960w" sizes="(max-width:600px) 100vw, 380px" width="480" height="480" alt="Arch Support Insoles &amp; Shoes for Plantar Fasciitis: A Buyer's Guide" loading="lazy" decoding="async"></div>
+  <div class="post-body">
+    <div class="post-meta"><span class="chip">Guide</span><span>Foot Health</span><span>· 3 min read</span></div>
+    <h3>Arch Support Insoles &amp; Shoes for Plantar Fasciitis: A Buyer's Guide</h3>
+    <p>How supportive shoes and orthotic insoles can help heel and arch pain, what to look for (arch height, heel cup, firmness), and when to see a clinician.</p>
+  </div>
+</a>
+    <a class="post-card" href="/guides/telehealth-weight-loss-what-to-expect.html">
+  <div class="post-thumb"><img src="/images/opt/fullscopemd-telehealth-480.webp" srcset="/images/opt/fullscopemd-telehealth-480.webp 480w, /images/opt/fullscopemd-telehealth-960.webp 960w" sizes="(max-width:600px) 100vw, 380px" width="480" height="320" alt="Telehealth for Weight Loss &amp; Hormone Therapy: What to Expect" loading="lazy" decoding="async"></div>
+  <div class="post-body">
+    <div class="post-meta"><span class="chip">Guide</span><span>Telehealth</span><span>· 3 min read</span></div>
+    <h3>Telehealth for Weight Loss &amp; Hormone Therapy: What to Expect</h3>
+    <p>How online weight-management and hormone therapy programs work, who GLP-1 medications are approved for, costs and questions to ask before you sign up.</p>
+  </div>
+</a>
+  </div>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
 </div>
-<div class="slider-wrap"><button class="slider-btn" style="left:-10px" onclick="this.nextElementSibling.scrollBy({left:-320,behavior:'smooth'})">‹</button>
-<div class="slider-row">
-<article class="product-card-v2" style="border-color:#C67C3E40"><div class="pc-media"><img src="images/walkhero-shoes.jpg" alt="WalkHero Men's exact" loading="lazy"></div><div class="pc-body"><h4>Men's Ultimate Arch Support Shoes</h4><p style="font-size:11px;color:#6B7280">Direct link — works now</p><a href="https://walkhero.com/collections/mens-arch-support-shoes" target="_blank" rel="noopener" class="btn btn-primary" style="background:#C67C3E;font-size:12px;padding:8px 14px">Shop at WalkHero</a></div></article>
-<article class="product-card-v2" style="border-color:#C67C3E40"><div class="pc-media"><img src="images/walkhero-women.jpg" alt="WalkHero Women's exact" loading="lazy"></div><div class="pc-body"><h4>Women's Ultimate Arch Support Shoes</h4><a href="https://walkhero.com/collections/womens-arch-support-shoes" target="_blank" rel="noopener" class="btn btn-primary" style="background:#C67C3E;font-size:12px;padding:8px 14px">Shop at WalkHero</a></div></article>
-<article class="product-card-v2" style="border-color:#C67C3E40"><div class="pc-media"><img src="images/walkhero-insoles.jpg" alt="WalkHero Insoles exact" loading="lazy"></div><div class="pc-body"><h4>Heavy Duty Orthotic Insoles 220+ lbs</h4><a href="https://walkhero.com/products/heavy-duty-orthotic-insoles" target="_blank" rel="noopener" class="btn btn-primary" style="background:#C67C3E;font-size:12px;padding:8px 14px">Shop at WalkHero</a></div></article>
-<article class="product-card-v2" style="border-color:#C67C3E40"><div class="pc-media"><img src="images/walkhero-canvas-slippers.jpg" alt="WalkHero Canvas exact" loading="lazy"></div><div class="pc-body"><h4>Canvas Arch Support Slippers</h4><a href="https://walkhero.com/products/canvas-slippers" target="_blank" rel="noopener" class="btn btn-primary" style="background:#C67C3E;font-size:12px;padding:8px 14px">Shop at WalkHero</a></div></article>
-<article class="product-card-v2" style="border-color:#C67C3E40"><div class="pc-media"><img src="images/walkhero-allpurpose-insoles.jpg" alt="WalkHero All-Purpose exact" loading="lazy"></div><div class="pc-body"><h4>All-Purpose Plantar Fasciitis Insoles</h4><a href="https://walkhero.com/products/plantar-fasciitis-insoles" target="_blank" rel="noopener" class="btn btn-primary" style="background:#C67C3E;font-size:12px;padding:8px 14px">Shop at WalkHero</a></div></article>
-</div><button class="slider-btn" style="right:-10px" onclick="this.previousElementSibling.scrollBy({left:320,behavior:'smooth'})">›</button></div>
+  </div>
 </section>
 
-<!-- EYDOLOGY -->
-<section class="Partner-section" id="Partner-eydology">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><h3>Eydology <small>eydology.com</small></h3><a href="https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297" target="_blank" rel="sponsored noopener">Shop all at Eydology →</a></div>
-<div class="slider-wrap"><button class="slider-btn" style="left:-10px" onclick="this.nextElementSibling.scrollBy({left:-320,behavior:'smooth'})">‹</button>
-<div class="slider-row">
-<article class="product-card-v2"><div class="pc-media"><img src="images/eydology-ai.jpg" alt="Eydology AI exact" loading="lazy"></div><div class="pc-body"><h4>AI Smart Glasses Black 4K HD</h4><a href="https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Eydology</a></div></article>
-<article class="product-card-v2"><div class="pc-media"><img src="images/eydology-cateye.jpg" alt="Eydology Cat Eye exact" loading="lazy"></div><div class="pc-body"><h4>Cat-Eye Transparent Grey Silver</h4><a href="https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297" target="_blank" rel="sponsored noopener" class="btn btn-primary" style="font-size:12px;padding:8px 14px">Shop at Eydology</a></div></article>
-</div><button class="slider-btn" style="right:-10px" onclick="this.previousElementSibling.scrollBy({left:320,behavior:'smooth'})">›</button></div>
+<section class="section" aria-labelledby="blog-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">From the blog</span><h2 id="blog-title">Health-at-home tips</h2></div><a class="btn btn-ghost btn-sm" href="/blog/">All articles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+    <div class="grid-3"><a class="post-card" href="/blog/home-first-aid-kit-checklist.html">
+  <div class="post-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+  <div class="post-body">
+    <div class="post-meta"><span class="chip">Blog</span><span>First Aid</span><span>· 3 min read</span></div>
+    <h3>The Complete Home First Aid Kit Checklist (2026)</h3>
+    <p>Everything a well-stocked home first aid kit should contain, plus how to store it and when to restock. Printable checklist included.</p>
+  </div>
+</a><a class="post-card" href="/blog/2026-09-24-wound-care-supplies-online.html">
+  <div class="post-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+  <div class="post-body">
+    <div class="post-meta"><span class="chip">Blog</span><span>First Aid</span><span>· 3 min read</span></div>
+    <h3>Buying Wound Care Supplies Online: A Practical Guide</h3>
+    <p>Which wound care supplies you actually need, from bandages and gauze to hydrocolloid and foam dressings, and how to buy them safely online.</p>
+  </div>
+</a><a class="post-card" href="/blog/2026-09-24-mobility-aids-for-seniors.html">
+  <div class="post-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+  <div class="post-body">
+    <div class="post-meta"><span class="chip">Blog</span><span>Mobility</span><span>· 5 min read</span></div>
+    <h3>Mobility Aids for Seniors: Complete Guide to Independence and Safety</h3>
+    <p>Canes, walkers, rollators and wheelchairs compared, plus how to choose the right mobility aid, set the correct height and stay safe at home.</p>
+  </div>
+</a></div>
+  </div>
 </section>
 
+<section class="section soft" aria-label="FAQ">
+  <div class="container"><div class="faq">
+  <h2 class="center" id="faq">Frequently asked questions</h2>
+  <details open><summary>What is MedicalSupplie?</summary><div class="answer"><p>MedicalSupplie is an independent buying guide. We research medical supplies, PPE, foot-health products, wellness devices, eyewear and U.S. telehealth services, then link you to trusted partner stores. We don't sell or ship products ourselves.</p></div></details>
+  <details><summary>Do you earn money from the links?</summary><div class="answer"><p>Yes. Most partner links are affiliate links, so we may earn a small commission if you buy, at no extra cost to you. It never changes the price you pay. Read our <a href="/affiliate-disclosure.html">affiliate disclosure</a>.</p></div></details>
+  <details><summary>Which gloves are best for everyday clinical use?</summary><div class="answer"><p>For most clinics and home carers, powder-free nitrile exam gloves around 3–4 mil thick are the best all-rounder: latex-free, puncture-resistant and comfortable. Choose 6–8 mil textured nitrile for cleaning or heavy-duty work. See our <a href="/guides/how-to-choose-medical-gloves.html">glove guide</a>.</p></div></details>
+  <details><summary>What is the difference between N95, KN95 and KF94 masks?</summary><div class="answer"><p>All three are filtering respirators rated for about 94–95% filtration of small particles. N95 is the U.S. NIOSH standard, KN95 is China's GB2626 standard and KF94 is South Korea's standard. Fit matters most. Details are in our <a href="/guides/n95-vs-kn95-vs-kf94-masks.html">mask guide</a>.</p></div></details>
+  <details><summary>Is telehealth safe for weight loss or hormone therapy?</summary><div class="answer"><p>Reputable telehealth services use licensed U.S. clinicians who review your history, may order labs and decide whether a treatment is appropriate. Ask about clinician licensing, follow-up and total costs before you start. Read <a href="/guides/telehealth-weight-loss-what-to-expect.html">what to expect</a>.</p></div></details>
+  <details><summary>Can arch-support insoles help plantar fasciitis?</summary><div class="answer"><p>Supportive footwear and orthotic insoles are among the first-line self-care options for heel pain, alongside stretching and rest. Persistent pain should be checked by a clinician. See our <a href="/guides/arch-support-insoles-plantar-fasciitis.html">insole guide</a>.</p></div></details>
+</div></div>
+</section>
+
+<section class="section" id="newsletter" aria-labelledby="nl-title">
+  <div class="container">
+    <div class="newsletter">
+      <div>
+        <span class="kicker" style="color:#a7e3dd">Newsletter</span>
+        <h2 id="nl-title">Deals & plain-English health-gear guides</h2>
+        <p>One short email a month: new partner offers, restocks and our latest buying guides. No spam, unsubscribe anytime.</p>
+      </div>
+      <div>
+        <form class="nl-form" action="mailto:hello@medicalsupplie.com" method="post" data-newsletter data-fallback="hello@medicalsupplie.com">
+          <label class="sr-only" for="nl-email">Email address</label>
+          <input id="nl-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <button class="btn" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Subscribe</button>
+        </form>
+        <p class="nl-note">By subscribing you agree to our <a href="/privacy.html" style="color:#fff">privacy policy</a>.</p>
+        <p class="nl-msg" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-<footer style="background:#0E1A2F;color:#94A3B8;padding:40px 20px;margin-top:40px;text-align:center">Exact Partner photos only — All images from official Partner CDNs — FullScopeMD at top — WalkHero fixed with direct links</footer>
-<script src="main.js" defer></script>
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <a class="brand" href="/"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#0e7c78"/><path d="M16.5 9h7v7.5H31v7h-7.5V31h-7v-7.5H9v-7h7.5z" fill="#fff"/><circle cx="31" cy="9" r="4" fill="#2fb3aa" stroke="#fff" stroke-width="2"/></svg><span>Medical<b>Supplie</b></span></a>
+      <p style="margin-top:14px;max-width:38ch">MedicalSupplie is an independent buying guide to medical supplies, PPE, foot health, wellness devices and U.S. telehealth, with plain-English guides and hand-picked partner products.</p>
+      <div class="social" aria-label="Follow us">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener me" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.6c0-.9.6-1.1 1-1.1h2.6V1.6L14 1.5c-4 0-4.9 3-4.9 4.9v2.1H6.5v4h2.6V22.5H14V12.5h3.3l.4-4z"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener me" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://x.com/" target="_blank" rel="noopener me" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 2.5h3.3l-7.2 8.2 8.5 11.3h-6.6l-5.2-6.8-6 6.8H1.3l7.7-8.8L.9 2.5h6.8l4.7 6.2zm-1.2 17.5h1.8L6.6 4.4H4.7z"/></svg></a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener me" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5C6.2 1.5 1.5 6.2 1.5 12c0 4.4 2.7 8.2 6.6 9.8-.1-.8-.2-2.1 0-3l1.2-5.2s-.3-.6-.3-1.6c0-1.5.9-2.6 2-2.6.9 0 1.4.7 1.4 1.6 0 1-.6 2.4-.9 3.7-.3 1.1.6 2 1.7 2 2 0 3.5-2.1 3.5-5.2 0-2.7-1.9-4.6-4.7-4.6-3.2 0-5.1 2.4-5.1 4.9 0 1 .4 2 .9 2.6.1.1.1.2.1.3l-.3 1.3c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.8-2.4-4.5 0-3.7 2.7-7.1 7.7-7.1 4 0 7.2 2.9 7.2 6.7 0 4-2.5 7.2-6 7.2-1.2 0-2.3-.6-2.7-1.3l-.7 2.8c-.3 1-1 2.3-1.5 3.1 1.1.3 2.3.5 3.5.5 5.8 0 10.5-4.7 10.5-10.5S17.8 1.5 12 1.5z"/></svg></a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener me" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-4.8.5-4.8s0-3.2-.5-4.8zM9.7 15V9l5.9 3z"/></svg></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener me" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Shop by category</h4>
+      <ul><li><a href="/shop/fullscopemd.html">All FullScopeMD treatments</a></li><li><a href="/#partner-fullscopemd">Telehealth</a></li><li><a href="/#partner-brookwood-med">Masks &amp; PPE</a></li><li><a href="/#partner-finitex">Gloves</a></li><li><a href="/#partner-walkhero">Foot Health</a></li><li><a href="/#partner-revo">Wellness Devices</a></li><li><a href="/#partner-eydology">Eyewear</a></li></ul>
+    </div>
+    <div>
+      <h4>Guides</h4>
+      <ul><li><a href="/guides/how-to-choose-medical-gloves.html">How to choose medical gloves</a></li><li><a href="/guides/n95-vs-kn95-vs-kf94-masks.html">N95 vs KN95 vs KF94 masks</a></li><li><a href="/guides/arch-support-insoles-plantar-fasciitis.html">Insoles for plantar fasciitis</a></li><li><a href="/guides/telehealth-weight-loss-what-to-expect.html">Telehealth: what to expect</a></li><li><a href="/blog/">Blog</a></li></ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about.html">About us</a></li>
+        <li><a href="/affiliate-disclosure.html">Affiliate disclosure</a></li>
+        <li><a href="/privacy.html">Privacy policy</a></li>
+        <li><a href="mailto:hello@medicalsupplie.com">Contact</a></li>
+        <li><a href="/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year>2026</span> MedicalSupplie. All rights reserved.</span>
+    <p class="disclaimer" style="margin:0">Content is for general information only and is not medical advice. Always consult a qualified healthcare professional. Some links are affiliate links; we may earn a commission at no extra cost to you.</p>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="Back to top" data-top><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></button>
+<script src="/assets/site.js?v=2026-09-29" defer></script>
 </body>
 </html>

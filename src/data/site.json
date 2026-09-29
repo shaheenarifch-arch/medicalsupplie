@@ -1,0 +1,23 @@
+{
+  "name": "MedicalSupplie",
+  "domain": "medicalsupplie.com",
+  "url": "https://medicalsupplie.com",
+  "tagline": "Trusted medical supplies & telehealth, reviewed in one place",
+  "description": "MedicalSupplie is an independent buying guide to medical supplies, PPE, foot health, wellness devices and U.S. telehealth, with plain-English guides and hand-picked partner products.",
+  "email": "hello@medicalsupplie.com",
+  "newsletter": {
+    "_help": "Paste the form action URL from Mailchimp, Buttondown, ConvertKit, Brevo or Formspree. Leave empty to use the email fallback (opens the visitor's mail app).",
+    "action": "",
+    "emailField": "email",
+    "method": "post"
+  },
+  "social": {
+    "_help": "Replace each URL with your real profile. Remove a line to hide that icon.",
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "x": "https://x.com/",
+    "pinterest": "https://www.pinterest.com/",
+    "youtube": "https://www.youtube.com/",
+    "linkedin": "https://www.linkedin.com/"
+  }
+}

@@ -1,0 +1,384 @@
+{
+ "brookwood-kids-kf94": {
+  "src": "brookwood-kids-kf94.jpg",
+  "width": 1600,
+  "height": 1600,
+  "variants": [
+   {
+    "w": 480,
+    "file": "brookwood-kids-kf94-480.webp",
+    "width": 480,
+    "height": 480
+   },
+   {
+    "w": 960,
+    "file": "brookwood-kids-kf94-960.webp",
+    "width": 960,
+    "height": 960
+   }
+  ]
+ },
+ "brookwood-kn95": {
+  "src": "brookwood-kn95.jpg",
+  "width": 1080,
+  "height": 951,
+  "variants": [
+   {
+    "w": 480,
+    "file": "brookwood-kn95-480.webp",
+    "width": 480,
+    "height": 423
+   },
+   {
+    "w": 960,
+    "file": "brookwood-kn95-960.webp",
+    "width": 960,
+    "height": 845
+   }
+  ]
+ },
+ "brookwood-white": {
+  "src": "brookwood-white.jpg",
+  "width": 540,
+  "height": 475,
+  "variants": [
+   {
+    "w": 480,
+    "file": "brookwood-white-480.webp",
+    "width": 480,
+    "height": 422
+   }
+  ]
+ },
+ "eydology-ai": {
+  "src": "eydology-ai.jpg",
+  "width": 533,
+  "height": 400,
+  "variants": [
+   {
+    "w": 480,
+    "file": "eydology-ai-480.webp",
+    "width": 480,
+    "height": 360
+   }
+  ]
+ },
+ "eydology-cateye": {
+  "src": "eydology-cateye.jpg",
+  "width": 645,
+  "height": 465,
+  "variants": [
+   {
+    "w": 480,
+    "file": "eydology-cateye-480.webp",
+    "width": 480,
+    "height": 346
+   }
+  ]
+ },
+ "finitex-black": {
+  "src": "finitex-black.jpg",
+  "width": 1500,
+  "height": 1500,
+  "variants": [
+   {
+    "w": 480,
+    "file": "finitex-black-480.webp",
+    "width": 480,
+    "height": 480
+   },
+   {
+    "w": 960,
+    "file": "finitex-black-960.webp",
+    "width": 960,
+    "height": 960
+   }
+  ]
+ },
+ "finitex-blue": {
+  "src": "finitex-blue.jpg",
+  "width": 1500,
+  "height": 1500,
+  "variants": [
+   {
+    "w": 480,
+    "file": "finitex-blue-480.webp",
+    "width": 480,
+    "height": 480
+   },
+   {
+    "w": 960,
+    "file": "finitex-blue-960.webp",
+    "width": 960,
+    "height": 960
+   }
+  ]
+ },
+ "finitex-rose": {
+  "src": "finitex-rose.jpg",
+  "width": 1500,
+  "height": 1500,
+  "variants": [
+   {
+    "w": 480,
+    "file": "finitex-rose-480.webp",
+    "width": 480,
+    "height": 480
+   },
+   {
+    "w": 960,
+    "file": "finitex-rose-960.webp",
+    "width": 960,
+    "height": 960
+   }
+  ]
+ },
+ "fullscopemd-glp1": {
+  "src": "fullscopemd-glp1.jpg",
+  "width": 2048,
+  "height": 1152,
+  "variants": [
+   {
+    "w": 480,
+    "file": "fullscopemd-glp1-480.webp",
+    "width": 480,
+    "height": 270
+   },
+   {
+    "w": 960,
+    "file": "fullscopemd-glp1-960.webp",
+    "width": 960,
+    "height": 540
+   }
+  ]
+ },
+ "fullscopemd-hormone": {
+  "src": "fullscopemd-hormone.jpg",
+  "width": 1536,
+  "height": 1024,
+  "variants": [
+   {
+    "w": 480,
+    "file": "fullscopemd-hormone-480.webp",
+    "width": 480,
+    "height": 320
+   },
+   {
+    "w": 960,
+    "file": "fullscopemd-hormone-960.webp",
+    "width": 960,
+    "height": 640
+   }
+  ]
+ },
+ "fullscopemd-telehealth": {
+  "src": "fullscopemd-telehealth.jpg",
+  "width": 1536,
+  "height": 1024,
+  "variants": [
+   {
+    "w": 480,
+    "file": "fullscopemd-telehealth-480.webp",
+    "width": 480,
+    "height": 320
+   },
+   {
+    "w": 960,
+    "file": "fullscopemd-telehealth-960.webp",
+    "width": 960,
+    "height": 640
+   }
+  ]
+ },
+ "fullscopemd-weight": {
+  "src": "fullscopemd-weight.jpg",
+  "width": 1240,
+  "height": 1432,
+  "variants": [
+   {
+    "w": 480,
+    "file": "fullscopemd-weight-480.webp",
+    "width": 480,
+    "height": 554
+   },
+   {
+    "w": 960,
+    "file": "fullscopemd-weight-960.webp",
+    "width": 960,
+    "height": 1109
+   }
+  ]
+ },
+ "fullscopemd-wellness": {
+  "src": "fullscopemd-wellness.jpg",
+  "width": 1536,
+  "height": 1024,
+  "variants": [
+   {
+    "w": 480,
+    "file": "fullscopemd-wellness-480.webp",
+    "width": 480,
+    "height": 320
+   },
+   {
+    "w": 960,
+    "file": "fullscopemd-wellness-960.webp",
+    "width": 960,
+    "height": 640
+   }
+  ]
+ },
+ "hero-fullscopemd": {
+  "src": "hero-fullscopemd.jpg",
+  "width": 2048,
+  "height": 1152,
+  "variants": [
+   {
+    "w": 640,
+    "file": "hero-fullscopemd-640.webp",
+    "width": 640,
+    "height": 360
+   },
+   {
+    "w": 1280,
+    "file": "hero-fullscopemd-1280.webp",
+    "width": 1280,
+    "height": 720
+   },
+   {
+    "w": 1920,
+    "file": "hero-fullscopemd-1920.webp",
+    "width": 1920,
+    "height": 1080
+   }
+  ]
+ },
+ "revo-face-genie": {
+  "src": "revo-face-genie.jpg",
+  "width": 1250,
+  "height": 1250,
+  "variants": [
+   {
+    "w": 480,
+    "file": "revo-face-genie-480.webp",
+    "width": 480,
+    "height": 480
+   },
+   {
+    "w": 960,
+    "file": "revo-face-genie-960.webp",
+    "width": 960,
+    "height": 960
+   }
+  ]
+ },
+ "revo-kit": {
+  "src": "revo-kit.jpg",
+  "width": 1707,
+  "height": 2048,
+  "variants": [
+   {
+    "w": 480,
+    "file": "revo-kit-480.webp",
+    "width": 480,
+    "height": 576
+   },
+   {
+    "w": 960,
+    "file": "revo-kit-960.webp",
+    "width": 960,
+    "height": 1152
+   }
+  ]
+ },
+ "revo-original": {
+  "src": "revo-original.jpg",
+  "width": 438,
+  "height": 500,
+  "variants": [
+   {
+    "w": 480,
+    "file": "revo-original-480.webp",
+    "width": 438,
+    "height": 500
+   }
+  ]
+ },
+ "walkhero-allpurpose-insoles": {
+  "src": "walkhero-allpurpose-insoles.jpg",
+  "width": 600,
+  "height": 600,
+  "variants": [
+   {
+    "w": 480,
+    "file": "walkhero-allpurpose-insoles-480.webp",
+    "width": 480,
+    "height": 480
+   }
+  ]
+ },
+ "walkhero-canvas-slippers": {
+  "src": "walkhero-canvas-slippers.jpg",
+  "width": 1700,
+  "height": 1700,
+  "variants": [
+   {
+    "w": 480,
+    "file": "walkhero-canvas-slippers-480.webp",
+    "width": 480,
+    "height": 480
+   },
+   {
+    "w": 960,
+    "file": "walkhero-canvas-slippers-960.webp",
+    "width": 960,
+    "height": 960
+   }
+  ]
+ },
+ "walkhero-insoles": {
+  "src": "walkhero-insoles.jpg",
+  "width": 600,
+  "height": 500,
+  "variants": [
+   {
+    "w": 480,
+    "file": "walkhero-insoles-480.webp",
+    "width": 480,
+    "height": 400
+   }
+  ]
+ },
+ "walkhero-shoes": {
+  "src": "walkhero-shoes.jpg",
+  "width": 1500,
+  "height": 1500,
+  "variants": [
+   {
+    "w": 480,
+    "file": "walkhero-shoes-480.webp",
+    "width": 480,
+    "height": 480
+   },
+   {
+    "w": 960,
+    "file": "walkhero-shoes-960.webp",
+    "width": 960,
+    "height": 960
+   }
+  ]
+ },
+ "walkhero-women": {
+  "src": "walkhero-women.jpg",
+  "width": 500,
+  "height": 500,
+  "variants": [
+   {
+    "w": 480,
+    "file": "walkhero-women-480.webp",
+    "width": 480,
+    "height": 480
+   }
+  ]
+ }
+}
