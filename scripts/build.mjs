@@ -110,7 +110,7 @@ const social = {
   linkedin: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>',
 };
 const socialLabel = { facebook: 'Facebook', instagram: 'Instagram', x: 'X (Twitter)', pinterest: 'Pinterest', youtube: 'YouTube', linkedin: 'LinkedIn' };
-const logo = `<svg class="brand-mark" width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#2563eb"/><path d="M16.5 9h7v7.5H31v7h-7.5V31h-7v-7.5H9v-7h7.5z" fill="#fff"/><circle cx="31" cy="9" r="4" fill="#60a5fa" stroke="#fff" stroke-width="2"/></svg>`;
+const logo = `<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#0e7c78"/><path d="M16.5 9h7v7.5H31v7h-7.5V31h-7v-7.5H9v-7h7.5z" fill="#fff"/><circle cx="31" cy="9" r="4" fill="#2fb3aa" stroke="#fff" stroke-width="2"/></svg>`;
 
 // ---------- layout ----------
 const NAV = [
@@ -132,7 +132,7 @@ function head({ title, description, canonical, image = '/images/og-image.jpg', t
 <meta name="description" content="${attr(description)}">
 <link rel="canonical" href="${abs(canonical)}">
 ${noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">'}
-<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0e7c78">
 <meta property="og:site_name" content="${site.name}">
 <meta property="og:type" content="${type}">
 <meta property="og:title" content="${attr(title)}">
@@ -159,17 +159,13 @@ function header(active = '') {
   return `<body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
-  <div class="wrap header-inner">
-    <a class="logo" href="/" aria-label="${site.name} home">${logo}<span>Medical<i>Supplie</i></span></a>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="${site.name} home">${logo}<span>Medical<b>Supplie</b></span></a>
+    <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" data-menu-btn>${icon.menu}</button>
     <nav class="nav" id="site-nav" aria-label="Main">
       ${NAV.map(([h, t]) => `<a href="${h}"${active === t ? ' aria-current="page"' : ''}>${t}</a>`).join('\n      ')}
+      <a class="btn btn-primary btn-sm" href="/#newsletter">Get deals</a>
     </nav>
-    <div class="search-box" data-search>
-      <label class="sr-only" for="site-search">Search products and guides</label>
-      <input class="search" id="site-search" type="search" placeholder="Search products" autocomplete="off" aria-controls="search-results" aria-expanded="false">
-      <div class="search-results" id="search-results" role="listbox" hidden></div>
-    </div>
-    <button class="menu" type="button" aria-controls="site-nav" aria-expanded="false" data-menu-btn>Menu</button>
   </div>
 </header>`;
 }
@@ -177,22 +173,24 @@ function header(active = '') {
 function newsletter() {
   const n = site.newsletter || {};
   const action = n.action || `mailto:${site.email}`;
-  return `<section class="wrap" id="newsletter" aria-labelledby="nl-title">
-  <div class="newsletter">
-    <div>
-      <p class="eyebrow">Newsletter</p>
-      <h2 id="nl-title">Deals & honest health-gear guides.</h2>
-      <p>One short email a month: new partner offers, restocks and our latest buying guides. No spam, unsubscribe anytime.</p>
-    </div>
-    <div class="nl-side">
-      <form class="nl-form" action="${attr(action)}" method="${n.method || 'post'}" data-newsletter data-fallback="${attr(site.email)}"${n.action ? ' target="_blank"' : ''}>
-        <label class="sr-only" for="nl-email">Email address</label>
-        <input id="nl-email" type="email" name="${attr(n.emailField || 'email')}" placeholder="you@example.com" autocomplete="email" required>
-        <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="nl-note">By subscribing you agree to our <a href="/privacy.html">privacy policy</a>.</p>
-      <p class="nl-msg" role="status" aria-live="polite"></p>
+  return `<section class="section" id="newsletter" aria-labelledby="nl-title">
+  <div class="container">
+    <div class="newsletter">
+      <div>
+        <span class="kicker" style="color:#a7e3dd">Newsletter</span>
+        <h2 id="nl-title">Deals & plain-English health-gear guides</h2>
+        <p>One short email a month: new partner offers, restocks and our latest buying guides. No spam, unsubscribe anytime.</p>
+      </div>
+      <div>
+        <form class="nl-form" action="${attr(action)}" method="${n.method || 'post'}" data-newsletter data-fallback="${attr(site.email)}"${n.action ? ' target="_blank"' : ''}>
+          <label class="sr-only" for="nl-email">Email address</label>
+          <input id="nl-email" type="email" name="${attr(n.emailField || 'email')}" placeholder="you@example.com" autocomplete="email" required>
+          <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <button class="btn" type="submit">${icon.mail} Subscribe</button>
+        </form>
+        <p class="nl-note">By subscribing you agree to our <a href="/privacy.html" style="color:#fff">privacy policy</a>.</p>
+        <p class="nl-msg" role="status" aria-live="polite"></p>
+      </div>
     </div>
   </div>
 </section>`;
@@ -200,25 +198,37 @@ function newsletter() {
 
 function footer() {
   const soc = Object.entries(site.social || {}).filter(([k, v]) => social[k] && v);
-  const col = (h, links) => `<div class="footer-col"><h2>${h}</h2>${links.map(([u, t]) => `<a href="${u}">${esc(t)}</a>`).join('')}</div>`;
   return `<footer class="site-footer">
-  <div class="wrap footer-grid">
+  <div class="container footer-top">
     <div class="footer-brand">
-      <a class="logo" href="/">${logo}<strong>Medical<i>Supplie</i></strong></a>
-      <p>${esc(site.description)}</p>
-      <div class="fcontact"><a href="mailto:${site.email}">${icon.mail} ${site.email}</a></div>
-      <div class="socials" aria-label="Follow us">
-        ${soc.map(([k, v]) => `<a class="soc" href="${attr(v)}" target="_blank" rel="noopener me" aria-label="${socialLabel[k]}">${social[k]}</a>`).join('\n        ')}
+      <a class="brand" href="/">${logo}<span>Medical<b>Supplie</b></span></a>
+      <p style="margin-top:14px;max-width:38ch">${esc(site.description)}</p>
+      <div class="social" aria-label="Follow us">
+        ${soc.map(([k, v]) => `<a href="${attr(v)}" target="_blank" rel="noopener me" aria-label="${socialLabel[k]}">${social[k]}</a>`).join('\n        ')}
       </div>
     </div>
-    ${col('Shop', Object.keys(feeds).filter((id) => partners[id]).map((id) => [catalogPath(id), partners[id].category]))}
-    ${col('Guides', articles.filter((a) => a.type === 'guide').map((a) => [a.path, a.short || a.title]))}
-    ${col('Read', [['/blog/', 'Blog'], ...articles.filter((a) => a.type === 'blog').slice(0, 4).map((a) => [a.path, a.short || a.title])])}
-    ${col('Company', [['/about.html', 'About us'], ['/affiliate-disclosure.html', 'Affiliate disclosure'], ['/privacy.html', 'Privacy policy'], [`mailto:${site.email}`, 'Contact'], ['/sitemap.xml', 'Sitemap']])}
+    <div>
+      <h4>Shop by category</h4>
+      <ul>${Object.keys(feeds).filter((id) => partners[id]).map((id) => `<li><a href="${catalogPath(id)}">${esc(partners[id].category)}</a></li>`).join('')}</ul>
+    </div>
+    <div>
+      <h4>Guides</h4>
+      <ul>${articles.filter((a) => a.type === 'guide').slice(0, 5).map((a) => `<li><a href="${a.path}">${esc(a.short || a.title)}</a></li>`).join('')}<li><a href="/blog/">Blog</a></li></ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about.html">About us</a></li>
+        <li><a href="/affiliate-disclosure.html">Affiliate disclosure</a></li>
+        <li><a href="/privacy.html">Privacy policy</a></li>
+        <li><a href="mailto:${site.email}">Contact</a></li>
+        <li><a href="/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="wrap footer-bottom">
-    <p>© <span data-year>${new Date().getFullYear()}</span> ${site.name}. All rights reserved.</p>
-    <p>Content is for general information only and is not medical advice. Always consult a qualified healthcare professional. Some links are affiliate links; we may earn a commission at no extra cost to you. Prices and availability are set by the retailer and may change.</p>
+  <div class="container footer-bottom">
+    <span>© <span data-year>${new Date().getFullYear()}</span> ${site.name}. All rights reserved.</span>
+    <p class="disclaimer" style="margin:0">Content is for general information only and is not medical advice. Always consult a qualified healthcare professional. Some links are affiliate links; we may earn a commission at no extra cost to you.</p>
   </div>
 </footer>
 <button class="to-top" type="button" aria-label="Back to top" data-top>${icon.up}</button>
@@ -228,73 +238,50 @@ function footer() {
 `;
 }
 
-
 // ---------- components ----------
-const ARROW = '<span aria-hidden="true">↗</span>';
 function productCard(p, { eager = false } = {}) {
-  return `<article class="card pick">
-  <a class="card-img" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}" tabindex="-1" aria-hidden="true">
-    ${img(p.image, { alt: `${p.name} from ${p.partnerObj.name}`, eager, sizes: '(max-width:650px) 82vw, 355px' })}
-    ${p.badge ? `<span class="badge">${esc(p.badge)}</span>` : ''}
-    <span class="view">View ${ARROW}</span>
+  return `<article class="card">
+  <a class="card-media" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}" tabindex="-1" aria-hidden="true">
+    ${img(p.image, { alt: `${p.name} from ${p.partnerObj.name}`, eager })}
+    ${p.badge ? `<span class="badge${p.badge === 'Featured' || p.badge === 'Best seller' ? ' hot' : ''}">${esc(p.badge)}</span>` : ''}
   </a>
-  <div class="card-copy">
-    <p class="card-partner">${esc(p.partnerObj.name)}</p>
-    <h3><a href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}">${esc(p.name)}</a></h3>
-    <div><span class="price muted">${esc(p.blurb ? 'See today\'s price' : 'View offer')}</span><a class="go" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}" aria-label="View ${attr(p.name)}">${ARROW}</a></div>
+  <div class="card-body">
+    <span class="card-partner">${esc(p.partnerObj.name)}</span>
+    <h3>${esc(p.name)}</h3>
+    <p>${esc(p.blurb || '')}</p>
+    <a class="btn btn-primary btn-sm" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}">View deal ${icon.ext}</a>
   </div>
 </article>`;
 }
 
 function feedCard(p) {
-  const rx = isRx(p.partner || p.partnerObj.id);
-  const aff = p.affiliate !== false;
-  return `<article class="card">
-  <a class="card-img" href="${attr(p.url)}" target="_blank" rel="${rel(aff)}" tabindex="-1" aria-hidden="true">
-    <img src="${attr(p.image)}" alt="${attr(p.name)}" width="400" height="470" loading="lazy" decoding="async"${p.imageFallback ? ` onerror="this.onerror=null;this.src='${attr(p.imageFallback)}'"` : ''}>
+  const short = p.description.length > 110 ? p.description.slice(0, 107).replace(/\s+\S*$/, '') + '…' : p.description;
+  return `<article class="card feed">
+  <a class="card-media" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate !== false)}" tabindex="-1" aria-hidden="true">
+    <img src="${attr(p.image)}" alt="${attr(p.name)}" width="400" height="400" loading="lazy" decoding="async"${p.imageFallback ? ` onerror="this.onerror=null;this.src='${attr(p.imageFallback)}'"` : ''}>
     <span class="badge">${esc(p.category)}</span>
-    <span class="view">View ${ARROW}</span>
   </a>
-  <div class="card-copy">
-    <p class="card-partner">${esc(p.partnerObj.name)}${rx ? ' · Clinician review' : ''}</p>
-    <h3><a href="${attr(p.url)}" target="_blank" rel="${rel(aff)}">${esc(p.name)}</a></h3>
-    <div><span class="price">${p.price != null ? `${rx ? '<small>From</small> ' : ''}${money(p.price, p.currency)}` : '<span class="muted">See price</span>'}</span><a class="go" href="${attr(p.url)}" target="_blank" rel="${rel(aff)}" aria-label="View ${attr(p.name)}">${ARROW}</a></div>
+  <div class="card-body">
+    <span class="card-partner">${esc(p.partnerObj.name)}</span>
+    <h3>${esc(p.name)}</h3>
+    ${short ? `<p>${esc(short)}</p>` : '<p></p>'}
+    <div class="price-row">${p.price != null ? `<span class="price"><small>From</small> ${money(p.price, p.currency)}</span>` : ''}${isRx(p.partner || p.partnerObj.id) ? '<span class="rx">Clinician review</span>' : ''}</div>
+    <a class="btn btn-primary btn-sm" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate !== false)}">${isRx(p.partner || p.partnerObj.id) ? 'View details' : 'View deal'} ${icon.ext}</a>
   </div>
 </article>`;
 }
 
 function carousel(items, label, id) {
-  return `<div class="railbox" data-carousel>
-  <button class="arrow prev" type="button" data-prev aria-label="Previous ${attr(label)}" aria-controls="${id}">‹</button>
-  <div class="rail track" id="${id}" role="region" aria-roledescription="carousel" aria-label="${attr(label)}" tabindex="0">
+  return `<div class="carousel" data-carousel>
+  <div class="section-head" style="margin-bottom:12px;justify-content:flex-end">
+    <div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous ${attr(label)}" aria-controls="${id}">${icon.left}</button><button class="car-btn" type="button" data-next aria-label="Next ${attr(label)}" aria-controls="${id}">${icon.right}</button></div>
+  </div>
+  <div class="track" id="${id}" role="region" aria-roledescription="carousel" aria-label="${attr(label)}" tabindex="0">
     ${items.join('\n    ')}
   </div>
-  <button class="arrow next" type="button" data-next aria-label="Next ${attr(label)}" aria-controls="${id}">›</button>
+  <div class="car-progress" aria-hidden="true"><span></span></div>
 </div>`;
 }
-
-function collection({ id, eyebrow, title, text, more, items, label, cls = '' }) {
-  return `<section class="collection${cls ? ' ' + cls : ''}" id="${id}" aria-labelledby="${id}-t">
-  <div class="section-head">
-    <div><p class="eyebrow">${esc(eyebrow)}</p><h2 id="${id}-t">${esc(title)}</h2>${text ? `<p>${text}</p>` : ''}</div>
-    ${more ? `<a href="${attr(more[0])}"${/^https?:/.test(more[0]) ? ` target="_blank" rel="${more[2] === false ? 'noopener' : 'sponsored noopener'}"` : ''}>${esc(more[1])}</a>` : ''}
-  </div>
-  ${carousel(items, label || title, 'car-' + id)}
-</section>`;
-}
-
-function story(tone, eyebrow, title, text, cta) {
-  return `<section class="story story-${tone}">
-  <div>
-    <p class="eyebrow">${esc(eyebrow)}</p>
-    <h2>${esc(title)}</h2>
-    <p>${text}</p>
-    ${cta ? `<div class="actions">${cta}</div>` : ''}
-  </div>
-</section>`;
-}
-
-
 
 function banners(partnerId, limit = 99) {
   const list = (feed.banners || []).filter((b) => !partnerId || b.partner === partnerId).slice(0, limit);
@@ -303,22 +290,17 @@ function banners(partnerId, limit = 99) {
   return `<div class="banners">${list.map((b) => `<a rel="sponsored noopener" target="_blank" href="${attr(b.href)}"><img src="${attr(b.img)}" alt="${attr(pname)} offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a>`).join('')}</div>`;
 }
 
-const TONES = ['coral', 'sky', 'sage', 'sand', 'lav', 'pink'];
-function postCard(a, i = 0) {
-  const tone = TONES[articles.indexOf(a) % TONES.length];
-  const hero = a.image ? img(a.image, { alt: '', sizes: '(max-width:650px) 82vw, 355px' }) : `<span class="post-ic">${catIcon[a.category] || icon.book}</span>`;
-  return `<article class="card post">
-  <a class="card-img tone-${tone}" href="${a.path}" tabindex="-1" aria-hidden="true">${hero}<span class="badge">${a.type === 'guide' ? 'Guide' : 'Blog'}</span></a>
-  <div class="card-copy">
-    <p class="card-partner">${esc(a.category)} · ${a.readMins} min read</p>
-    <h3><a href="${a.path}">${esc(a.title)}</a></h3>
-    <p class="post-desc">${esc(a.description)}</p>
-    <div><span class="price muted">Read ${a.type === 'guide' ? 'guide' : 'article'}</span><a class="go" href="${a.path}" aria-label="Read ${attr(a.title)}">→</a></div>
+function postCard(a) {
+  const hero = a.image ? img(a.image, { alt: a.title, sizes: '(max-width:600px) 100vw, 380px' }) : (catIcon[a.category] || icon.book);
+  return `<a class="post-card" href="${a.path}">
+  <div class="post-thumb">${hero}</div>
+  <div class="post-body">
+    <div class="post-meta"><span class="chip">${a.type === 'guide' ? 'Guide' : 'Blog'}</span><span>${esc(a.category)}</span><span>· ${a.readMins} min read</span></div>
+    <h3>${esc(a.title)}</h3>
+    <p>${esc(a.description)}</p>
   </div>
-</article>`;
+</a>`;
 }
-
-
 
 function crumbs(list) {
   return `<nav class="crumbs" aria-label="Breadcrumb"><ol>${list.map(([h, t], i) => `<li>${i < list.length - 1 ? `<a href="${h}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`}</li>`).join('')}</ol></nav>`;
@@ -350,37 +332,15 @@ const HOME_FAQS = [
 ];
 
 // ---------- pages ----------
-const CAT_BLURB = {
-  'Telehealth': 'See a licensed U.S. clinician online',
-  'Masks & PPE': 'KN95, KF94 and surgical masks',
-  'Gloves': 'Nitrile exam and heavy-duty gloves',
-  'Foot Health': 'Arch-support shoes and insoles',
-  'Wellness Devices': 'Smart cupping and LED care',
-  'Eyewear': 'Frames and smart glasses',
-};
-
 function homePage() {
   const featured = feed.partners.find((p) => p.featured) || feed.partners[0];
   const rest = feed.partners.filter((p) => p !== featured);
   const heroPic = imgs['hero-fullscopemd'];
   const heroSrcset = heroPic ? heroPic.variants.map((v) => `/images/opt/${v.file} ${v.width}w`).join(', ') : '';
-  const preload = heroPic ? `<link rel="preload" as="image" imagesrcset="${heroSrcset}" imagesizes="(max-width:900px) 100vw, 45vw" fetchpriority="high">` : '';
+  const preload = heroPic ? `<link rel="preload" as="image" imagesrcset="${heroSrcset}" imagesizes="(max-width:900px) 100vw, 560px" fetchpriority="high">` : '';
   const guides = articles.filter((a) => a.type === 'guide');
   const posts = articles.filter((a) => a.type === 'blog');
   const itemList = { '@type': 'ItemList', name: 'Featured medical supplies and telehealth services', itemListElement: products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: p.url })) };
-  const fsPrices = feedItems(featured.id).map((p) => p.price).filter((v) => v != null);
-  const fsFrom = fsPrices.length ? money(Math.min(...fsPrices)) : '';
-  const moreLink = (pt) => (feedItems(pt.id).length ? [catalogPath(pt.id), 'Explore all'] : [pt.url, 'Explore all', pt.affiliate]);
-  const stories = {
-    'brookwood-med': ['sage', 'Everyday protection', 'Breathe easier, wherever you are.', 'Certified respirators and surgical masks for adults and kids, in bulk and small packs.'],
-    'walkhero': ['sand', 'All-day comfort', 'Support for every step.', 'Arch-support shoes, orthotic insoles and slippers built for long days on your feet.'],
-    'eydology': ['lav', 'See it differently', 'Frames that fit your life.', 'Lightweight prescription-ready frames and smart glasses with modern designs.'],
-  };
-  const sideCard = (tone, pic, label, eyebrow, title, href, cta) => `<div class="feature ${tone}">
-      <a class="feature-pic" href="${href}" tabindex="-1" aria-hidden="true">${img(pic, { alt: '', sizes: '(max-width:1050px) 50vw, 25vw', eager: true })}<span>${esc(label)}</span></a>
-      <div><p class="eyebrow">${esc(eyebrow)}</p><h2>${esc(title)}</h2></div>
-      <a href="${href}">${esc(cta)}</a>
-    </div>`;
 
   return head({
     title: 'MedicalSupplie — Medical Supplies, PPE & Telehealth Buying Guide',
@@ -389,82 +349,116 @@ function homePage() {
     preload,
     schema: [itemList, faqSchema(HOME_FAQS)],
   }) + header('') + `
-<main id="main" class="wrap">
-<section class="hero" aria-label="Featured">
-  <div class="hero-main hero-lit">
-    <div class="hero-copy">
-      <p class="eyebrow">New · Telehealth from home</p>
-      <h1>Medical Supplies & Care, Made Simple</h1>
-      <p>Compare trusted gloves, masks, foot-health gear and wellness devices, or see a licensed U.S. clinician online. Honest guides and hand-picked partners.</p>
-      <ul class="hero-points">
-        <li>Vetted partner stores</li>
-        <li>Clinician-informed guides</li>
-        <li>Real starting prices</li>
-      </ul>
-      <div class="actions">
-        <a class="btn" href="${catalogPath(featured.id)}">Browse telehealth${fsFrom ? ` from ${fsFrom}` : ''}</a>
-        <a class="btn alt" href="#trending">Shop top picks</a>
+<main id="main">
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Clinician-informed · Updated ${new Date().toLocaleString('en-US', { month: 'long', year: 'numeric' })}</span>
+      <h1>Medical supplies & telehealth, <em>made simple.</em></h1>
+      <p class="lead">Compare trusted gloves, masks, foot-health gear and wellness devices, or see a licensed U.S. clinician online. Honest guides, hand-picked partners, zero jargon.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#shop">Shop top picks ${icon.arrow}</a>
+        <a class="btn btn-ghost" href="/guides/">Read buying guides</a>
       </div>
-      <p class="hero-note">Prices and availability are set by the retailer and may change.</p>
+      <ul class="hero-trust">
+        <li>${icon.shield} Vetted partner stores</li>
+        <li>${icon.steth} Clinician-informed guides</li>
+        <li>${icon.truck} U.S.-focused partners</li>
+      </ul>
     </div>
-    <a class="hero-product" href="${catalogPath(featured.id)}">
-      <img src="/images/opt/hero-fullscopemd-1280.webp" srcset="${heroSrcset}" sizes="(max-width:900px) 100vw, 45vw" width="1280" height="720" alt="Clinician smiling during a telehealth video visit on a tablet" fetchpriority="high" decoding="async">
-      <span class="hero-tag"><b>${esc(featured.name)} telehealth</b>${fsFrom ? `From ${fsFrom}` : 'Licensed U.S. clinicians'}</span>
-    </a>
-  </div>
-  <div class="side">
-    ${sideCard('lav', 'brookwood-kn95.jpg', 'KN95 5-Ply · Brookwood', 'Protect every shift', 'Masks you can trust.', catalogPath('brookwood-med'), 'Explore masks')}
-    ${sideCard('sand', 'walkhero-shoes.jpg', 'Arch Support Shoes · WalkHero', 'Comfort all day', 'Support every step.', catalogPath('walkhero'), 'Explore foot health')}
-  </div>
-</section>
-
-<section class="rooms" aria-labelledby="cat-t">
-  <div class="title"><p class="eyebrow">Find what you need</p><h2 id="cat-t">Shop by Category</h2><p>Start with the category, then compare products and guides from trusted partners.</p></div>
-  <div class="room-grid">
-    ${feed.partners.map((p) => `<a class="room" href="${feeds[p.id] ? catalogPath(p.id) : '#partner-' + p.id}"><span class="room-ic">${catIcon[p.category] || icon.heart}</span><h3>${esc(p.category)}</h3><p>${esc(CAT_BLURB[p.category] || p.tagline)}</p></a>`).join('\n    ')}
+    <div class="hero-media">
+      <picture>
+        <img src="/images/opt/hero-fullscopemd-1280.webp" srcset="${heroSrcset}" sizes="(max-width:900px) 100vw, 560px" width="1280" height="720" alt="Clinician smiling during a telehealth video visit on a tablet" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero-card c1"><span class="ic">${icon.video}</span><div><strong>See a clinician online</strong><small>Telehealth via ${esc(featured.name)}</small></div></div>
+      <div class="hero-card c2"><span class="ic">${icon.shield}</span><div><strong>${products.length}+ vetted picks</strong><small>${feed.partners.length} trusted partners</small></div></div>
+    </div>
   </div>
 </section>
 
-${collection({ id: 'trending', cls: 'band-sky', eyebrow: 'Top picks', title: 'Trending This Month', text: 'Our most-clicked products across every category. Tap a card to see today\'s price at the partner store.', items: feed.partners.flatMap((pt) => partnerItems(pt.id, 4)), label: 'Top picks' })}
-
-${story('living', 'Care from home', 'See a clinician without the waiting room.', `${esc(featured.tagline)} Every treatment is reviewed by a licensed U.S. clinician.`, `<a class="btn" href="${catalogPath(featured.id)}">Browse all ${feedItems(featured.id).length || ''} treatments</a><a class="btn alt" href="/guides/telehealth-weight-loss-what-to-expect.html">How telehealth works</a>`)}
-
-${collection({ id: 'partner-' + featured.id, eyebrow: `Featured partner · ${featured.category}`, title: `${featured.name}: 30 Popular Treatments`, text: 'Weight care, hormone therapy, hair loss, acute care and more, with starting prices.', more: moreLink(featured), items: feedItems(featured.id).length ? mixed(feedItems(featured.id), 30).map(feedCard) : byPartner(featured.id).map((p) => productCard(p)), label: `${featured.name} treatments` })}
-${banners(featured.id) ? `<div class="banner-strip"><p class="eyebrow">Current ${esc(featured.name)} offers</p>${banners(featured.id)}</div>` : ''}
-
-${rest.map((pt) => `${stories[pt.id] ? story(stories[pt.id][0], stories[pt.id][1], stories[pt.id][2], stories[pt.id][3]) : ''}
-${collection({ id: 'partner-' + pt.id, eyebrow: pt.category, title: `${pt.name}`, text: esc(pt.tagline), more: moreLink(pt), items: partnerItems(pt.id, 14), label: `${pt.name} products` })}
-${banners(pt.id) ? `<div class="banner-strip">${banners(pt.id)}</div>` : ''}`).join('\n')}
-
-<section class="collection band-warm" id="why" aria-labelledby="why-t">
-  <div class="section-head"><div><p class="eyebrow">Why MedicalSupplie</p><h2 id="why-t">Buy With Confidence</h2><p>What you can expect from every page and partner on this site.</p></div></div>
-  ${carousel([
-    [icon.shield, 'Vetted partners', 'We only list stores with clear specs, secure checkout and real customer support.'],
-    [icon.book, 'Plain-English guides', 'Standards like ASTM, NIOSH and mil thickness, explained simply.'],
-    [icon.heart, 'Independent picks', 'Commissions never change our recommendations or your price.'],
-    [icon.bolt, 'Fast & private', 'No account, no pop-ups. Just pick and go.'],
-    [icon.steth, 'Licensed telehealth', 'Online care partners use licensed U.S. clinicians.'],
-    [icon.star, 'Real prices', 'Starting prices pulled from partner stores and refreshed often.'],
-  ].map(([ic, t, d], i) => `<div class="prop tone-${TONES[i % 6]}"><span class="room-ic">${ic}</span><h3>${t}</h3><p>${d}</p></div>`), 'Why MedicalSupplie', 'car-props')}
+<section class="cats" aria-label="Shop by category">
+  <div class="container cat-row">
+    ${feed.partners.map((p) => `<a class="cat" href="${feeds[p.id] ? catalogPath(p.id) : '#partner-' + p.id}"><span class="ic">${catIcon[p.category] || icon.heart}</span>${esc(p.category)}</a>`).join('\n    ')}
+  </div>
 </section>
 
-${collection({ id: 'guides', eyebrow: 'Buying guides', title: 'Know Exactly What to Buy', text: 'Short, practical guides that answer the questions people actually ask.', more: ['/guides/', 'Explore all'], items: guides.map(postCard) })}
+<section class="section" id="shop" aria-labelledby="shop-title">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="kicker">Top picks</span><h2 id="shop-title">Trending across every category</h2><p>A quick look at our most-clicked products this month. Tap any card to see today's price at the partner store.</p></div>
+    </div>
+    ${carousel(feed.partners.flatMap((pt) => partnerItems(pt.id, 4)), 'Top picks', 'car-top')}
+  </div>
+</section>
 
-${collection({ id: 'blog', eyebrow: 'From the blog', title: 'Health-at-Home Tips', text: 'First aid, wound care, mobility and everyday wellness.', more: ['/blog/', 'Explore all'], items: posts.map(postCard) })}
+<section class="section soft" id="partners" aria-labelledby="partners-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">Our partners</span><h2 id="partners-title">Shop by trusted partner</h2><p>Every partner is checked for clear product information, secure checkout and U.S. availability.</p></div></div>
+
+    <div class="featured-band partner" id="partner-${featured.id}">
+      <div class="partner-head">
+        <div><h3>${esc(featured.name)} <span class="chip">★ Featured · ${esc(featured.category)}</span></h3><p>${esc(featured.tagline)}</p></div>
+        <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="/guides/telehealth-weight-loss-what-to-expect.html">How telehealth works</a><a class="btn btn-primary btn-sm" style="background:#fff;color:var(--teal-900)" href="${attr(featured.url)}" target="_blank" rel="${rel(featured.affiliate)}">${esc(featured.cta)} ${icon.ext}</a></div>
+      </div>
+      ${feedItems(featured.id).length
+        ? carousel(mixed(feedItems(featured.id), 30).map(feedCard), `${featured.name}: 30 popular treatments`, 'car-' + featured.id) +
+          `<p class="center" style="margin:18px 0 0"><a class="btn btn-ghost btn-sm" href="${catalogPath(featured.id)}">Browse all ${feedItems(featured.id).length} ${esc(featured.name)} treatments ${icon.arrow}</a></p>`
+        : carousel(byPartner(featured.id).map((p) => productCard(p)), featured.name + ' services', 'car-' + featured.id)}
+      ${banners(featured.id) ? `<p class="banners-label">Current ${esc(featured.name)} offers</p>${banners(featured.id)}` : ''}
+    </div>
+
+    ${rest.map((pt) => `<div class="partner" id="partner-${pt.id}">
+      <div class="partner-head">
+        <div><h3>${esc(pt.name)} <span class="chip">${esc(pt.category)}</span></h3><p>${esc(pt.tagline)}</p></div>
+        <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="${attr(pt.url)}" target="_blank" rel="${rel(pt.affiliate)}">${esc(pt.cta)} ${icon.ext}</a></div>
+      </div>
+      ${carousel(partnerItems(pt.id, 14), pt.name + ' products', 'car-' + pt.id)}
+      ${feedItems(pt.id).length ? `<p class="center" style="margin:18px 0 0"><a class="btn btn-ghost btn-sm" href="${catalogPath(pt.id)}">Browse all ${esc(pt.name)} products ${icon.arrow}</a></p>` : ''}
+      ${banners(pt.id)}
+    </div>`).join('\n    ')}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">Why MedicalSupplie</span><h2 id="why-title">Buy with confidence</h2></div></div>
+    <div class="carousel props-car" data-carousel>
+    <div class="section-head" style="margin-bottom:12px;justify-content:flex-end"><div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous" aria-controls="car-props">${icon.left}</button><button class="car-btn" type="button" data-next aria-label="Next" aria-controls="car-props">${icon.right}</button></div></div>
+    <div class="track props" id="car-props" role="region" aria-roledescription="carousel" aria-label="Why MedicalSupplie" tabindex="0">
+      <div class="prop"><span class="ic">${icon.shield}</span><h3>Vetted partners</h3><p>We only list stores with clear specs, secure checkout and real customer support.</p></div>
+      <div class="prop"><span class="ic">${icon.book}</span><h3>Plain-English guides</h3><p>Standards like ASTM, NIOSH and mil thickness, explained simply.</p></div>
+      <div class="prop"><span class="ic">${icon.heart}</span><h3>Independent picks</h3><p>Commissions never change our recommendations or your price.</p></div>
+      <div class="prop"><span class="ic">${icon.bolt}</span><h3>Fast & private</h3><p>No account, no tracking pop-ups. Just pick and go.</p></div>
+      <div class="prop"><span class="ic">${icon.steth}</span><h3>Licensed telehealth</h3><p>Online care partners use licensed U.S. clinicians.</p></div>
+      <div class="prop"><span class="ic">${icon.star}</span><h3>Real prices</h3><p>Starting prices pulled from partner stores and refreshed often.</p></div>
+    </div>
+    <div class="car-progress" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="guides" aria-labelledby="guides-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">Buying guides</span><h2 id="guides-title">Know exactly what to buy</h2><p>Short, practical guides that answer the questions people actually ask.</p></div><a class="btn btn-ghost btn-sm" href="/guides/">All guides ${icon.arrow}</a></div>
+    ${carousel(guides.map((a) => postCard(a)), 'Buying guides', 'car-guides')}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="blog-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">From the blog</span><h2 id="blog-title">Health-at-home tips</h2></div><a class="btn btn-ghost btn-sm" href="/blog/">All articles ${icon.arrow}</a></div>
+    ${carousel(posts.map(postCard), 'Blog articles', 'car-blog')}
+  </div>
+</section>
+
+<section class="section soft" aria-label="FAQ">
+  <div class="container">${faqBlock(HOME_FAQS)}</div>
+</section>
 
 ${newsletter()}
-
-<section class="faq" aria-labelledby="faq-t">
-  <div class="title"><p class="eyebrow">Good to know</p><h2 id="faq-t">Frequently Asked Questions</h2></div>
-  <div class="faq-grid">
-    ${HOME_FAQS.map((f) => `<details><summary>${esc(f.q)}</summary><p>${f.a}</p></details>`).join('\n    ')}
-  </div>
-</section>
 </main>
 ` + footer();
 }
-
-
 
 function articlePage(a) {
   const section = a.type === 'guide' ? ['/guides/', 'Guides'] : ['/blog/', 'Blog'];
@@ -485,7 +479,7 @@ function articlePage(a) {
   return head({ title: `${a.title} | ${site.name}`, description: a.description, canonical: a.path, type: 'article', schema }) + header(section[1]) + `
 <main id="main">
 <header class="page-hero">
-  <div class="wrap">
+  <div class="container">
     ${crumbs(list)}
     <span class="kicker">${esc(a.category)} ${a.type === 'guide' ? 'guide' : ''}</span>
     <h1>${esc(a.title)}</h1>
@@ -493,7 +487,7 @@ function articlePage(a) {
     <div class="byline"><span>By the ${site.name} Editorial Team</span><span>Updated <time datetime="${a.updated || a.date}">${new Date(a.updated || a.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time></span><span>${a.readMins} min read</span></div>
   </div>
 </header>
-<div class="wrap article-wrap">
+<div class="container article-wrap">
   <article class="prose">
     ${a.quick ? `<div class="quick-answer"><strong>${icon.bolt.replace('<svg', '<svg width="16" height="16"')} Quick answer</strong><p>${a.quick}</p></div>` : ''}
     ${a.body}
@@ -509,7 +503,7 @@ function articlePage(a) {
   </aside>
 </div>
 <section class="section">
-  <div class="wrap">
+  <div class="container">
     <div class="section-head"><div><span class="kicker">Keep reading</span><h2>Related articles</h2></div></div>
     ${carousel(articles.filter((x) => x !== a).map(postCard), 'Related articles', 'car-related')}
   </div>
@@ -532,9 +526,9 @@ function listPage(type) {
   const other = articles.filter((a) => a.type !== type);
   return head({ title: `${title} | ${site.name}`, description: desc, canonical: pathName, schema }) + header(isGuide ? 'Guides' : 'Blog') + `
 <main id="main">
-<header class="page-hero"><div class="wrap">${crumbs(list)}<h1>${title}</h1><p class="lead">${desc}</p></div></header>
-<section class="section"><div class="wrap">${carousel(items.map(postCard), isGuide ? 'Guides' : 'Articles', 'car-list')}</div></section>
-<section class="section soft"><div class="wrap">
+<header class="page-hero"><div class="container">${crumbs(list)}<h1>${title}</h1><p class="lead">${desc}</p></div></header>
+<section class="section"><div class="container">${carousel(items.map(postCard), isGuide ? 'Guides' : 'Articles', 'car-list')}</div></section>
+<section class="section soft"><div class="container">
   <div class="section-head"><div><span class="kicker">${isGuide ? 'From the blog' : 'Buying guides'}</span><h2>${isGuide ? 'More reading' : 'Know what to buy'}</h2></div><a class="btn btn-ghost btn-sm" href="${isGuide ? '/blog/' : '/guides/'}">View all ${icon.arrow}</a></div>
   ${carousel(other.map(postCard), isGuide ? 'Blog posts' : 'Guides', 'car-more')}
 </div></section>
@@ -547,8 +541,8 @@ function simplePage({ file, title, description, h1, body, active = '' }) {
   const list = [['/', 'Home'], ['/' + file, h1]];
   return head({ title: `${title} | ${site.name}`, description, canonical: '/' + file, schema: [crumbSchema(list)] }) + header(active) + `
 <main id="main">
-<header class="page-hero"><div class="wrap">${crumbs(list)}<h1>${esc(h1)}</h1></div></header>
-<div class="wrap"><div class="legal prose">${body}</div></div>
+<header class="page-hero"><div class="container">${crumbs(list)}<h1>${esc(h1)}</h1></div></header>
+<div class="container"><div class="legal prose">${body}</div></div>
 ${newsletter()}
 </main>
 ` + footer();
@@ -568,20 +562,20 @@ function catalogPage(id) {
   const bannersHtml = banners(id);
   return head({ title: `${title} | ${site.name}`, description, canonical: catalogPath(id), schema }) + header('Shop') + `
 <main id="main">
-<header class="page-hero"><div class="wrap">${crumbs(list)}
+<header class="page-hero"><div class="container">${crumbs(list)}
   <span class="kicker">${esc(pt.category)} · ${items.length} ${noun(id)}</span>
   <h1>${esc(pt.name)} ${noun(id)}</h1>
   <p class="lead">${esc(pt.tagline)} Prices shown are the starting price listed by ${esc(pt.name)} and may change.${isRx(id) ? ' Every prescription is subject to review by a licensed U.S. clinician.' : ''}</p>
   <ul class="pill-list" style="margin-top:18px">${cats.map((c) => `<li><a href="#${c.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${esc(c)} (${groups[c].length})</a></li>`).join('')}</ul>
 </div></header>
 ${cats.map((c, i) => `<section class="section${i % 2 ? ' soft' : ''}" id="${c.toLowerCase().replace(/[^a-z0-9]+/g, '-')}" style="padding:44px 0">
-  <div class="wrap">
+  <div class="container">
     <div class="section-head" style="margin-bottom:0"><div><h2 style="font-size:1.5rem">${esc(c)}</h2><p>${groups[c].length} options</p></div></div>
     ${carousel(groups[c].map(feedCard), c, 'car-' + id + '-' + i)}
   </div>
 </section>`).join('\n')}
-${bannersHtml ? `<section class="section"><div class="wrap"><p class="banners-label" style="color:var(--muted)">Current ${esc(pt.name)} offers</p>${bannersHtml}</div></section>` : ''}
-${isRx(id) ? `<section class="section soft"><div class="wrap">
+${bannersHtml ? `<section class="section"><div class="container"><p class="banners-label" style="color:var(--muted)">Current ${esc(pt.name)} offers</p>${bannersHtml}</div></section>` : ''}
+${isRx(id) ? `<section class="section soft"><div class="container">
   <p class="med-note" style="border:0;margin:0 auto;max-width:80ch;text-align:center"><strong>Important:</strong> ${site.name} is not a pharmacy or medical provider. Treatment eligibility, prescriptions and pricing are decided by ${esc(pt.name)} and its licensed clinicians. Read <a href="/guides/telehealth-weight-loss-what-to-expect.html">what to expect from telehealth</a>.</p>
 </div></section>` : ''}
 ${newsletter()}
@@ -605,7 +599,7 @@ const pages = (await import(pathToFileURL(path.join(ROOT, 'src/content/pages.mjs
 for (const p of pages) write(p.file, simplePage(p));
 
 write('404.html', head({ title: `Page not found | ${site.name}`, description: 'The page you were looking for could not be found.', canonical: '/404.html', noindex: true }) + header() + `
-<main id="main"><section class="section"><div class="wrap center" style="max-width:640px">
+<main id="main"><section class="section"><div class="container center" style="max-width:640px">
 <span class="kicker">Error 404</span><h1>We couldn't find that page</h1><p class="lead" style="margin:0 auto 24px">It may have moved. Try one of these instead:</p>
 <ul class="pill-list" style="justify-content:center"><li><a href="/">Home</a></li><li><a href="/#shop">Top picks</a></li><li><a href="/guides/">Guides</a></li><li><a href="/blog/">Blog</a></li></ul>
 </div></section></main>` + footer());
@@ -614,16 +608,6 @@ write('404.html', head({ title: `Page not found | ${site.name}`, description: 'T
 for (const [from, to] of Object.entries(await (async () => (await import(pathToFileURL(path.join(ROOT, 'src/content/pages.mjs')).href)).redirects)())) {
   write(from, `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moved | ${site.name}</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="${abs(to)}"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p>This page has moved to <a href="${to}">${abs(to)}</a>.</p></body></html>\n`);
 }
-
-
-// search index for the header search box
-const searchIndex = [
-  ...articles.map((a) => ({ t: a.title, s: a.type === 'guide' ? 'Guide' : 'Blog', u: a.path, k: `${a.category} ${a.description}`, i: a.image ? `/images/opt/${(imgs[a.image.replace(/\.[a-z]+$/i, '')]?.variants[0].file) || ''}` : '' })),
-  ...Object.keys(feeds).filter((id) => partners[id]).map((id) => ({ t: `All ${partners[id].name} ${noun(id)}`, s: partners[id].category, u: catalogPath(id), k: partners[id].tagline, i: '' })),
-  ...products.map((p) => ({ t: p.name, s: p.partnerObj.name, u: p.url, k: `${p.partnerObj.category} ${p.blurb || ''}`, i: imgs[p.image.replace(/\.[a-z]+$/i, '')] ? `/images/opt/${imgs[p.image.replace(/\.[a-z]+$/i, '')].variants[0].file}` : '' })),
-  ...Object.keys(feeds).filter((id) => partners[id]).flatMap((id) => feedItems(id).map((p) => ({ t: p.name, s: `${partners[id].name}${p.price != null ? ' · ' + money(p.price, p.currency) : ''}`, u: p.url, k: `${p.category} ${partners[id].category}`, i: p.image }))),
-];
-write('search.json', JSON.stringify(searchIndex));
 
 // sitemap
 const urls = [
@@ -697,7 +681,7 @@ ${feed.partners.map((p) => `- ${p.name} (${p.domain}), ${p.category}: ${p.taglin
 - [Affiliate disclosure](${abs('/affiliate-disclosure.html')})
 `);
 
-write('site.webmanifest', JSON.stringify({ name: site.name, short_name: site.name, start_url: '/', display: 'standalone', background_color: '#ffffff', theme_color: '#2563eb', icons: [{ src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' }, { src: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }] }, null, 2));
+write('site.webmanifest', JSON.stringify({ name: site.name, short_name: site.name, start_url: '/', display: 'standalone', background_color: '#ffffff', theme_color: '#0e7c78', icons: [{ src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' }, { src: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }] }, null, 2));
 write('favicon.svg', logo.replace('class="brand-mark" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true"', ''));
 
 console.log(`Built ${4 + articles.length + pages.length} pages · ${products.length} products · ${(feed.banners || []).length} banners`);
