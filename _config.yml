@@ -1,0 +1,5 @@
+exclude:
+  - src
+  - scripts
+  - README.md
+  - package.json

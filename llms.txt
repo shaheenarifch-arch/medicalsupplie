@@ -1,0 +1,33 @@
+# MedicalSupplie
+
+> MedicalSupplie is an independent buying guide to medical supplies, PPE, foot health, wellness devices and U.S. telehealth, with plain-English guides and hand-picked partner products.
+
+MedicalSupplie is an independent affiliate buying guide (not a store or medical provider). Content is general information, not medical advice.
+
+## Buying guides
+- [Nitrile vs Latex vs Vinyl: How to Choose Medical Gloves](https://medicalsupplie.com/guides/how-to-choose-medical-gloves.html): For most clinical and home-care tasks, choose powder-free nitrile exam gloves about 3–4 mil thick that meet ASTM D6319. They're latex-free, puncture-resistant and comfortable. Use 6–8 mil textured nitrile for cleaning or heavy-duty work, and keep vinyl for brief, low-risk tasks like food prep.
+- [N95 vs KN95 vs KF94 vs Surgical Masks: What's the Difference?](https://medicalsupplie.com/guides/n95-vs-kn95-vs-kf94-masks.html): N95, KN95 and KF94 are all respirators that filter about 94–95% of small airborne particles. N95 is the U.S. NIOSH standard, KN95 is China's GB2626 and KF94 is South Korea's. Surgical masks protect against splashes but fit loosely. The best mask is a certified one that seals well on your face.
+- [Arch Support Insoles & Shoes for Plantar Fasciitis: A Buyer's Guide](https://medicalsupplie.com/guides/arch-support-insoles-plantar-fasciitis.html): For heel and arch pain, look for firm arch support, a deep heel cup and cushioning under the heel, in shoes with a stiff heel counter. Over-the-counter orthotic insoles, daily calf and foot stretches, and avoiding flat unsupportive footwear are common first steps. See a clinician if pain lasts more than a few weeks.
+- [Telehealth for Weight Loss & Hormone Therapy: What to Expect](https://medicalsupplie.com/guides/telehealth-weight-loss-what-to-expect.html): A reputable telehealth program starts with an online intake and a visit with a licensed U.S. clinician, may require lab work, and includes regular follow-ups. Prescription weight-loss medicines like GLP-1s are FDA-approved for adults with a BMI of 30+, or 27+ with a weight-related condition. Your clinician decides whether they're right for you.
+
+## Blog
+- [The Complete Home First Aid Kit Checklist (2026)](https://medicalsupplie.com/blog/home-first-aid-kit-checklist.html): Everything a well-stocked home first aid kit should contain, plus how to store it and when to restock. Printable checklist included.
+- [Buying Wound Care Supplies Online: A Practical Guide](https://medicalsupplie.com/blog/2026-09-24-wound-care-supplies-online.html): Which wound care supplies you actually need, from bandages and gauze to hydrocolloid and foam dressings, and how to buy them safely online.
+- [Mobility Aids for Seniors: Complete Guide to Independence and Safety](https://medicalsupplie.com/blog/2026-09-24-mobility-aids-for-seniors.html): Canes, walkers, rollators and wheelchairs compared, plus how to choose the right mobility aid, set the correct height and stay safe at home.
+- [Smart Cupping at Home: How It Works and How to Use It Safely](https://medicalsupplie.com/blog/smart-cupping-at-home.html): What rechargeable smart cupping devices do, what the evidence says, and simple safety tips for using them on sore muscles at home.
+- [How to Choose Glasses Frames (and Are Smart Glasses Worth It?)](https://medicalsupplie.com/blog/how-to-choose-glasses-frames.html): Read the numbers on your frame arm, match frames to your face shape, understand blue-light lenses, and decide whether smart glasses suit you.
+
+## Catalogs
+- [All FullScopeMD treatments](https://medicalsupplie.com/shop/fullscopemd.html): 55 options with starting prices
+
+## Partners
+- FullScopeMD (fullscopemd.com), Telehealth: U.S. telehealth with licensed clinicians: weight care, hormone therapy and everyday acute care from home.
+- Brookwood Med (brookwoodmed.com), Masks & PPE: Certified respirators and surgical masks for adults and kids, in bulk and small packs.
+- Finitex by Titans Medicare (titansmedicare.com), Gloves: Nitrile exam and heavy-duty gloves by the case, for clinics, labs and home care.
+- WalkHero (walkhero.com), Foot Health: Arch-support shoes, orthotic insoles and slippers designed for all-day comfort.
+- REVO by Revomadic (revomadic.com), Wellness Devices: Smart cupping and LED devices for at-home muscle recovery and skincare routines.
+- Eydology (eydology.com), Eyewear: Prescription-ready frames and smart glasses with modern, lightweight designs.
+
+## About
+- [About](https://medicalsupplie.com/about.html)
+- [Affiliate disclosure](https://medicalsupplie.com/affiliate-disclosure.html)

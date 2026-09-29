@@ -1,25 +1,21 @@
-# robots.txt for medicalsupplie.com
-# New version: products-first layout with fancy FullScopeMD hero
-# Last updated: 2026-09-26
-
+# medicalsupplie.com
 User-agent: *
 Allow: /
-Allow: /images/
-Allow: /blog/
-Allow: /faqs.json
 
-# Disallow admin / draft paths if any
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$ 
-Allow: /faqs.json
+# AI answer engines are welcome to cite our guides
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
 
-# Sitemap location
 Sitemap: https://medicalsupplie.com/sitemap.xml
-
-# Crawl-delay optional (be nice to bots)
-# Crawl-delay: 1
-
-# Affiliate disclosure note for crawlers:
-# All outbound vendor links use rel="sponsored" and are marked as affiliate (Awin awinaffid 3067297)
-# Official vendor domains verified 2026-05-13: brookwoodmed.com, revomadic.com, titansmedicare.com, walkhero.com, eydology.com, fullscopemd.com

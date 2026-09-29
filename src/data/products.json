@@ -1,0 +1,237 @@
+{
+  "_help": "Product feed. Each partner has a shop link; each product has its own link (defaults to the partner link). Set affiliate:false for plain (non-affiliate) links. Images go in /images and are optimised automatically by the build.",
+  "partners": [
+    {
+      "id": "fullscopemd",
+      "name": "FullScopeMD",
+      "domain": "fullscopemd.com",
+      "category": "Telehealth",
+      "tagline": "U.S. telehealth with licensed clinicians: weight care, hormone therapy and everyday acute care from home.",
+      "url": "https://www.awin1.com/cread.php?awinmid=130233&awinaffid=3067297",
+      "affiliate": true,
+      "featured": true,
+      "cta": "Visit FullScopeMD"
+    },
+    {
+      "id": "brookwood-med",
+      "name": "Brookwood Med",
+      "domain": "brookwoodmed.com",
+      "category": "Masks & PPE",
+      "tagline": "Certified respirators and surgical masks for adults and kids, in bulk and small packs.",
+      "url": "https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297",
+      "affiliate": true,
+      "cta": "Shop Brookwood Med"
+    },
+    {
+      "id": "finitex",
+      "name": "Finitex by Titans Medicare",
+      "domain": "titansmedicare.com",
+      "category": "Gloves",
+      "tagline": "Nitrile exam and heavy-duty gloves by the case, for clinics, labs and home care.",
+      "url": "https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297",
+      "affiliate": true,
+      "cta": "Shop Finitex"
+    },
+    {
+      "id": "walkhero",
+      "name": "WalkHero",
+      "domain": "walkhero.com",
+      "category": "Foot Health",
+      "tagline": "Arch-support shoes, orthotic insoles and slippers designed for all-day comfort.",
+      "url": "https://walkhero.com",
+      "affiliate": false,
+      "cta": "Shop WalkHero"
+    },
+    {
+      "id": "revo",
+      "name": "REVO by Revomadic",
+      "domain": "revomadic.com",
+      "category": "Wellness Devices",
+      "tagline": "Smart cupping and LED devices for at-home muscle recovery and skincare routines.",
+      "url": "https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297",
+      "affiliate": true,
+      "cta": "Shop REVO"
+    },
+    {
+      "id": "eydology",
+      "name": "Eydology",
+      "domain": "eydology.com",
+      "category": "Eyewear",
+      "tagline": "Prescription-ready frames and smart glasses with modern, lightweight designs.",
+      "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297",
+      "affiliate": true,
+      "cta": "Shop Eydology"
+    }
+  ],
+  "products": [
+    {
+      "partner": "fullscopemd",
+      "name": "U.S. Telehealth Patient Support",
+      "image": "fullscopemd-telehealth.jpg",
+      "badge": "Featured",
+      "blurb": "Video visits with licensed U.S. clinicians, without the waiting room."
+    },
+    {
+      "partner": "fullscopemd",
+      "name": "Branded GLP-1 Medications Program",
+      "image": "fullscopemd-glp1.jpg",
+      "blurb": "Clinician-led weight program; eligibility is decided by your provider."
+    },
+    {
+      "partner": "fullscopemd",
+      "name": "Hormone Therapy Patient Support",
+      "image": "fullscopemd-hormone.jpg",
+      "blurb": "Consultations, labs guidance and ongoing follow-up from home."
+    },
+    {
+      "partner": "fullscopemd",
+      "name": "Medical Weight Management",
+      "image": "fullscopemd-weight.jpg",
+      "blurb": "Personalised plans with regular clinician check-ins."
+    },
+    {
+      "partner": "fullscopemd",
+      "name": "Wellness Therapy & Acute Care",
+      "image": "fullscopemd-wellness.jpg",
+      "blurb": "Everyday concerns handled online by U.S.-licensed providers."
+    },
+    {
+      "partner": "brookwood-med",
+      "name": "KN95 CE Certified 5-Ply White",
+      "image": "brookwood-kn95.jpg",
+      "badge": "Best seller",
+      "blurb": "Five-layer filtration with a snug nose bridge for all-day wear."
+    },
+    {
+      "partner": "brookwood-med",
+      "name": "FuturePPE 3-Ply Surgical Masks",
+      "image": "brookwood-white.jpg",
+      "blurb": "Everyday disposable masks for clinics, travel and home care."
+    },
+    {
+      "partner": "brookwood-med",
+      "name": "Kids KF94 Pink Rainbow Panda",
+      "image": "brookwood-kids-kf94.jpg",
+      "blurb": "Child-sized 4-layer masks with a fun print kids will wear."
+    },
+    {
+      "partner": "finitex",
+      "name": "Blue Nitrile Exam Gloves 3.2 mil, 600 pcs",
+      "image": "finitex-blue.jpg",
+      "badge": "Clinic pick",
+      "blurb": "Latex-free, powder-free everyday exam gloves by the case."
+    },
+    {
+      "partner": "finitex",
+      "name": "Black Heavy-Duty Nitrile 8 mil, Diamond Grip",
+      "image": "finitex-black.jpg",
+      "blurb": "Thick, textured gloves for cleaning, auto and industrial work."
+    },
+    {
+      "partner": "finitex",
+      "name": "Rose Red Nitrile Gloves 3 mil",
+      "image": "finitex-rose.jpg",
+      "blurb": "Colour-coded nitrile gloves for salons, labs and home care."
+    },
+    {
+      "partner": "walkhero",
+      "name": "Men's Ultimate Arch Support Shoes",
+      "image": "walkhero-shoes.jpg",
+      "url": "https://walkhero.com/collections/mens-arch-support-shoes",
+      "badge": "Popular",
+      "blurb": "Built-in arch support and cushioning for long days on your feet."
+    },
+    {
+      "partner": "walkhero",
+      "name": "Women's Ultimate Arch Support Shoes",
+      "image": "walkhero-women.jpg",
+      "url": "https://walkhero.com/collections/womens-arch-support-shoes",
+      "blurb": "Supportive everyday sneakers with a lightweight, breathable upper."
+    },
+    {
+      "partner": "walkhero",
+      "name": "Heavy Duty Orthotic Insoles (220+ lbs)",
+      "image": "walkhero-insoles.jpg",
+      "url": "https://walkhero.com/products/heavy-duty-orthotic-insoles",
+      "blurb": "Firm arch support for heavier users and work boots."
+    },
+    {
+      "partner": "walkhero",
+      "name": "Canvas Arch Support Slippers",
+      "image": "walkhero-canvas-slippers.jpg",
+      "url": "https://walkhero.com/products/canvas-slippers",
+      "blurb": "House slippers with a contoured, supportive footbed."
+    },
+    {
+      "partner": "walkhero",
+      "name": "All-Purpose Plantar Fasciitis Insoles",
+      "image": "walkhero-allpurpose-insoles.jpg",
+      "url": "https://walkhero.com/products/plantar-fasciitis-insoles",
+      "blurb": "Slip-in insoles that fit most everyday and athletic shoes."
+    },
+    {
+      "partner": "revo",
+      "name": "REVO Smart Cup 4-in-1 Relief Bundle",
+      "image": "revo-kit.jpg",
+      "badge": "Bundle",
+      "blurb": "Rechargeable smart cupping with heat and vibration modes."
+    },
+    {
+      "partner": "revo",
+      "name": "REVO Kit 2-Pack with Case",
+      "image": "revo-original.jpg",
+      "blurb": "Two smart cups plus a travel case for back and shoulders."
+    },
+    {
+      "partner": "revo",
+      "name": "REVO Face Genie LED (Pink)",
+      "image": "revo-face-genie.jpg",
+      "blurb": "Handheld LED device for an at-home skincare routine."
+    },
+    {
+      "partner": "eydology",
+      "name": "AI Smart Glasses, Black, 4K HD",
+      "image": "eydology-ai.jpg",
+      "badge": "New",
+      "blurb": "Camera and audio smart glasses in a classic black frame."
+    },
+    {
+      "partner": "eydology",
+      "name": "Cat-Eye Frames, Transparent Grey Silver",
+      "image": "eydology-cateye.jpg",
+      "blurb": "Lightweight cat-eye frames, ready for prescription lenses."
+    }
+  ],
+  "banners": [
+    {
+      "partner": "fullscopemd",
+      "href": "https://www.awin1.com/cread.php?s=4896831&v=130233&q=615511&r=3067297",
+      "img": "https://www.awin1.com/cshow.php?s=4896831&v=130233&q=615511&r=3067297"
+    },
+    {
+      "partner": "fullscopemd",
+      "href": "https://www.awin1.com/cread.php?s=4896838&v=130233&q=615515&r=3067297",
+      "img": "https://www.awin1.com/cshow.php?s=4896838&v=130233&q=615515&r=3067297"
+    },
+    {
+      "partner": "fullscopemd",
+      "href": "https://www.awin1.com/cread.php?s=4896833&v=130233&q=615513&r=3067297",
+      "img": "https://www.awin1.com/cshow.php?s=4896833&v=130233&q=615513&r=3067297"
+    },
+    {
+      "partner": "fullscopemd",
+      "href": "https://www.awin1.com/cread.php?s=4896839&v=130233&q=615516&r=3067297",
+      "img": "https://www.awin1.com/cshow.php?s=4896839&v=130233&q=615516&r=3067297"
+    },
+    {
+      "partner": "finitex",
+      "href": "https://www.awin1.com/cread.php?s=4022681&v=117741&q=528186&r=3067297",
+      "img": "https://www.awin1.com/cshow.php?s=4022681&v=117741&q=528186&r=3067297"
+    },
+    {
+      "partner": "eydology",
+      "href": "https://www.awin1.com/cread.php?s=4742695&v=124966&q=601644&r=3067297",
+      "img": "https://www.awin1.com/cshow.php?s=4742695&v=124966&q=601644&r=3067297"
+    }
+  ]
+}
