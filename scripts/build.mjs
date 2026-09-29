@@ -158,7 +158,6 @@ ${preload}
 function header(active = '') {
   return `<body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="topbar">Independent buying guide · We may earn a commission from partner links · <a href="/affiliate-disclosure.html">How we earn</a></div>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="${site.name} home">${logo}<span>Medical<b>Supplie</b></span></a>
