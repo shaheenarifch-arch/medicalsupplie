@@ -387,7 +387,7 @@ function homePage() {
     <div class="section-head">
       <div><span class="kicker">Top picks</span><h2 id="shop-title">Trending across every category</h2><p>A quick look at our most-clicked products this month. Tap any card to see today's price at the partner store.</p></div>
     </div>
-    ${carousel(feed.partners.flatMap((pt) => byPartner(pt.id).slice(0, 2)).map((p, i) => productCard(p, { eager: false })), 'Top picks', 'car-top')}
+    ${carousel((() => { const pools = feed.partners.map((pt) => [...byPartner(pt.id).map((p) => productCard(p, { eager: false })), ...feedItems(pt.id).map(feedCard)]); const out = []; for (let i = 0; out.length < 20 && pools.some((l) => l[i]); i++) for (const l of pools) if (l[i] && out.length < 20) out.push(l[i]); return out; })(), 'Top picks', 'car-top')}
   </div>
 </section>
 
