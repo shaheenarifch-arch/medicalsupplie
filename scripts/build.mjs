@@ -174,10 +174,10 @@ function newsletter() {
         <p>One short email a month: new partner offers, restocks and our latest buying guides. No spam, unsubscribe anytime.</p>
       </div>
       <div>
-        <form class="nl-form" action="${attr(action)}" method="${n.method || 'post'}" data-newsletter data-fallback="${attr(site.email)}">${Object.entries(n.hidden || {}).map(([k, v]) => `<input type="hidden" name="${attr(k)}" value="${attr(v)}">`).join('')}
+        <form class="nl-form" action="${attr(action)}" method="${n.method || 'post'}" data-newsletter data-ajax data-fallback="${attr(site.email)}">${Object.entries(n.hidden || {}).map(([k, v]) => `<input type="hidden" name="${attr(k)}" value="${attr(v)}">`).join('')}
           <label class="sr-only" for="nl-email">Email address</label>
           <input id="nl-email" type="email" name="${attr(n.emailField || 'email')}" placeholder="you@example.com" autocomplete="email" required>
-          <div class="hp" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+          <div class="hp" aria-hidden="true"><input type="text" name="botcheck" tabindex="-1" autocomplete="off"></div>
           <button class="btn" type="submit">${icon.mail} Subscribe</button>
         </form>
         <p class="nl-note">By subscribing you agree to our <a href="/privacy.html" style="color:#fff">privacy policy</a>.</p>

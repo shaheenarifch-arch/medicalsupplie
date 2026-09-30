@@ -6,15 +6,14 @@
   "description": "MedicalSupplie is an independent buying guide to medical supplies, PPE, foot health, wellness devices and U.S. telehealth, with plain-English guides and hand-picked partner products.",
   "email": "agents@getservices.ai",
   "newsletter": {
-    "_help": "Free FormSubmit form: signups are emailed to agents@getservices.ai. The first signup triggers a one-time activation email.",
-    "action": "https://formsubmit.co/agents@getservices.ai",
+    "_help": "Free Web3Forms form: signups are emailed to agents@getservices.ai.",
+    "action": "https://api.web3forms.com/submit",
     "emailField": "email",
     "method": "post",
     "hidden": {
-      "_subject": "MedicalSupplie - New newsletter signup",
-      "_next": "https://medicalsupplie.com/",
-      "_captcha": "true",
-      "_template": "table"
+      "access_key": "5376676d-3736-4ef5-b2ea-2fcd5076f373",
+      "subject": "MedicalSupplie - New newsletter signup",
+      "from_name": "MedicalSupplie"
     }
   },
   "social": {

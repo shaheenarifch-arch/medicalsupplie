@@ -66,9 +66,14 @@
       }
       if (window.fetch && form.hasAttribute('data-ajax')) {
         e.preventDefault();
-        fetch(action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, mode: 'cors' })
-          .then(function () { if (msg) msg.textContent = 'Thanks for subscribing! Check your inbox to confirm.'; form.reset(); })
-          .catch(function () { form.removeAttribute('data-ajax'); form.submit(); });
+        var btn = form.querySelector('button[type=submit],button:not([type])');
+        if (btn) btn.disabled = true;
+        if (msg) msg.textContent = 'Sending…';
+        fetch(action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+          .then(function (r) { return r.json().catch(function () { return { success: r.ok }; }); })
+          .then(function (res) { if (!res || !res.success) throw 0; if (msg) msg.textContent = 'Thanks! You are subscribed.'; form.reset(); })
+          .catch(function () { if (msg) msg.textContent = 'Sorry, that did not go through. Please try again or email ' + form.getAttribute('data-fallback') + '.'; })
+          .then(function () { if (btn) btn.disabled = false; });
       }
     });
   });
