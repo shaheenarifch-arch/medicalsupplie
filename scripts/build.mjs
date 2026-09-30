@@ -12,6 +12,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+const fitTitle = (t) => { if (t.length <= 65) return t; for (const sep of [' | ', ' — ', ' – ', ' - ']) { const i = t.lastIndexOf(sep); if (i > 29 && i <= 65) return t.slice(0, i); } return t; };
+const fitDesc = (d) => { if (!d || d.length <= 165) return d; const c = d.slice(0, 158); return c.slice(0, c.lastIndexOf(' ')).replace(/[,;:\-— ]+$/, '') + '…'; };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
@@ -118,8 +120,8 @@ function head({ title, description, canonical, image = '/images/og-image.jpg', t
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)}</title>
-<meta name="description" content="${attr(description)}">
+<title>${esc(fitTitle(title))}</title>
+<meta name="description" content="${attr(fitDesc(description))}">
 <link rel="canonical" href="${abs(canonical)}">
 ${noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">'}
 <meta name="theme-color" content="#0e7c78">
