@@ -565,9 +565,9 @@ ${cats.map((c, i) => `<section class="section${i % 2 ? ' soft' : ''}" id="${c.to
   <div class="container">
     <div class="section-head" style="margin-bottom:0"><div><h2 style="font-size:1.5rem">${esc(c)}</h2><p>${groups[c].length} options</p></div></div>
     ${carousel(groups[c].map(feedCard), c, 'car-' + id + '-' + i)}
+    ${offerStrip(pt, i)}
   </div>
 </section>`).join('\n')}
-${bannersHtml ? `<section class="section"><div class="container"><p class="banners-label" style="color:var(--muted)">Current ${esc(pt.name)} offers</p>${bannersHtml}</div></section>` : ''}
 <section class="section soft"><div class="container">
   <p class="med-note" style="border:0;margin:0 auto;max-width:80ch;text-align:center"><strong>Important:</strong> ${site.name} is not a pharmacy or medical provider. Treatment eligibility, prescriptions and pricing are decided by ${esc(pt.name)} and its licensed clinicians. Read <a href="/guides/telehealth-weight-loss-what-to-expect.html">what to expect from telehealth</a>.</p>
 </div></section>
