@@ -205,7 +205,7 @@ p{margin:0 0 1em}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding:56px 20px 40px}
 .site-footer .brand{color:#fff}
 .site-footer .brand span b{color:var(--teal-400)}
-.site-footer h4{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.site-footer h3,.site-footer h4{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
 .site-footer ul{list-style:none;padding:0;margin:0}
 .site-footer li{margin-bottom:9px}
 .site-footer a{color:#cfe9e5;text-decoration:none}
@@ -245,7 +245,7 @@ p{margin:0 0 1em}
 .callout{border-left:4px solid var(--teal-500);background:var(--bg-soft);padding:14px 18px;border-radius:0 12px 12px 0;margin:1.4em 0;font-size:.97rem}
 .byline{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.88rem;color:var(--muted);margin-top:14px}
 .aside-box{position:sticky;top:92px;border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#fff}
-.aside-box h4{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-700);margin-bottom:12px}
+.aside-box h4,.aside-box .aside-h{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-700);margin-bottom:12px}
 .toc{list-style:none;padding:0;margin:0 0 8px;font-size:.92rem}
 .toc li{margin-bottom:8px}
 .toc a{color:var(--ink-2);text-decoration:none}

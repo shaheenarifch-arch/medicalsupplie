@@ -199,15 +199,15 @@ function footer() {
       <p class="footer-contact"><a href="mailto:${attr(site.email)}">${esc(site.email)}</a><a href="tel:${attr(site.phoneTel || '')}">${esc(site.phone || '')}</a></p>
     </div>
     <div>
-      <h4>Shop by category</h4>
+      <h3>Shop by category</h3>
       <ul>${Object.keys(feeds).filter((id) => partners[id]).map((id) => `<li><a href="${catalogPath(id)}">All ${esc(partners[id].name)} treatments</a></li>`).join('')}${feed.partners.map((p) => `<li><a href="/#partner-${p.id}">${esc(p.category)}</a></li>`).join('')}</ul>
     </div>
     <div>
-      <h4>Guides</h4>
+      <h3>Guides</h3>
       <ul>${articles.filter((a) => a.type === 'guide').slice(0, 5).map((a) => `<li><a href="${a.path}">${esc(a.short || a.title)}</a></li>`).join('')}<li><a href="/blog/">Blog</a></li></ul>
     </div>
     <div>
-      <h4>Company</h4>
+      <h3>Company</h3>
       <ul>
         <li><a href="/about.html">About us</a></li>
         <li><a href="/affiliate-disclosure.html">Affiliate disclosure</a></li>
@@ -481,8 +481,8 @@ function articlePage(a) {
   </article>
   <aside>
     <div class="aside-box">
-      ${toc.length ? `<h4>On this page</h4><ol class="toc">${toc.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join('')}</ol>` : ''}
-      ${related.length ? `<div class="aside-products"><h4 style="margin:0">Recommended</h4>${related.map((p) => `<a class="mini" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}">${img(p.image, { alt: '', sizes: '56px' })}<span><small>${esc(p.partnerObj.name)}</small>${esc(p.name)}</span></a>`).join('')}</div>` : ''}
+      ${toc.length ? `<h2 class="aside-h">On this page</h2><ol class="toc">${toc.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join('')}</ol>` : ''}
+      ${related.length ? `<div class="aside-products"><h2 class="aside-h" style="margin:0">Recommended</h2>${related.map((p) => `<a class="mini" href="${attr(p.url)}" target="_blank" rel="${rel(p.affiliate)}">${img(p.image, { alt: '', sizes: '56px' })}<span><small>${esc(p.partnerObj.name)}</small>${esc(p.name)}</span></a>`).join('')}</div>` : ''}
       ${fsBanners}
     </div>
   </aside>
@@ -512,7 +512,7 @@ function listPage(type) {
   return head({ title: `${title} | ${site.name}`, description: desc, canonical: pathName, schema }) + header(isGuide ? 'Guides' : 'Blog') + `
 <main id="main">
 <header class="page-hero"><div class="container">${crumbs(list)}<h1>${title}</h1><p class="lead">${desc}</p></div></header>
-<section class="section"><div class="container"><div class="grid-3">${items.map(postCard).join('')}</div></div></section>
+<section class="section"><div class="container"><h2 class="sr-only">All ${isGuide ? 'guides' : 'articles'}</h2><div class="grid-3">${items.map(postCard).join('')}</div></div></section>
 <section class="section soft"><div class="container">
   <div class="section-head"><div><span class="kicker">${isGuide ? 'From the blog' : 'Buying guides'}</span><h2>${isGuide ? 'More reading' : 'Know what to buy'}</h2></div><a class="btn btn-ghost btn-sm" href="${isGuide ? '/blog/' : '/guides/'}">View all ${icon.arrow}</a></div>
   ${carousel(other.map(postCard), isGuide ? 'Blog posts' : 'Guides', 'car-more')}
