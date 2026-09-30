@@ -1,0 +1,68 @@
+{
+ "partner": "revo",
+ "merchant_id": 127003,
+ "imported": "2026-09-30",
+ "source": "merchant storefront",
+ "products": [
+  {
+   "id": "revo-genie-smartwand",
+   "name": "REVO Genie Smart Wand",
+   "url": "https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297&ued=https%3A%2F%2Frevomadic.com%2Fproducts%2Frevo-genie-smartwand",
+   "image": "https://cdn.shopify.com/s/files/1/0527/0123/3328/files/Beige_1_months_df6e297a-641b-42ea-969d-f6921405ce3d.webp?v=1785501219",
+   "category": "Recovery",
+   "description": "At-home wellness device from REVO; see sizes, colors and bundle options on the product page.",
+   "price": 78.0,
+   "currency": "USD"
+  },
+  {
+   "id": "revo-smartcupperbundle",
+   "name": "REVO Smart Cupper Bundle",
+   "url": "https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297&ued=https%3A%2F%2Frevomadic.com%2Fproducts%2Frevo-smartcupperbundle",
+   "image": "https://cdn.shopify.com/s/files/1/0527/0123/3328/files/2x_Cupper_Bundle_-_Buy_1_Get_1_evergreen_b100ab98-3d50-41b1-8897-a0a7a4214c5f.jpg?v=1784553608",
+   "category": "Recovery",
+   "description": "At-home wellness device from REVO; see sizes, colors and bundle options on the product page.",
+   "price": 108.0,
+   "currency": "USD"
+  },
+  {
+   "id": "vibration-plate",
+   "name": "REVO Vibration Plate",
+   "url": "https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297&ued=https%3A%2F%2Frevomadic.com%2Fproducts%2Fvibration-plate",
+   "image": "https://cdn.shopify.com/s/files/1/0527/0123/3328/files/Wave_Shopify_f2cc9493-19f3-4bc4-a7de-b91972c489d2.png?v=1783435939",
+   "category": "Fitness",
+   "description": "At-home wellness device from REVO; see sizes, colors and bundle options on the product page.",
+   "price": 139.0,
+   "currency": "USD"
+  },
+  {
+   "id": "revo-sculptor",
+   "name": "REVO Anti-Cellulite Sculptor",
+   "url": "https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297&ued=https%3A%2F%2Frevomadic.com%2Fproducts%2Frevo-sculptor",
+   "image": "https://cdn.shopify.com/s/files/1/0527/0123/3328/files/Sculptor_1st_Variant.webp?v=1787678925",
+   "category": "Body care",
+   "description": "At-home wellness device from REVO; see sizes, colors and bundle options on the product page.",
+   "price": 99.0,
+   "currency": "USD"
+  },
+  {
+   "id": "revo-facegenie",
+   "name": "REVO Face Genie",
+   "url": "https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297&ued=https%3A%2F%2Frevomadic.com%2Fproducts%2Frevo-facegenie",
+   "image": "https://cdn.shopify.com/s/files/1/0527/0123/3328/files/FG_Beige_X1_eca4fd02-7c1e-4ae1-804b-3b91618498a1.webp?v=1786283652",
+   "category": "Skincare",
+   "description": "At-home wellness device from REVO; see sizes, colors and bundle options on the product page.",
+   "price": 89.0,
+   "currency": "USD"
+  },
+  {
+   "id": "revo-face-genie-standalone",
+   "name": "REVO Face Genie (Standalone)",
+   "url": "https://www.awin1.com/cread.php?awinmid=127003&awinaffid=3067297&ued=https%3A%2F%2Frevomadic.com%2Fproducts%2Frevo-face-genie-standalone",
+   "image": "https://cdn.shopify.com/s/files/1/0527/0123/3328/files/REVO-Face-Genie-Beige.jpg?v=1773035632",
+   "category": "Skincare",
+   "description": "At-home wellness device from REVO; see sizes, colors and bundle options on the product page.",
+   "price": 69.0,
+   "currency": "USD"
+  }
+ ]
+}

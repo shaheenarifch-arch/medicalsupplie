@@ -1,0 +1,38 @@
+{
+ "partner": "walkhero",
+ "merchant_id": null,
+ "imported": "2026-09-30",
+ "source": "merchant storefront",
+ "products": [
+  {
+   "id": "mens-supportive-pain-relief-slip-ons",
+   "name": "Men's Supportive Pain Relief Slip-Ons",
+   "url": "https://walkhero.com/products/mens-supportive-pain-relief-slip-ons",
+   "image": "https://cdn.shopify.com/s/files/1/0568/3534/2513/files/5_c0e65061-0322-4ed5-a69e-3a7c4d86bbd7.png?v=1769766338",
+   "category": "Shoes",
+   "description": "Arch-support footwear from WalkHero; check the size chart on the product page.",
+   "price": 49.85,
+   "currency": "USD"
+  },
+  {
+   "id": "women-wide-toe-box-loafers-with-arch-support",
+   "name": "Women's Wide Toe Box Loafers with Arch Support",
+   "url": "https://walkhero.com/products/women-wide-toe-box-loafers-with-arch-support",
+   "image": "https://cdn.shopify.com/s/files/1/0568/3534/2513/files/1_fc10c044-1980-4005-a307-f49ebdada4ea.png?v=1751941694",
+   "category": "Shoes",
+   "description": "Arch-support footwear from WalkHero; check the size chart on the product page.",
+   "price": 49.85,
+   "currency": "USD"
+  },
+  {
+   "id": "all-purpose-everyday-comfort-insoles",
+   "name": "All-Purpose Everyday Comfort Insoles",
+   "url": "https://walkhero.com/products/all-purpose-everyday-comfort-insoles",
+   "image": "https://cdn.shopify.com/s/files/1/0568/3534/2513/files/9_558515ae-c788-49ff-9d38-85aab403f3bb.png?v=1756794533",
+   "category": "Insoles",
+   "description": "Arch-support footwear from WalkHero; check the size chart on the product page.",
+   "price": 19.99,
+   "currency": "USD"
+  }
+ ]
+}

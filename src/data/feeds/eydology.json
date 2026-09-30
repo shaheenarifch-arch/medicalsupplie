@@ -1,0 +1,198 @@
+{
+ "partner": "eydology",
+ "merchant_id": 124966,
+ "imported": "2026-09-30",
+ "source": "merchant storefront",
+ "products": [
+  {
+   "id": "tayla-matte-pink-kids-glasses",
+   "name": "Tayla Matte Pink Kids Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Ftayla-matte-pink-kids-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Tayla_Matte_Pink_Kids_Glasses_1.webp?v=1785315320",
+   "category": "Kids",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 9.9,
+   "currency": "USD"
+  },
+  {
+   "id": "quella-silver-sparkly-eyeglasses",
+   "name": "Quella Silver Sparkly Eyeglasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fquella-silver-sparkly-eyeglasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Quella_Silver_Sparkly_Eyeglasses_1.webp?v=1790733619",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 18.95,
+   "currency": "USD"
+  },
+  {
+   "id": "hannah-black-rectangle-glasses",
+   "name": "Hannah Black Rectangle Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fhannah-black-rectangle-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Hannah_Black_Rectangle_Glasses_1.webp?v=1790579697",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 13.95,
+   "currency": "USD"
+  },
+  {
+   "id": "layla-gold-semi-rimless-glasses",
+   "name": "Layla Gold Semi-Rimless Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Flayla-gold-semi-rimless-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Layla_Gold_Semi-Rimless_Glasses_2.webp?v=1790578902",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 9.9,
+   "currency": "USD"
+  },
+  {
+   "id": "layla-silver-semi-rimless-glasses",
+   "name": "Layla Silver Semi-Rimless Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Flayla-silver-semi-rimless-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Layla_Silver_Semi-Rimless_Glasses_2.webp?v=1790577602",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 9.9,
+   "currency": "USD"
+  },
+  {
+   "id": "joanna-black-half-rim-glasses",
+   "name": "Joanna Black Half-Rim Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fjoanna-black-half-rim-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Joanna_Black_Half-Rim_Glasses_1.webp?v=1790577110",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 13.95,
+   "currency": "USD"
+  },
+  {
+   "id": "joanna-silver-half-rim-glasses",
+   "name": "Joanna Silver Half-Rim Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fjoanna-silver-half-rim-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Joanna_Silver_Half-Rim_Glasses_1.webp?v=1790575180",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 13.95,
+   "currency": "USD"
+  },
+  {
+   "id": "margot-brown-rectangle-glasses",
+   "name": "Margot Brown Rectangle Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fmargot-brown-rectangle-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Margot_Brown_Rectangle_Glasses_1.webp?v=1789105385",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 9.9,
+   "currency": "USD"
+  },
+  {
+   "id": "giselle-tortoise-rectangle-glasses",
+   "name": "Giselle Tortoise Rectangle Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fgiselle-tortoise-rectangle-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Giselle_Tortoise_Rectangle_Glasses_1.webp?v=1788923198",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 13.95,
+   "currency": "USD"
+  },
+  {
+   "id": "giselle-black-rectangle-glasses",
+   "name": "Giselle Black Rectangle Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fgiselle-black-rectangle-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Giselle_Black_Rectangle_Glasses_1.webp?v=1788923187",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 13.95,
+   "currency": "USD"
+  },
+  {
+   "id": "krista-black-rectangle-glasses",
+   "name": "Krista Black Rectangle Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fkrista-black-rectangle-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Krista_Black_Rectangle_Glasses_1.webp?v=1788923175",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 7.99,
+   "currency": "USD"
+  },
+  {
+   "id": "kiara-silver-rectangle-eyeglasses",
+   "name": "Kiara Silver Rectangle Eyeglasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fkiara-silver-rectangle-eyeglasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Kiara_Silver_Rectangle_Eyeglasses_1.webp?v=1788857645",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 9.9,
+   "currency": "USD"
+  },
+  {
+   "id": "kiara-gold-rectangle-eyeglasses",
+   "name": "Kiara Gold Rectangle Eyeglasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fkiara-gold-rectangle-eyeglasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Kiara_Gold_Rectangle_Eyeglasses_1.webp?v=1788856259",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 9.9,
+   "currency": "USD"
+  },
+  {
+   "id": "rectangle-eyeglasses-with-prescription-brown-rectangle-eyeglasses",
+   "name": "Lydia Dark Brown Rectangle Eyeglasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Frectangle-eyeglasses-with-prescription-brown-rectangle-eyeglasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Lydia_Dark_Brown_Rectangle_Eyeglasses_1.webp?v=1788857473",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 9.9,
+   "currency": "USD"
+  },
+  {
+   "id": "rectangle-eyeglasses-with-prescription-black-rectangle-eyeglasses",
+   "name": "Lydia Black Rectangle Eyeglasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Frectangle-eyeglasses-with-prescription-black-rectangle-eyeglasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Lydia_Black_Rectangle_Eyeglasses_1.webp?v=1788852832",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 9.9,
+   "currency": "USD"
+  },
+  {
+   "id": "nina-clear-green-round-glasses",
+   "name": "Nina Clear Green Round Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fnina-clear-green-round-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Nina_Clear_Green_Round_Glasses_1.webp?v=1790574489",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 13.95,
+   "currency": "USD"
+  },
+  {
+   "id": "nina-clear-grey-oval-optical-glasses",
+   "name": "Nina Clear Grey Round Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fnina-clear-grey-oval-optical-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Nina_Clear_Grey_Round_Glasses_1.webp?v=1790574626",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 13.95,
+   "currency": "USD"
+  },
+  {
+   "id": "dalton-blue-kids-glasses",
+   "name": "Dalton Blue Kids Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fdalton-blue-kids-glasses",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Dalton_Blue_Kids_Glasses_1.webp?v=1789983951",
+   "category": "Kids",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 15.9,
+   "currency": "USD"
+  },
+  {
+   "id": "leilani-pink-tortoise-rose-gold",
+   "name": "Leilani Pink Tortoise Rose Gold Glasses",
+   "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297&ued=https%3A%2F%2Feydology.com%2Fproducts%2Fleilani-pink-tortoise-rose-gold",
+   "image": "https://cdn.shopify.com/s/files/1/0951/0076/4233/files/Eydology_Leilani_Pink_Tortoise_Rose_Gold_Glasses_1.png?v=1772516206",
+   "category": "Eyeglasses",
+   "description": "Prescription-ready frames; add your prescription and lens options on the product page.",
+   "price": 19.95,
+   "currency": "USD"
+  }
+ ]
+}

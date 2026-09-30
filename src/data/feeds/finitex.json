@@ -1,0 +1,58 @@
+{
+ "partner": "finitex",
+ "merchant_id": 117741,
+ "imported": "2026-09-30",
+ "source": "merchant storefront",
+ "products": [
+  {
+   "id": "finitex-industrial-heavy-duty-cleaning-wipes",
+   "name": "FINITEX Industrial Heavy-Duty Cleaning Wipes",
+   "url": "https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297&ued=https%3A%2F%2Ftitansmedicare.com%2Fproducts%2Ffinitex-industrial-heavy-duty-cleaning-wipes",
+   "image": "https://cdn.shopify.com/s/files/1/0819/1243/0877/files/FINITEXHeavy-DutyCleaningWipes50PCS.png?v=1787727990",
+   "category": "Cleaning",
+   "description": "Latex-free nitrile from FINITEX; choose size and case quantity on the product page.",
+   "price": 9.99,
+   "currency": "USD"
+  },
+  {
+   "id": "finitex-200-count-ice-blue-nitrile-gloves-3-2-mil",
+   "name": "FINITEX Ice Blue Nitrile Gloves 3.2 mil, 200 ct",
+   "url": "https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297&ued=https%3A%2F%2Ftitansmedicare.com%2Fproducts%2Ffinitex-200-count-ice-blue-nitrile-gloves-3-2-mil",
+   "image": "https://cdn.shopify.com/s/files/1/0819/1243/0877/files/FINITEX200CountIceBlueNitrileGlovesSizeS.jpg?v=1786082288",
+   "category": "Exam gloves",
+   "description": "Latex-free nitrile from FINITEX; choose size and case quantity on the product page.",
+   "price": 19.99,
+   "currency": "USD"
+  },
+  {
+   "id": "finitex-200-count-black-nitrile-gloves-3-2mil",
+   "name": "FINITEX Black Nitrile Gloves 3.2 mil, 200 ct",
+   "url": "https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297&ued=https%3A%2F%2Ftitansmedicare.com%2Fproducts%2Ffinitex-200-count-black-nitrile-gloves-3-2mil",
+   "image": "https://cdn.shopify.com/s/files/1/0819/1243/0877/files/FINITEX-200-Count-Black-Nitrile-Gloves-Size-S.webp?v=1786072921",
+   "category": "Exam gloves",
+   "description": "Latex-free nitrile from FINITEX; choose size and case quantity on the product page.",
+   "price": 19.99,
+   "currency": "USD"
+  },
+  {
+   "id": "finitex-6-3-mil-orange-diamond-textured-industrial-nitrile-gloves",
+   "name": "FINITEX 6.3 mil Orange Diamond-Textured Gloves",
+   "url": "https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297&ued=https%3A%2F%2Ftitansmedicare.com%2Fproducts%2Ffinitex-6-3-mil-orange-diamond-textured-industrial-nitrile-gloves",
+   "image": "https://cdn.shopify.com/s/files/1/0819/1243/0877/files/FINITEX6.3MilOrangeDiamondTexturedIndustrialNitrileGloves.jpg?v=1755573888",
+   "category": "Industrial gloves",
+   "description": "Latex-free nitrile from FINITEX; choose size and case quantity on the product page.",
+   "price": 16.99,
+   "currency": "USD"
+  },
+  {
+   "id": "finitex-8-mil-diamond-textured-black-industrial-nitrile-gloves",
+   "name": "FINITEX 8 mil Black Diamond-Textured Gloves",
+   "url": "https://www.awin1.com/cread.php?awinmid=117741&awinaffid=3067297&ued=https%3A%2F%2Ftitansmedicare.com%2Fproducts%2Ffinitex-8-mil-diamond-textured-black-industrial-nitrile-gloves",
+   "image": "https://cdn.shopify.com/s/files/1/0819/1243/0877/files/FINITEX_Heavy_Duty_Black_Industrial_Nitrile_Gloves_8Mil_3D_Diamond_1000pcs.jpg?v=1747122135",
+   "category": "Industrial gloves",
+   "description": "Latex-free nitrile from FINITEX; choose size and case quantity on the product page.",
+   "price": 18.99,
+   "currency": "USD"
+  }
+ ]
+}

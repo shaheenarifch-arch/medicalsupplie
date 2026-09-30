@@ -202,7 +202,7 @@ function footer() {
     </div>
     <div>
       <h3>Shop by category</h3>
-      <ul>${Object.keys(feeds).filter((id) => partners[id]).map((id) => `<li><a href="${catalogPath(id)}">All ${esc(partners[id].name)} treatments</a></li>`).join('')}${feed.partners.map((p) => `<li><a href="/#partner-${p.id}">${esc(p.category)}</a></li>`).join('')}</ul>
+      <ul>${Object.keys(feeds).filter((id) => partners[id] && partners[id].featured).map((id) => `<li><a href="${catalogPath(id)}">All ${esc(partners[id].name)} treatments</a></li>`).join('')}${feed.partners.map((p) => `<li><a href="/#partner-${p.id}">${esc(p.category)}</a></li>`).join('')}</ul>
     </div>
     <div>
       <h3>Guides</h3>
@@ -412,7 +412,7 @@ function homePage() {
         <div><h3>${esc(pt.name)} <span class="chip">${esc(pt.category)}</span></h3><p>${esc(pt.tagline)}</p></div>
         <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="${attr(pt.url)}" target="_blank" rel="${rel(pt.affiliate)}">${esc(pt.cta)} ${icon.ext}</a></div>
       </div>
-      ${carousel(byPartner(pt.id).map((p) => productCard(p)), pt.name + ' products', 'car-' + pt.id)}
+      ${carousel(byPartner(pt.id).map((p) => productCard(p)).concat(feedItems(pt.id).map(feedCard)), pt.name + ' products', 'car-' + pt.id)}
       ${banners(pt.id)}
     </div>${offerStrip(featured, i + 1)}`).join('\n    ')}
   </div>
@@ -585,7 +585,7 @@ write('index.html', homePage());
 write('guides/index.html', listPage('guide'));
 write('blog/index.html', listPage('blog'));
 for (const a of articles) write(a.path.replace(/^\//, ''), articlePage(a));
-const catalogs = Object.keys(feeds).filter((id) => partners[id] && feedItems(id).length);
+const catalogs = Object.keys(feeds).filter((id) => partners[id] && partners[id].featured && feedItems(id).length);
 for (const id of catalogs) write(catalogPath(id).slice(1), catalogPage(id));
 
 const pages = (await import(pathToFileURL(path.join(ROOT, 'src/content/pages.mjs')).href)).pages(site);
@@ -664,7 +664,7 @@ ${articles.filter((a) => a.type === 'guide').map((a) => `- [${a.title}](${abs(a.
 ${articles.filter((a) => a.type === 'blog').map((a) => `- [${a.title}](${abs(a.path)}): ${a.description}`).join('\n')}
 
 ## Catalogs
-${Object.keys(feeds).filter((id) => partners[id]).map((id) => `- [All ${partners[id].name} treatments](${abs(catalogPath(id))}): ${feeds[id].products.length} options with starting prices`).join('\n')}
+${Object.keys(feeds).filter((id) => partners[id] && partners[id].featured).map((id) => `- [All ${partners[id].name} treatments](${abs(catalogPath(id))}): ${feeds[id].products.length} options with starting prices`).join('\n')}
 
 ## Partners
 ${feed.partners.map((p) => `- ${p.name} (${p.domain}), ${p.category}: ${p.tagline}`).join('\n')}

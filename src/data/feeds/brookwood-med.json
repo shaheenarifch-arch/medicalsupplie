@@ -1,0 +1,28 @@
+{
+ "partner": "brookwood-med",
+ "merchant_id": 124250,
+ "imported": "2026-09-30",
+ "source": "merchant storefront",
+ "products": [
+  {
+   "id": "futureppe-kn95-5-layer-protective-face-masks-ce-certified-k95",
+   "name": "FuturePPE KN95 5-Layer Masks, CE Certified",
+   "url": "https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297&ued=https%3A%2F%2Fbrookwoodmed.com%2Fproducts%2Ffutureppe-kn95-5-layer-protective-face-masks-ce-certified-k95",
+   "image": "https://cdn.shopify.com/s/files/1/0399/5267/9071/files/FuturePPE-KN95-5-Layer-Protective-Face-Masks-CE-Certified-K95-2.webp?v=1772966228",
+   "category": "Masks",
+   "description": "Protective masks from Brookwood Med; choose color, size and pack quantity on the product page.",
+   "price": 24.99,
+   "currency": "USD"
+  },
+  {
+   "id": "brookwood-med-kn95-face-masks-ce-certified-5ply-protective-mask-k95-respirator",
+   "name": "Brookwood Med KN95 Masks, 5-Ply, Colors",
+   "url": "https://www.awin1.com/cread.php?awinmid=124250&awinaffid=3067297&ued=https%3A%2F%2Fbrookwoodmed.com%2Fproducts%2Fbrookwood-med-kn95-face-masks-ce-certified-5ply-protective-mask-k95-respirator",
+   "image": "https://cdn.shopify.com/s/files/1/0399/5267/9071/files/brookwood-med-kn95-face-masks-ce-certified-5ply-protective-mask-k95-respirator-futureppe-black-10-masks.webp?v=1745116415",
+   "category": "Masks",
+   "description": "Protective masks from Brookwood Med; choose color, size and pack quantity on the product page.",
+   "price": 24.99,
+   "currency": "USD"
+  }
+ ]
+}
