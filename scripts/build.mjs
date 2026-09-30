@@ -283,6 +283,12 @@ function banners(partnerId, limit = 99) {
   return `<div class="banners">${list.map((b) => `<a rel="sponsored noopener" target="_blank" href="${attr(b.href)}"><img src="${attr(b.img)}" alt="${attr(pname)} offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a>`).join('')}</div>`;
 }
 
+function offerStrip(pt, index) {
+  const b = (feed.banners || []).filter((x) => x.partner === pt.id)[index];
+  if (!b) return '';
+  return `<div class="offer-strip"><p class="banners-label">${esc(pt.name)} offer</p><div class="banners"><a rel="sponsored noopener" target="_blank" href="${attr(b.href)}"><img src="${attr(b.img)}" alt="${attr(pt.name)} offer" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade"></a></div></div>`;
+}
+
 function postCard(a) {
   const hero = a.image ? img(a.image, { alt: a.title, sizes: '(max-width:600px) 100vw, 380px' }) : (catIcon[a.category] || icon.book);
   return `<a class="post-card" href="${a.path}">
@@ -398,17 +404,17 @@ function homePage() {
         ? carousel(mixed(feedItems(featured.id), 30).map(feedCard), `${featured.name}: 30 popular treatments`, 'car-' + featured.id) +
           `<p class="center" style="margin:18px 0 0"><a class="btn btn-ghost btn-sm" href="${catalogPath(featured.id)}">Browse all ${feedItems(featured.id).length} ${esc(featured.name)} treatments ${icon.arrow}</a></p>`
         : carousel(byPartner(featured.id).map((p) => productCard(p)), featured.name + ' services', 'car-' + featured.id)}
-      ${banners(featured.id) ? `<p class="banners-label">Current ${esc(featured.name)} offers</p>${banners(featured.id)}` : ''}
+      ${banners(featured.id, 1) ? `<p class="banners-label">Current ${esc(featured.name)} offer</p>${banners(featured.id, 1)}` : ''}
     </div>
 
-    ${rest.map((pt) => `<div class="partner" id="partner-${pt.id}">
+    ${rest.map((pt, i) => `<div class="partner" id="partner-${pt.id}">
       <div class="partner-head">
         <div><h3>${esc(pt.name)} <span class="chip">${esc(pt.category)}</span></h3><p>${esc(pt.tagline)}</p></div>
         <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="${attr(pt.url)}" target="_blank" rel="${rel(pt.affiliate)}">${esc(pt.cta)} ${icon.ext}</a></div>
       </div>
       ${carousel(byPartner(pt.id).map((p) => productCard(p)), pt.name + ' products', 'car-' + pt.id)}
       ${banners(pt.id)}
-    </div>`).join('\n    ')}
+    </div>${offerStrip(featured, i + 1)}`).join('\n    ')}
   </div>
 </section>
 

@@ -292,3 +292,8 @@ p{margin:0 0 1em}
 .footer-contact a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .back-link{display:inline-flex;align-items:center;gap:6px;margin:0 0 10px;font-size:.9rem;font-weight:600;color:inherit;text-decoration:none;opacity:.85}
 .back-link:hover{opacity:1;text-decoration:underline}
+
+.banners img{max-width:min(100%,728px);max-height:260px;width:auto}
+.offer-strip{margin:8px 0 40px;padding:18px;border-radius:18px;background:#fff;border:1px solid var(--line,#e2e8f0);text-align:center}
+.offer-strip .banners{margin-top:10px}
+.offer-strip .banners-label{margin-top:0;color:var(--muted,#64748b)}
