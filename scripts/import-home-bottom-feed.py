@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Build the bottom-of-home-page carousel from an Awin product feed CSV (Comenii scrubs).
 
-Usage:  python3 scripts/import-home-bottom-feed.py path/to/feed.csv [count]
+Usage:  python3 scripts/import-home-bottom-feed.py path/to/feed.csv [count] [dead-images.txt]
+
+dead-images.txt (optional): whitespace-separated image file-name prefixes whose
+merchant image no longer loads; those colour pages are skipped.
 Then:   node scripts/build.mjs
 
 Writes src/data/home-bottom.json. The feed lists every size as its own row, so rows are
@@ -66,7 +69,9 @@ def sized(u, w=500):
 def main():
     path = sys.argv[1]
     count = int(sys.argv[2]) if len(sys.argv) > 2 else 50
+    dead = open(sys.argv[3]).read().split() if len(sys.argv) > 3 else []
     rows = list(csv.DictReader(open(path, encoding="utf-8-sig", newline="")))
+    rows = [r for r in rows if not any(f"/files/{d}" in r.get("merchant_image_url", "") for d in dead)]
     pages = OrderedDict()
     for r in rows:
         if r.get("aw_deep_link") and r.get("merchant_image_url"):
