@@ -1,0 +1,216 @@
+{
+ "partner": {
+  "id": "tactical-x-gear",
+  "name": "Tactical X Gear",
+  "domain": "tacticalxgear.com",
+  "category": "Recovery & Pain Relief",
+  "kicker": "New partner · Recovery & pain relief",
+  "title": "Tactical X Gear: TENS, EMS & recovery devices",
+  "tagline": "At-home TENS and EMS units, muscle stimulators, massagers and knee therapy. Includes an NMES back-pain device the maker describes as FDA-cleared and a TENS unit it describes as FDA-registered.",
+  "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297",
+  "cta": "Shop Tactical X Gear",
+  "note": "* FDA status as stated by the manufacturer; FDA clearance or registration is not FDA approval. Electrical stimulation devices are not suitable for people with pacemakers or other electronic implants. Talk to your clinician before use if you are pregnant or have a medical condition."
+ },
+ "merchant_id": "130747",
+ "imported": "2026-10-13",
+ "products": [
+  {
+   "id": "44804126277945",
+   "name": "EMS Stimulator – Arms & Legs Pads",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-tactical-x-ab-stimulator-2026-arms-legs-only%3Fvariant%3D44804126277945",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/tactical_x_ab_stimulator_arms_legs_only.png?v=1780981084&width=600",
+   "imageFallback": "",
+   "category": "Muscle stimulator",
+   "description": "Wireless EMS pads for arms and legs, for use alongside the abs unit.",
+   "price": 29.99,
+   "currency": "USD"
+  },
+  {
+   "id": "44804126671161",
+   "name": "Replacement Gel Pads for EMS Stimulator",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Fextra-gel-pads-nextgen-abs-stimulator%3Fvariant%3D44804126671161",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/extra-gel-pads-nextgen-abs-stimulator.png?v=1780912979&width=600",
+   "imageFallback": "",
+   "category": "Accessory",
+   "description": "Replacement adhesive gel pads to keep stimulator pads sticking and conducting well.",
+   "price": 29.99,
+   "currency": "USD"
+  },
+  {
+   "id": "44804128866617",
+   "name": "EMS Abs Stimulator Kit – 6 Abs + 2 Arms/Legs + 20 Gel Pads",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-tactical-x-abs-stimulator-2026-abs-gel-pads-ultimate-abs-360-stimulator%3Fvariant%3D44804128866617",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/Tactical_X_Abs_Gel.png?v=1780980518&width=600",
+   "imageFallback": "",
+   "category": "Muscle stimulator",
+   "description": "Complete EMS kit for core, arms and legs with a 20-pad refill pack.",
+   "price": 79.99,
+   "currency": "USD"
+  },
+  {
+   "id": "44804130767161",
+   "name": "EMS Abs Stimulator – Abs Only",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Fnextgen-abs-stimulator-2026-abs-only%3Fvariant%3D44804130767161",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/Tactical_X_Abs_stimulator_abs_only.png?v=1780981083&width=600",
+   "imageFallback": "",
+   "category": "Muscle stimulator",
+   "description": "Wireless EMS belt pad for the abdominal area with adjustable intensity.",
+   "price": 69.99,
+   "currency": "USD"
+  },
+  {
+   "id": "45499461665081",
+   "name": "Percussion Massage Gun",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Fmassage-gun%3Fvariant%3D45499461665081",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/Maximize-Your-Comfort_-Shop-the-Best-Massage-Guns-on-the-Market-Tactical-X-Gear_-67093250.jpg?v=1703402686&width=600",
+   "imageFallback": "",
+   "category": "Massager",
+   "description": "Handheld massage gun with adjustable intensity for post-workout muscle relief.",
+   "price": 149.99,
+   "currency": "USD"
+  },
+  {
+   "id": "47453963780409",
+   "name": "NMES Back-Pain Therapy Device with Heat",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Ftactical-x-nmes-neuro-md-corrective-therapy-device%3Fvariant%3D47453963780409",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/Origina-Tactical-X-NMES_-Warm-Wave-Sync-Neuromuscular-Electrical-Stimulation_Pain-Deep-Therapy_-Fast-Muscle-Rescue-Elite-Tactical-X-Gear-67094046.jpg?v=1703402723&width=600",
+   "imageFallback": "",
+   "category": "FDA-cleared*",
+   "description": "Neuromuscular electrical stimulation plus heat for lower back pain. The maker describes it as FDA-cleared.",
+   "price": 79.99,
+   "currency": "USD"
+  },
+  {
+   "id": "47619805184313",
+   "name": "TENS & EMS 2.0 Dual-Channel Electrotherapy Unit",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Ftactical-x-tens-dual-channel-electrotherapy-device%3Fvariant%3D47619805184313",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/Tactical_Titan_Stimulator_Kit_2.0.webp?v=1736874947&width=600",
+   "imageFallback": "",
+   "category": "FDA-registered*",
+   "description": "Wireless dual-channel TENS + EMS unit with 20 intensity levels. The maker describes it as FDA-registered.",
+   "price": 159.99,
+   "currency": "USD"
+  },
+  {
+   "id": "47623064486201",
+   "name": "TENS & EMS 1.0 Wireless Pain Relief Unit",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-tactical-x-tens-ems-1-0-wireless-pain-relief-muscle-recovery-device-ultimate-360-electrostimulation%3Fvariant%3D47623064486201",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/Tactical_Titan_Stimulator_Kit_1.0_-_Wireless.jpg?v=1736875448&width=600",
+   "imageFallback": "",
+   "category": "TENS / EMS",
+   "description": "Compact wireless TENS and EMS device for drug-free muscle and back-pain relief.",
+   "price": 119.99,
+   "currency": "USD"
+  },
+  {
+   "id": "48797023207737",
+   "name": "EMS Abs Stimulator Kit – 8 Abs + Arms/Legs + 20 Gel Pads",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-tactical-x-abs-stimulator-8-abs-gel-pads-ultimate-abs-360-stimulator%3Fvariant%3D48797023207737",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/Tactical_X_Abs_8abs_gel.png?v=1780980518&width=600",
+   "imageFallback": "",
+   "category": "Muscle stimulator",
+   "description": "Larger 8-pad abs unit with arm/leg pads and a 20-pad refill pack.",
+   "price": 89.99,
+   "currency": "USD"
+  },
+  {
+   "id": "49893406638393",
+   "name": "Heated Foot Massager – 1 Set",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-nooro-tactical-foot-massager%3Fvariant%3D49893406638393",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/1X.png?v=1726109062&width=600",
+   "imageFallback": "",
+   "category": "Massager",
+   "description": "Foot massager with heat therapy and adjustable settings for tired feet.",
+   "price": 69.99,
+   "currency": "USD"
+  },
+  {
+   "id": "49893406671161",
+   "name": "Heated Foot Massager – 2 Sets",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-nooro-tactical-foot-massager%3Fvariant%3D49893406671161",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/2X.png?v=1726109080&width=600",
+   "imageFallback": "",
+   "category": "Massager",
+   "description": "Two-pack of the heated foot massager, handy for couples or gifting.",
+   "price": 119.99,
+   "currency": "USD"
+  },
+  {
+   "id": "49893406703929",
+   "name": "Heated Foot Massager – 3 Sets",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-nooro-tactical-foot-massager%3Fvariant%3D49893406703929",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/3X.png?v=1726109095&width=600",
+   "imageFallback": "",
+   "category": "Massager",
+   "description": "Three-pack of the heated foot massager.",
+   "price": 149.99,
+   "currency": "USD"
+  },
+  {
+   "id": "50144182042937",
+   "name": "Fitness Tracker Watch",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Ffitness-tracker-for-weight-loss%3Fvariant%3D50144182042937",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/P71-W.jpg?v=1731431940&width=600",
+   "imageFallback": "",
+   "category": "Activity monitor",
+   "description": "Tracks heart rate, steps and calories with multiple sport modes.",
+   "price": 159.99,
+   "currency": "USD"
+  },
+  {
+   "id": "50359946248505",
+   "name": "TENS & EMS 3.0 – 3-in-1 Portable Stimulator",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-tactical-x-tens-ems-3-0-3-in-1-portable-muscle-stimulator-pain-relief-device-ultimate-360-tens-ems%3Fvariant%3D50359946248505",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/OriginalTacticalTitanStimulatorkit3.0.webp?v=1736874041&width=600",
+   "imageFallback": "",
+   "category": "TENS / EMS",
+   "description": "3-in-1 TENS, EMS and massage modes with dual-channel coverage and presets.",
+   "price": 139.99,
+   "currency": "USD"
+  },
+  {
+   "id": "50959512043833",
+   "name": "EMS Muscle Master Kit – Abs + 4 Arms + 20 Gel Pads",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Foriginal-tactical-x-muscle-master-kit-abs-4-arms-20-gel-refill-pack%3Fvariant%3D50959512043833",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/Original_Tactical_X_Muscle_Master_Kit_Abs_4_Arms_20_Gel_Refill_Pack.jpg?v=1751445932&width=600",
+   "imageFallback": "",
+   "category": "Muscle stimulator",
+   "description": "Abs unit plus four arm pads and 20 refill pads for an upper-body EMS routine.",
+   "price": 99.99,
+   "currency": "USD"
+  },
+  {
+   "id": "52085954412857",
+   "name": "Triple-Therapy Knee Massager – 1 Unit",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Ftactical-x-rejuvaknee-2026-triple-therapy-tactical-x-360-military-precision-device%3Fvariant%3D52085954412857",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/1_e11dee74-49ba-46b8-98d1-4c96863ee15a.png?v=1776161000&width=600",
+   "imageFallback": "",
+   "category": "Knee therapy",
+   "description": "Heat, compression and vibration for knee stiffness and post-workout recovery.",
+   "price": 79.99,
+   "currency": "USD"
+  },
+  {
+   "id": "52085954445625",
+   "name": "Triple-Therapy Knee Massager – Buy 2 Get 1 Free",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Ftactical-x-rejuvaknee-2026-triple-therapy-tactical-x-360-military-precision-device%3Fvariant%3D52085954445625",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/2_e1872895-579a-4c36-a917-eb32a290233c.png?v=1776161013&width=600",
+   "imageFallback": "",
+   "category": "Knee therapy",
+   "description": "Bundle offer on the heat, compression and vibration knee massager.",
+   "price": 149.99,
+   "currency": "USD"
+  },
+  {
+   "id": "52085954478393",
+   "name": "Triple-Therapy Knee Massager – Buy 3 Get 2 Free",
+   "url": "https://www.awin1.com/cread.php?awinmid=130747&awinaffid=3067297&ued=https%3A%2F%2Ftacticalxgear.com%2Fproducts%2Ftactical-x-rejuvaknee-2026-triple-therapy-tactical-x-360-military-precision-device%3Fvariant%3D52085954478393",
+   "image": "https://cdn.shopify.com/s/files/1/0749/2337/6953/files/3_532cd50c-834c-4ff7-817b-82d96532f830.png?v=1776161026&width=600",
+   "imageFallback": "",
+   "category": "Knee therapy",
+   "description": "Larger bundle offer on the triple-therapy knee massager.",
+   "price": 219.99,
+   "currency": "USD"
+  }
+ ]
+}
