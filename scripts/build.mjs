@@ -43,6 +43,8 @@ const FEED_DIR = path.join(ROOT, 'src/data/feeds');
 const feeds = fs.existsSync(FEED_DIR)
   ? Object.fromEntries(fs.readdirSync(FEED_DIR).filter((f) => f.endsWith('.json')).map((f) => { const d = JSON.parse(fs.readFileSync(path.join(FEED_DIR, f), 'utf8')); return [d.partner, d]; }))
   : {};
+// Extra carousel at the bottom of the home page (src/data/home-bottom.json, from scripts/import-home-bottom-feed.py)
+const homeBottom = fs.existsSync(path.join(ROOT, 'src/data/home-bottom.json')) ? json('src/data/home-bottom.json') : null;
 const feedItems = (id) => (feeds[id]?.products || []).map((p) => ({ ...p, partnerObj: partners[id] }));
 // Pick n items round-robin across categories so a carousel shows variety
 function mixed(items, n) {
@@ -247,7 +249,7 @@ function productCard(p, { eager = false } = {}) {
 </article>`;
 }
 
-function feedCard(p) {
+function feedCard(p, { rx = true } = {}) {
   const short = p.description.length > 110 ? p.description.slice(0, 107).replace(/\s+\S*$/, '') + '…' : p.description;
   return `<article class="card feed">
   <a class="card-media" href="${attr(p.url)}" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
@@ -258,7 +260,7 @@ function feedCard(p) {
     <span class="card-partner">${esc(p.partnerObj.name)}</span>
     <h3>${esc(p.name)}</h3>
     <p>${esc(short)}</p>
-    <div class="price-row">${p.price != null ? `<span class="price"><small>From</small> ${money(p.price, p.currency)}</span>` : ''}<span class="rx">Clinician review</span></div>
+    <div class="price-row">${p.price != null ? `<span class="price"><small>From</small> ${money(p.price, p.currency)}</span>` : ''}${rx ? '<span class="rx">Clinician review</span>' : ''}</div>
     <a class="btn btn-primary btn-sm" href="${attr(p.url)}" target="_blank" rel="sponsored noopener">View details ${icon.ext}</a>
   </div>
 </article>`;
@@ -447,6 +449,13 @@ function homePage() {
 <section class="section soft" aria-label="FAQ">
   <div class="container">${faqBlock(HOME_FAQS)}</div>
 </section>
+
+${homeBottom && homeBottom.products.length ? (() => { const hp = homeBottom.partner; return `<section class="section" id="partner-${hp.id}" aria-labelledby="${hp.id}-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">${esc(hp.kicker || hp.category)}</span><h2 id="${hp.id}-title">${esc(hp.title || hp.name)}</h2><p>${esc(hp.tagline)}</p></div><a class="btn btn-ghost btn-sm" href="${attr(hp.url)}" target="_blank" rel="sponsored noopener">${esc(hp.cta || 'Shop ' + hp.name)} ${icon.ext}</a></div>
+    ${carousel(homeBottom.products.map((p) => feedCard({ ...p, partnerObj: hp }, { rx: false })), `${hp.name}: ${homeBottom.products.length} products`, 'car-' + hp.id)}
+  </div>
+</section>`; })() : ''}
 
 ${newsletter()}
 </main>
