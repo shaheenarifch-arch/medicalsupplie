@@ -5,5 +5,19 @@
     "description": "Compare the best disposable face masks for home caregiving, including kids, toddler, surgical, and KN95 options, plus buying tips and where to shop.",
     "file": "best-disposable-face-masks-for-home-caregiving.html",
     "date": "2026-10-12"
+  },
+  {
+    "keyword": "disposable face masks for sensitive skin caregivers",
+    "title": "Disposable Face Masks for Sensitive Skin Caregivers",
+    "description": "Find disposable face masks for sensitive skin caregivers with guidance on materials, fit, and mistakes to avoid during long caregiving shifts.",
+    "file": "disposable-face-masks-for-sensitive-skin-caregivers.html",
+    "date": "2026-10-16",
+    "archetype": "authority_guide",
+    "archetype_confidence": 0.59,
+    "risk_level": "medium",
+    "requires_human_review": true,
+    "google_quality_passed": true,
+    "eeat_score": 100,
+    "seo_aeo_score": 9.79
   }
 ]
