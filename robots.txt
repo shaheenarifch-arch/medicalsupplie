@@ -1,21 +1,29 @@
 # medicalsupplie.com
 User-agent: *
 Allow: /
+Disallow: /src/
 
 # AI answer engines are welcome to cite our guides
 User-agent: GPTBot
 Allow: /
+Disallow: /src/
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /src/
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /src/
 User-agent: ClaudeBot
 Allow: /
+Disallow: /src/
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /src/
 User-agent: PerplexityBot
 Allow: /
+Disallow: /src/
 User-agent: Google-Extended
 Allow: /
+Disallow: /src/
 
 Sitemap: https://medicalsupplie.com/sitemap.xml
