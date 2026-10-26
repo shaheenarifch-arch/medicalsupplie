@@ -1,0 +1,40 @@
+# Product Hub carousel (romeo-studio#48): adds the "Recommended Products" script tag
+# before </body> on every page, including pages added later (e.g. by the blog bot).
+# Affiliate links, reviews and page content are not changed.
+name: Product carousel
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  carousel:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add the carousel tag to every page
+        run: |
+          python3 - <<'PY'
+          import pathlib, re
+          tag = '<script src="https://atlas-api-v2.python-tester.workers.dev/hub/carousel.js" data-site="medicalsupplie.com" async></script>'
+          skip = re.compile(r"(^|/)(404|privacy|terms|disclosure|cookie|google[0-9a-f]+)[^/]*\.html$", re.I)
+          changed = 0
+          for p in pathlib.Path(".").rglob("*.html"):
+              rel = p.as_posix()
+              if any(part.startswith(".") or part == "node_modules" for part in p.parts) or skip.search(rel):
+                  continue
+              s = p.read_text(encoding="utf-8", errors="ignore")
+              i = s.lower().rfind("</body>")
+              if "/hub/carousel.js" in s or i < 0:
+                  continue
+              p.write_text(s[:i] + tag + "\n" + s[i:], encoding="utf-8")
+              changed += 1
+          print("pages updated:", changed)
+          PY
+      - name: Save
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Add the product carousel to new pages" && git push)
