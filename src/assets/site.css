@@ -294,12 +294,25 @@ p{margin:0 0 1em}
 .back-link:hover{opacity:1;text-decoration:underline}
 
 .banners img{max-width:min(100%,728px);max-height:260px;width:auto}
-.offer-strip{margin:8px 0 40px;padding:18px;border-radius:18px;background:#fff;border:1px solid var(--line,#e2e8f0);text-align:center}
-.offer-strip .banners{margin-top:10px}
-.offer-strip .banners-label{margin-top:0;color:var(--muted,#64748b)}
+.offer-strip{margin:4px auto 32px;padding:0;background:none;border:0;text-align:center;max-width:728px}
+.offer-strip .banners{margin-top:6px;gap:0}
+.offer-strip .banners a{border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.06),0 4px 14px rgba(15,23,42,.06)}
+.offer-strip .banners img{max-height:180px;display:block}
+.offer-strip .banners-label{margin:0;font-size:.62rem;letter-spacing:.12em;color:var(--muted,#64748b);opacity:.8}
 
 /* Why-us carousel */
 .track.props{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:calc((100% - 3*16px)/4);gap:16px}
 @media (max-width:1100px){.track.props{grid-auto-columns:calc((100% - 2*16px)/3)}}
 @media (max-width:760px){.track.props{grid-auto-columns:calc((100% - 16px)/2)}}
 @media (max-width:520px){.track.props{grid-auto-columns:78%}}
+
+/* Compact partner sections on the home page */
+#partners .partner{padding:24px 0}
+#partners .partner-head{margin-bottom:10px}
+#partners .partner-head h3{font-size:1.2rem}
+#partners .featured-band{padding:24px;margin-bottom:16px}
+#partners .card-media{aspect-ratio:4/3}
+#partners .card-body{padding:12px 12px 14px;gap:4px}
+#partners .card h3{font-size:.95rem}
+#partners .card-body p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.85rem;margin:0}
+#partners .partner .center{margin-top:10px!important}
