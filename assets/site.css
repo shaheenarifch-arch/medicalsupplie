@@ -343,10 +343,11 @@ p{margin:0 0 1em}
 .mp-panel .section-head{margin-bottom:10px}
 .mp-panel .section-head h2{font-size:1.25rem}
 .mp-panel.gsx-sec,.ptabs > .mp-panel{margin:0;max-width:none;padding-left:0;padding-right:0}
-.duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.duo-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}
 .duo-why .track.props{grid-auto-columns:calc((100% - 16px)/2)}
 .duo-why .prop{padding:18px}
 .duo-ad{display:flex}
+.duo-grid > *{min-width:0}
 .duo .duo-ad .mmc-card{grid-template-columns:1fr;gap:18px;padding:28px;width:100%}
 .duo .duo-ad .mmc-card h2{font-size:1.45rem}
 @media (max-width:900px){.duo-grid{grid-template-columns:1fr}.duo-why .track.props{grid-auto-columns:78%}}
