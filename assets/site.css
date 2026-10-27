@@ -297,3 +297,9 @@ p{margin:0 0 1em}
 .offer-strip{margin:8px 0 40px;padding:18px;border-radius:18px;background:#fff;border:1px solid var(--line,#e2e8f0);text-align:center}
 .offer-strip .banners{margin-top:10px}
 .offer-strip .banners-label{margin-top:0;color:var(--muted,#64748b)}
+
+/* Why-us carousel */
+.track.props{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:calc((100% - 3*16px)/4);gap:16px}
+@media (max-width:1100px){.track.props{grid-auto-columns:calc((100% - 2*16px)/3)}}
+@media (max-width:760px){.track.props{grid-auto-columns:calc((100% - 16px)/2)}}
+@media (max-width:520px){.track.props{grid-auto-columns:78%}}
