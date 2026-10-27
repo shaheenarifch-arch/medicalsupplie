@@ -24,6 +24,7 @@ const site = json('src/data/site.json');
 const feed = json('src/data/products.json');
 const imgs = fs.existsSync(path.join(ROOT, 'images/opt/manifest.json')) ? json('images/opt/manifest.json') : {};
 const { articles } = await import(pathToFileURL(path.join(ROOT, 'src/content/articles.mjs')).href);
+const { shopGuides } = await import(pathToFileURL(path.join(ROOT, 'src/content/shop-guides.mjs')).href);
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 // ---------- helpers ----------
@@ -577,6 +578,8 @@ function catalogPage(id) {
   const title = rx ? `${pt.name} Treatments & Prices (${items.length} options)` : `${pt.name} ${pt.category}: ${items.length} Products & Prices`;
   const description = !rx ? `Shop ${items.length} ${pt.name} products: ${cats.filter((c) => c !== 'Top picks').slice(0, 4).join(', ').toLowerCase() || pt.category.toLowerCase()} and more${prices.length ? `, from ${money(Math.min(...prices))}` : ''}. Compare and buy at ${pt.domain}.` : `Browse ${items.length} ${pt.name} telehealth treatments: ${cats.slice(0, 4).join(', ').toLowerCase()} and more, with prices from ${money(Math.min(...prices))}. Every treatment requires a licensed clinician review.`;
   const schema = [crumbSchema(list), { '@type': 'ItemList', name: title, numberOfItems: items.length, itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: p.url })) }];
+  const guide = shopGuides[id];
+  if (guide?.faqs?.length) schema.push(faqSchema(guide.faqs));
   const bannersHtml = banners(id);
   return head({ title: `${title} | ${site.name}`, description, canonical: catalogPath(id), schema }) + header('Shop') + `
 <main id="main">
@@ -586,6 +589,12 @@ function catalogPage(id) {
   <p class="lead">${esc(pt.tagline)} Prices shown are the starting price listed by ${esc(pt.name)} and may change.${rx ? ' Every prescription is subject to review by a licensed U.S. clinician.' : ''}</p>
   <ul class="pill-list" style="margin-top:18px">${cats.map((c) => `<li><a href="#${c.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${esc(c)} (${groups[c].length})</a></li>`).join('')}</ul>
 </div></header>
+${guide ? `<section class="section" id="buying-guide" style="padding:44px 0"><div class="container">
+  <article class="prose" style="margin:0 auto"><h2>${esc(guide.heading)}</h2>
+${guide.body}
+  </article>
+  ${guide.faqs?.length ? faqBlock(guide.faqs, `${pt.name}: common questions`) : ''}
+</div></section>` : ''}
 ${cats.map((c, i) => `<section class="section${i % 2 ? ' soft' : ''}" id="${c.toLowerCase().replace(/[^a-z0-9]+/g, '-')}" style="padding:44px 0">
   <div class="container">
     <div class="section-head" style="margin-bottom:0"><div><h2 style="font-size:1.5rem">${esc(c)}</h2><p>${groups[c].length} options</p></div></div>
