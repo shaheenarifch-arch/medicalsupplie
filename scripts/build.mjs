@@ -48,6 +48,9 @@ const feeds = fs.existsSync(FEED_DIR)
 const homeBottoms = ['home-bottom.json', ...fs.readdirSync(path.join(ROOT, 'src/data')).filter((f) => /^home-bottom-.+\.json$/.test(f)).sort()]
   .filter((f) => fs.existsSync(path.join(ROOT, 'src/data', f))).map((f) => json('src/data/' + f)).filter((d) => d.products && d.products.length);
 const feedItems = (id) => (feeds[id]?.products || []).map((p) => ({ ...p, partnerObj: partners[id] }));
+const catalogs = Object.keys(feeds).filter((id) => partners[id] && feedItems(id).length);
+const isRx = (id) => partners[id]?.category === 'Telehealth';
+const noun = (id) => (isRx(id) ? 'treatments' : 'products');
 // Pick n items round-robin across categories so a carousel shows variety
 function mixed(items, n) {
   const groups = {};
@@ -263,7 +266,7 @@ function feedCard(p, { rx = true } = {}) {
     <h3>${esc(p.name)}</h3>
     <p>${esc(short)}</p>
     <div class="price-row">${p.price != null ? `<span class="price"><small>From</small> ${money(p.price, p.currency)}</span>` : ''}${rx ? '<span class="rx">Clinician review</span>' : ''}</div>
-    <a class="btn btn-primary btn-sm" href="${attr(p.url)}" target="_blank" rel="sponsored noopener">View details ${icon.ext}</a>
+    <a class="btn btn-primary btn-sm" href="${attr(p.url)}" target="_blank" rel="sponsored noopener">${rx ? 'View details' : 'View deal'} ${icon.ext}</a>
   </div>
 </article>`;
 }
@@ -382,7 +385,7 @@ function homePage() {
 
 <section class="cats" aria-label="Shop by category">
   <div class="container cat-row">
-    ${feed.partners.map((p) => `<a class="cat" href="#partner-${p.id}"><span class="ic">${catIcon[p.category] || icon.heart}</span>${esc(p.category)}</a>`).join('\n    ')}
+    ${feed.partners.map((p) => `<a class="cat" href="${catalogs.includes(p.id) ? catalogPath(p.id) : '#partner-' + p.id}"><span class="ic">${catIcon[p.category] || icon.heart}</span>${esc(p.category)}</a>`).join('\n    ')}
   </div>
 </section>
 
@@ -425,11 +428,17 @@ function homePage() {
 <section class="section" aria-labelledby="why-title">
   <div class="container">
     <div class="section-head"><div><span class="kicker">Why MedicalSupplie</span><h2 id="why-title">Buy with confidence</h2></div></div>
-    <div class="props">
+    <div class="carousel props-car" data-carousel>
+    <div class="section-head" style="margin-bottom:12px;justify-content:flex-end"><div class="car-controls"><button class="car-btn" type="button" data-prev aria-label="Previous" aria-controls="car-props">${icon.left}</button><button class="car-btn" type="button" data-next aria-label="Next" aria-controls="car-props">${icon.right}</button></div></div>
+    <div class="track props" id="car-props" role="region" aria-roledescription="carousel" aria-label="Why MedicalSupplie" tabindex="0">
       <div class="prop"><span class="ic">${icon.shield}</span><h3>Vetted partners</h3><p>We only list stores with clear specs, secure checkout and real customer support.</p></div>
       <div class="prop"><span class="ic">${icon.book}</span><h3>Plain-English guides</h3><p>Standards like ASTM, NIOSH and mil thickness, explained simply.</p></div>
       <div class="prop"><span class="ic">${icon.heart}</span><h3>Independent picks</h3><p>Commissions never change our recommendations or your price.</p></div>
       <div class="prop"><span class="ic">${icon.bolt}</span><h3>Fast & private</h3><p>No account, no tracking pop-ups. Just pick and go.</p></div>
+      <div class="prop"><span class="ic">${icon.steth}</span><h3>Licensed telehealth</h3><p>Online care partners use licensed U.S. clinicians.</p></div>
+      <div class="prop"><span class="ic">${icon.star}</span><h3>Real prices</h3><p>Starting prices pulled from partner stores and refreshed often.</p></div>
+    </div>
+    <div class="car-progress" aria-hidden="true"><span></span></div>
     </div>
   </div>
 </section>
@@ -555,34 +564,38 @@ ${newsletter()}
 
 function catalogPage(id) {
   const pt = partners[id];
-  const items = feedItems(id);
+  const rx = isRx(id);
+  const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const feedOnly = feedItems(id);
+  const picks = rx ? [] : byPartner(id).filter((p) => !feedOnly.some((f) => norm(f.name) === norm(p.name))).map((p) => ({ ...p, pick: true, category: 'Top picks' }));
+  const items = [...picks, ...feedOnly];
   const groups = {};
   for (const it of items) (groups[it.category] ||= []).push(it);
-  const cats = Object.keys(groups).sort((a, b) => groups[b].length - groups[a].length);
+  const cats = Object.keys(groups).sort((a, b) => (b === 'Top picks') - (a === 'Top picks') || groups[b].length - groups[a].length);
   const list = [['/', 'Home'], ['/#partners', 'Partners'], [catalogPath(id), pt.name]];
   const prices = items.map((i) => i.price).filter((v) => v != null);
-  const title = `${pt.name} Treatments & Prices (${items.length} options)`;
-  const description = `Browse ${items.length} ${pt.name} telehealth treatments: ${cats.slice(0, 4).join(', ').toLowerCase()} and more, with prices from ${money(Math.min(...prices))}. Every treatment requires a licensed clinician review.`;
+  const title = rx ? `${pt.name} Treatments & Prices (${items.length} options)` : `${pt.name} ${pt.category}: ${items.length} Products & Prices`;
+  const description = !rx ? `Shop ${items.length} ${pt.name} products: ${cats.filter((c) => c !== 'Top picks').slice(0, 4).join(', ').toLowerCase() || pt.category.toLowerCase()} and more${prices.length ? `, from ${money(Math.min(...prices))}` : ''}. Compare and buy at ${pt.domain}.` : `Browse ${items.length} ${pt.name} telehealth treatments: ${cats.slice(0, 4).join(', ').toLowerCase()} and more, with prices from ${money(Math.min(...prices))}. Every treatment requires a licensed clinician review.`;
   const schema = [crumbSchema(list), { '@type': 'ItemList', name: title, numberOfItems: items.length, itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: p.url })) }];
   const bannersHtml = banners(id);
   return head({ title: `${title} | ${site.name}`, description, canonical: catalogPath(id), schema }) + header('Shop') + `
 <main id="main">
 <header class="page-hero"><div class="container">${crumbs(list)}
-  <span class="kicker">${esc(pt.category)} · ${items.length} treatments</span>
-  <h1>${esc(pt.name)} treatments</h1>
-  <p class="lead">${esc(pt.tagline)} Prices shown are the starting price listed by ${esc(pt.name)} and may change. Every prescription is subject to review by a licensed U.S. clinician.</p>
+  <span class="kicker">${esc(pt.category)} · ${items.length} ${noun(id)}</span>
+  <h1>${esc(pt.name)} ${noun(id)}</h1>
+  <p class="lead">${esc(pt.tagline)} Prices shown are the starting price listed by ${esc(pt.name)} and may change.${rx ? ' Every prescription is subject to review by a licensed U.S. clinician.' : ''}</p>
   <ul class="pill-list" style="margin-top:18px">${cats.map((c) => `<li><a href="#${c.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${esc(c)} (${groups[c].length})</a></li>`).join('')}</ul>
 </div></header>
 ${cats.map((c, i) => `<section class="section${i % 2 ? ' soft' : ''}" id="${c.toLowerCase().replace(/[^a-z0-9]+/g, '-')}" style="padding:44px 0">
   <div class="container">
     <div class="section-head" style="margin-bottom:0"><div><h2 style="font-size:1.5rem">${esc(c)}</h2><p>${groups[c].length} options</p></div></div>
-    ${carousel(groups[c].map(feedCard), c, 'car-' + id + '-' + i)}
+    ${carousel(groups[c].map((p) => (p.pick ? productCard(p) : feedCard(p, { rx }))), c, 'car-' + id + '-' + i)}
     ${offerStrip(pt, i)}
   </div>
 </section>`).join('\n')}
-<section class="section soft"><div class="container">
+${rx ? `<section class="section soft"><div class="container">
   <p class="med-note" style="border:0;margin:0 auto;max-width:80ch;text-align:center"><strong>Important:</strong> ${site.name} is not a pharmacy or medical provider. Treatment eligibility, prescriptions and pricing are decided by ${esc(pt.name)} and its licensed clinicians. Read <a href="/guides/telehealth-weight-loss-what-to-expect.html">what to expect from telehealth</a>.</p>
-</div></section>
+</div></section>` : ''}
 ${newsletter()}
 </main>
 ` + footer();
@@ -597,7 +610,6 @@ write('index.html', homePage());
 write('guides/index.html', listPage('guide'));
 write('blog/index.html', listPage('blog'));
 for (const a of articles) write(a.path.replace(/^\//, ''), articlePage(a));
-const catalogs = Object.keys(feeds).filter((id) => partners[id] && partners[id].featured && feedItems(id).length);
 for (const id of catalogs) write(catalogPath(id).slice(1), catalogPage(id));
 
 const pages = (await import(pathToFileURL(path.join(ROOT, 'src/content/pages.mjs')).href)).pages(site);
