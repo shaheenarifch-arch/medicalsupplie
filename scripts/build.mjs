@@ -12,7 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-const fitTitle = (t) => { if (t.length <= 65) return t; for (const sep of [' | ', ' — ', ' – ', ' - ']) { const i = t.lastIndexOf(sep); if (i > 29 && i <= 65) return t.slice(0, i); } return t; };
+const fitTitle = (t) => { if (t.length <= 65) return t; for (const sep of [' | ', ' — ', ' – ', ' - ', ': ']) { const i = t.lastIndexOf(sep); if (i > 29 && i <= 65) return t.slice(0, i); } return t; };
 const fitDesc = (d) => { if (!d || d.length <= 165) return d; const c = d.slice(0, 158); return c.slice(0, c.lastIndexOf(' ')).replace(/[,;:\-— ]+$/, '') + '…'; };
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -319,7 +319,7 @@ function faqBlock(faqs, heading = 'Frequently asked questions') {
 const strip = (h) => h.replace(/<[^>]+>/g, '');
 const faqSchema = (faqs) => ({ '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: strip(f.a) } })) });
 function orgSchema() {
-  return { '@type': 'Organization', '@id': site.url + '/#org', name: site.name, url: site.url + '/', logo: abs('/apple-touch-icon.png'), email: site.email, sameAs: Object.values(site.social || {}).filter((v) => v && !/^https:\/\/(www\.)?[a-z]+\.com\/?$/.test(v) && !/^https:\/\/x\.com\/?$/.test(v)) };
+  return { '@type': 'Organization', '@id': site.url + '/#org', name: site.name, url: site.url + '/', logo: abs('/apple-touch-icon.png'), email: site.email, sameAs: Object.values(site.social || {}).filter((v) => /^https?:\/\//.test(v || '') && !/^https:\/\/(www\.)?[a-z]+\.com\/?$/.test(v) && !/^https:\/\/x\.com\/?$/.test(v)) };
 }
 function websiteSchema() {
   return { '@type': 'WebSite', '@id': site.url + '/#website', url: site.url + '/', name: site.name, description: site.description, publisher: { '@id': site.url + '/#org' }, inLanguage: 'en-US' };
@@ -347,7 +347,7 @@ function homePage() {
   const itemList = { '@type': 'ItemList', name: 'Featured medical supplies and telehealth services', itemListElement: products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: p.url })) };
 
   return head({
-    title: 'MedicalSupplie — Medical Supplies, PPE & Telehealth Buying Guide',
+    title: 'MedicalSupplie — Medical Supplies, PPE & Telehealth Guide',
     description: 'Compare trusted medical supplies: nitrile gloves, KN95 & KF94 masks, arch-support insoles, wellness devices, eyewear and U.S. telehealth. Plain-English guides and hand-picked partner deals.',
     canonical: '/',
     preload,
