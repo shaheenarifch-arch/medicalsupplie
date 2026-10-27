@@ -416,7 +416,7 @@ function homePage() {
         <div><h3>${esc(pt.name)} <span class="chip">${esc(pt.category)}</span></h3><p>${esc(pt.tagline)}</p></div>
         <div class="partner-actions"><a class="btn btn-ghost btn-sm" href="${attr(pt.url)}" target="_blank" rel="${rel(pt.affiliate)}">${esc(pt.cta)} ${icon.ext}</a></div>
       </div>
-      ${carousel(byPartner(pt.id).map((p) => productCard(p)).concat(feedItems(pt.id).map(feedCard)), pt.name + ' products', 'car-' + pt.id)}
+      ${(byPartner(pt.id).length || feedItems(pt.id).length) ? carousel(byPartner(pt.id).map((p) => productCard(p)).concat(feedItems(pt.id).map(feedCard)), pt.name + ' products', 'car-' + pt.id) : ''}
       ${banners(pt.id)}
     </div>${offerStrip(featured, i + 1)}`).join('\n    ')}
   </div>

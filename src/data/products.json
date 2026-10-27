@@ -61,6 +61,16 @@
       "url": "https://www.awin1.com/cread.php?awinmid=124966&awinaffid=3067297",
       "affiliate": true,
       "cta": "Shop Eydology"
+    },
+    {
+      "id": "january",
+      "name": "January AI",
+      "domain": "january.ai",
+      "category": "Nutrition & Metabolic Health",
+      "tagline": "AI nutrition app that predicts how foods may affect your blood sugar, with an AI coach for smarter meals and weight goals. No CGM required.",
+      "url": "https://www.awin1.com/cread.php?awinmid=44237&awinaffid=3067297",
+      "affiliate": true,
+      "cta": "Try January AI"
     }
   ],
   "products": [
@@ -232,6 +242,11 @@
       "partner": "eydology",
       "href": "https://www.awin1.com/cread.php?s=4742695&v=124966&q=601644&r=3067297",
       "img": "https://www.awin1.com/cshow.php?s=4742695&v=124966&q=601644&r=3067297"
+    },
+    {
+      "partner": "january",
+      "href": "https://www.awin1.com/cread.php?s=4276076&v=44237&q=557510&r=3067297",
+      "img": "https://www.awin1.com/cshow.php?s=4276076&v=44237&q=557510&r=3067297"
     }
   ]
 }
