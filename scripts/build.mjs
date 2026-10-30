@@ -48,6 +48,11 @@ const feeds = fs.existsSync(FEED_DIR)
 // Extra carousels at the bottom of the home page: src/data/home-bottom.json first, then src/data/home-bottom-*.json
 const homeBottoms = ['home-bottom.json', ...fs.readdirSync(path.join(ROOT, 'src/data')).filter((f) => /^home-bottom-.+\.json$/.test(f)).sort()]
   .filter((f) => fs.existsSync(path.join(ROOT, 'src/data', f))).map((f) => json('src/data/' + f)).filter((d) => d.products && d.products.length);
+// Amazon Associates picks (src/data/amazon.json). Links get the Associates tag; no prices/images (Amazon policy without the PA-API).
+const amazon = fs.existsSync(path.join(ROOT, 'src/data/amazon.json')) ? json('src/data/amazon.json') : null;
+const hasAmazon = !!(amazon && amazon.products && amazon.products.length);
+const amazonPath = '/shop/amazon.html';
+const amazonUrl = (p) => (p.asin ? `https://www.amazon.com/dp/${encodeURIComponent(p.asin)}?tag=${encodeURIComponent(amazon.tag)}` : `https://www.amazon.com/s?k=${encodeURIComponent(p.search || p.name)}&tag=${encodeURIComponent(amazon.tag)}`);
 const feedItems = (id) => (feeds[id]?.products || []).map((p) => ({ ...p, partnerObj: partners[id] }));
 const catalogs = Object.keys(feeds).filter((id) => partners[id] && feedItems(id).length);
 const isRx = (id) => partners[id]?.category === 'Telehealth';
@@ -284,6 +289,64 @@ function carousel(items, label, id) {
 </div>`;
 }
 
+const amzIcon = { 'PPE': icon.mask, 'First aid': icon.heart, 'Home monitoring': icon.steth, 'Daily living': icon.shield };
+function amazonCard(p) {
+  const url = amazonUrl(p);
+  return `<article class="card amz">
+  <a class="card-media" href="${attr(url)}" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true">
+    <span class="amz-ic">${amzIcon[p.category] || icon.heart}</span>
+    <span class="badge">${esc(p.category)}</span>
+  </a>
+  <div class="card-body">
+    <span class="card-partner">Amazon</span>
+    <h3>${esc(p.name)}</h3>
+    <p>${esc(p.blurb || '')}</p>
+    <a class="btn btn-primary btn-sm" href="${attr(url)}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon ${icon.ext}</a>
+  </div>
+</article>`;
+}
+const amazonDisclosure = () => `<p class="small muted amz-note">${esc(amazon.disclosure)} <a href="/affiliate-disclosure.html#amazon">How affiliate links work</a>.</p>`;
+function amazonSection() {
+  if (!hasAmazon) return '';
+  return `<section class="section" id="amazon" aria-labelledby="amazon-title">
+  <div class="container">
+    <div class="section-head"><div><span class="kicker">${esc(amazon.kicker)}</span><h2 id="amazon-title">${esc(amazon.title)}</h2><p>${esc(amazon.tagline)}</p></div><a class="btn btn-ghost btn-sm" href="${amazonPath}">See all Amazon picks ${icon.arrow}</a></div>
+    ${carousel(mixed(amazon.products, 12).map(amazonCard), 'Amazon picks', 'car-amazon')}
+    ${amazonDisclosure()}
+  </div>
+</section>`;
+}
+function amazonPage() {
+  const list = [['/', 'Home'], [amazonPath, 'Amazon picks']];
+  const groups = {};
+  for (const p of amazon.products) (groups[p.category] ||= []).push(p);
+  const cats = Object.keys(groups);
+  const slug = (c) => c.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const itemList = { '@type': 'ItemList', name: amazon.title, itemListElement: amazon.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: amazonUrl(p) })) };
+  return head({
+    title: `Amazon Medical Supplies Picks: PPE, First Aid & Home Monitoring | ${site.name}`,
+    description: `${amazon.products.length} hand-picked medical supplies on Amazon: ${cats.join(', ').toLowerCase()}. What to look for in each, with links to today's Amazon price.`,
+    canonical: amazonPath,
+    schema: [crumbSchema(list), itemList],
+  }) + header() + `
+<main id="main">
+<header class="page-hero"><div class="container">${crumbs(list)}<h1>${esc(amazon.title)}</h1><p class="lead">${esc(amazon.tagline)}</p>
+  <ul class="pill-list" style="margin-top:18px">${cats.map((c) => `<li><a href="#${slug(c)}">${esc(c)} (${groups[c].length})</a></li>`).join('')}</ul>
+</div></header>
+${cats.map((c, i) => `<section class="section${i % 2 ? ' soft' : ''}" id="${slug(c)}" style="padding:44px 0">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:0"><div><h2 style="font-size:1.5rem">${esc(c)}</h2><p>${groups[c].length} options</p></div></div>
+    ${carousel(groups[c].map(amazonCard), c, 'car-amazon-' + i)}
+  </div>
+</section>`).join('\n')}
+<section class="section soft"><div class="container">
+  <p class="med-note" style="border:0;margin:0 auto;max-width:80ch;text-align:center"><strong>Good to know:</strong> ${esc(amazon.disclosure)} ${site.name} is not a medical provider; ask a clinician which device or supply is right for you. New to buying supplies? Start with our <a href="/guides/">buying guides</a>.</p>
+</div></section>
+${newsletter()}
+</main>
+` + footer();
+}
+
 function banners(partnerId, limit = 99) {
   const list = (feed.banners || []).filter((b) => !partnerId || b.partner === partnerId).slice(0, limit);
   if (!list.length) return '';
@@ -398,6 +461,8 @@ function homePage() {
     ${carousel((() => { const pools = feed.partners.map((pt) => [...byPartner(pt.id).map((p) => productCard(p, { eager: false })), ...feedItems(pt.id).map(feedCard)]); const out = []; for (let i = 0; out.length < 20 && pools.some((l) => l[i]); i++) for (const l of pools) if (l[i] && out.length < 20) out.push(l[i]); return out; })(), 'Top picks', 'car-top')}
   </div>
 </section>
+
+${amazonSection()}
 
 <section class="section soft" id="partners" aria-labelledby="partners-title">
   <div class="container">
@@ -620,6 +685,7 @@ write('guides/index.html', listPage('guide'));
 write('blog/index.html', listPage('blog'));
 for (const a of articles) write(a.path.replace(/^\//, ''), articlePage(a));
 for (const id of catalogs) write(catalogPath(id).slice(1), catalogPage(id));
+if (hasAmazon) write(amazonPath.slice(1), amazonPage());
 
 const pages = (await import(pathToFileURL(path.join(ROOT, 'src/content/pages.mjs')).href)).pages(site);
 for (const p of pages) write(p.file, simplePage(p));
@@ -641,6 +707,7 @@ const urls = [
   ['/guides/', 0.9, 'weekly', BUILD_DATE],
   ['/blog/', 0.8, 'weekly', BUILD_DATE],
   ...catalogs.map((id) => [catalogPath(id), 0.9, 'weekly', feeds[id].imported || BUILD_DATE]),
+  ...(hasAmazon ? [[amazonPath, 0.8, 'weekly', BUILD_DATE]] : []),
   ...articles.map((a) => [a.path, a.type === 'guide' ? 0.8 : 0.7, 'monthly', a.updated || a.date]),
   ...pages.map((p) => ['/' + p.file, 0.4, 'yearly', BUILD_DATE]),
 ];
@@ -697,7 +764,7 @@ ${articles.filter((a) => a.type === 'guide').map((a) => `- [${a.title}](${abs(a.
 ${articles.filter((a) => a.type === 'blog').map((a) => `- [${a.title}](${abs(a.path)}): ${a.description}`).join('\n')}
 
 ## Catalogs
-${Object.keys(feeds).filter((id) => partners[id] && partners[id].featured).map((id) => `- [All ${partners[id].name} treatments](${abs(catalogPath(id))}): ${feeds[id].products.length} options with starting prices`).join('\n')}
+${Object.keys(feeds).filter((id) => partners[id] && partners[id].featured).map((id) => `- [All ${partners[id].name} treatments](${abs(catalogPath(id))}): ${feeds[id].products.length} options with starting prices`).join('\n')}${hasAmazon ? `\n- [${amazon.title}](${abs(amazonPath)}): ${amazon.products.length} Amazon picks (${[...new Set(amazon.products.map((p) => p.category))].join(', ')})` : ''}
 
 ## Partners
 ${feed.partners.map((p) => `- ${p.name} (${p.domain}), ${p.category}: ${p.tagline}`).join('\n')}

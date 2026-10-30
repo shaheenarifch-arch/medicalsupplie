@@ -1,0 +1,22 @@
+{
+  "_help": "Amazon Associates picks. Each product needs a name, category and either an 'asin' (links to amazon.com/dp/ASIN) or a 'search' phrase (links to an Amazon search). The tag is added to every link automatically. Amazon rules: do not add prices or Amazon product images by hand (they must come from the Product Advertising API), so cards show an icon and a 'Check price' button. Help: https://affiliate-program.amazon.com/help/operating/policies",
+  "tag": "get786-20",
+  "title": "Amazon picks for home health",
+  "kicker": "Amazon picks",
+  "tagline": "Everyday medical supplies we'd buy on Amazon: PPE, first aid, home monitoring and daily-living aids. Tap a card to see today's price and reviews on Amazon.",
+  "disclosure": "As an Amazon Associate, MedicalSupplie earns from qualifying purchases. Prices and availability are set by Amazon and can change.",
+  "products": [
+    { "name": "Nitrile exam gloves (box of 100)", "category": "PPE", "search": "nitrile exam gloves powder free 100", "blurb": "Latex-free, powder-free gloves for home care and cleaning. Check the ASTM D6319 rating." },
+    { "name": "KN95 / KF94 face masks", "category": "PPE", "search": "kn95 masks individually wrapped", "blurb": "Look for individually wrapped masks and a listed filtration standard." },
+    { "name": "NIOSH N95 respirators", "category": "PPE", "search": "niosh approved n95 respirator", "blurb": "Confirm the NIOSH approval number on the CDC's certified list before buying." },
+    { "name": "Home first aid kit", "category": "First aid", "search": "first aid kit home 200 piece", "blurb": "A stocked kit for cuts, burns and sprains, sized for home or car." },
+    { "name": "Instant cold packs", "category": "First aid", "search": "instant cold packs disposable", "blurb": "Squeeze-to-activate packs for sprains and bumps; no freezer needed." },
+    { "name": "Digital thermometer", "category": "Home monitoring", "search": "digital oral thermometer adults", "blurb": "Fast oral or underarm readings with a fever alert." },
+    { "name": "Upper-arm blood pressure monitor", "category": "Home monitoring", "search": "upper arm blood pressure monitor validated", "blurb": "Choose a model listed on validatebp.org for reliable readings." },
+    { "name": "Fingertip pulse oximeter", "category": "Home monitoring", "search": "fingertip pulse oximeter fda cleared", "blurb": "Spot-checks SpO2 and pulse. Readings can be less accurate on darker skin." },
+    { "name": "Weekly pill organizer", "category": "Daily living", "search": "weekly pill organizer am pm", "blurb": "AM/PM compartments make it easier to keep a medication routine." },
+    { "name": "Shower chair with back", "category": "Daily living", "search": "shower chair with back adjustable", "blurb": "Adjustable height and non-slip feet for safer bathing." },
+    { "name": "Folding walker", "category": "Daily living", "search": "folding walker with wheels adults", "blurb": "Lightweight walker that folds for the car; check the weight rating." },
+    { "name": "Compression socks", "category": "Daily living", "search": "compression socks 15-20 mmhg", "blurb": "15–20 mmHg is the common everyday level; ask a clinician for higher." }
+  ]
+}

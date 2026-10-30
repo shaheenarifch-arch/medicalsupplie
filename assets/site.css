@@ -355,3 +355,8 @@ p{margin:0 0 1em}
 .faq-more > summary{display:inline-block;padding:10px 0!important;color:var(--teal-700);font-weight:700}
 .faq-more > summary::after{display:none}
 .faq-more-body{margin-top:6px}
+/* Amazon picks: icon tiles instead of product photos (Amazon policy without the PA-API) */
+.card.amz .card-media{display:grid;place-items:center;background:linear-gradient(135deg,var(--teal-50),#fff)}
+.card.amz .amz-ic{width:84px;height:84px;border-radius:24px;background:#fff;display:grid;place-items:center;color:var(--teal-600);box-shadow:var(--shadow)}
+.card.amz .amz-ic svg{width:42px;height:42px}
+.amz-note{margin-top:14px;font-size:.85rem}
