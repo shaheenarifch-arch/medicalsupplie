@@ -20,6 +20,7 @@ Then commit and push. GitHub Pages publishes automatically.
 | Awin product feed (e.g. all FullScopeMD treatments) | `python3 scripts/import-awin-feed.py feed.csv`, which writes to `src/data/feeds/` |
 | Awin banner creatives | `python3 scripts/add-banner.py < banner-snippet.html` |
 | Bottom-of-home carousel (Comenii scrubs, 50 products) | `python3 scripts/import-home-bottom-feed.py feed.csv 50 src/data/comenii-dead-images.txt`, which writes `src/data/home-bottom.json` |
+| Amazon Associates picks (home "Amazon picks" carousel + `/shop/amazon.html`) — add an `asin` or a `search` phrase per product; tag `get786-20` is added automatically. No prices or Amazon images by hand ([Amazon policies](https://affiliate-program.amazon.com/help/operating/policies)) | `src/data/amazon.json` |
 | Guides and blog posts | `src/content/articles.mjs` |
 | About / disclosure / privacy pages, old-URL redirects | `src/content/pages.mjs` |
 | Styles / scripts | `src/assets/site.css`, `src/assets/site.js` |
