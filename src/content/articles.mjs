@@ -44,7 +44,7 @@ const raw = [
 <h2>Certifications that matter</h2>
 <ul>
 <li><strong>ASTM D6319</strong>: the U.S. standard for nitrile examination gloves (ASTM D3578 is for latex, D5250 for vinyl).</li>
-<li><strong>"Medical" or "exam grade" with FDA 510(k) clearance</strong>: required for gloves sold for patient examination in the U.S.</li>
+<li><strong>"Medical" or "exam grade" with <a href="https://www.fda.gov/medical-devices" target="_blank" rel="noopener">FDA</a> 510(k) clearance</strong>: required for gloves sold for patient examination in the U.S.</li>
 <li><strong>AQL (Acceptable Quality Level)</strong>: a lower number means fewer pinholes per batch. Exam gloves are typically AQL 2.5 or better; 1.5 is stricter.</li>
 <li><strong>ASTM D6978</strong>: tested for handling chemotherapy drugs. You only need this for hazardous-drug work.</li>
 </ul>
@@ -83,7 +83,7 @@ const raw = [
 <table>
 <thead><tr><th>Mask</th><th>Standard</th><th>Filtration</th><th>Style</th></tr></thead>
 <tbody>
-<tr><td><strong>N95</strong></td><td>U.S. NIOSH (42 CFR 84)</td><td>≥95%</td><td>Usually head straps, tight seal</td></tr>
+<tr><td><strong>N95</strong></td><td>U.S. <a href="https://www.cdc.gov/niosh/" target="_blank" rel="noopener">NIOSH</a> (42 CFR 84)</td><td>≥95%</td><td>Usually head straps, tight seal</td></tr>
 <tr><td><strong>KN95</strong></td><td>China GB2626</td><td>≥95%</td><td>Usually ear loops, fold-flat</td></tr>
 <tr><td><strong>KF94</strong></td><td>South Korea MFDS</td><td>≥94%</td><td>Ear loops, 3D "boat" shape</td></tr>
 <tr><td><strong>FFP2</strong></td><td>EU EN 149</td><td>≥94%</td><td>Varies</td></tr>
@@ -98,7 +98,7 @@ const raw = [
 <p>Choose masks sized for children. An adult mask gaps badly on a small face. Kids' KF94 and KN95 masks come in smaller sizes and fun prints that make them more likely to stay on. Masks aren\'t recommended for children under 2.</p>
 <h2>How to spot a counterfeit</h2>
 <ul>
-<li>A genuine N95 is printed with the manufacturer, a <strong>TC-84A-xxxx approval number</strong> and "NIOSH". You can check it on the CDC\'s certified equipment list.</li>
+<li>A genuine N95 is printed with the manufacturer, a <strong>TC-84A-xxxx approval number</strong> and "NIOSH". You can check it on the <a href="https://www.cdc.gov/niosh/" target="_blank" rel="noopener">CDC\'s certified equipment list</a>.</li>
 <li>Be wary of claims like "FDA approved KN95" or "N95 equivalent" with no standard number.</li>
 <li>Buy from established medical suppliers that publish test reports or certificates.</li>
 </ul>
@@ -179,11 +179,11 @@ const raw = [
 <li><strong>Follow-ups:</strong> regular check-ins to monitor progress and side effects and adjust dosing.</li>
 </ol>
 <h2>GLP-1 weight-loss medications: the basics</h2>
-<p>GLP-1 medicines such as semaglutide (Wegovy) and tirzepatide (Zepbound) are FDA-approved for chronic weight management in adults with a BMI of 30 or higher, or 27 or higher with at least one weight-related condition (such as high blood pressure or type 2 diabetes), alongside diet and exercise.</p>
+<p>GLP-1 medicines such as semaglutide (Wegovy) and tirzepatide (Zepbound) are <a href="https://www.fda.gov/" target="_blank" rel="noopener">FDA</a>-approved for chronic weight management in adults with a BMI of 30 or higher, or 27 or higher with at least one weight-related condition (such as high blood pressure or type 2 diabetes), alongside diet and exercise.</p>
 <ul>
 <li><strong>Common side effects</strong> include nausea, diarrhoea, constipation and reduced appetite, which are often worse when starting or increasing the dose.</li>
 <li><strong>They aren\'t suitable for everyone</strong>, including people with a personal or family history of certain thyroid cancers (MTC or MEN2) and people who are pregnant.</li>
-<li><strong>Branded vs compounded:</strong> compounded versions are not FDA-approved products, and the FDA has warned about dosing errors and unregulated sources. Ask exactly what you\'d be prescribed.</li>
+<li><strong>Branded vs compounded:</strong> compounded versions are not FDA-approved products, and the <a href="https://www.fda.gov/drugs/human-drug-compounding" target="_blank" rel="noopener">FDA</a> has warned about dosing errors and unregulated sources. Ask exactly what you\'d be prescribed.</li>
 </ul>
 <h2>Hormone therapy via telehealth</h2>
 <p>Hormone therapy, for example for menopause symptoms or low testosterone, generally needs a proper assessment and lab testing before starting, plus ongoing monitoring. A good service will explain risks and benefits and follow up regularly rather than simply shipping a prescription.</p>
