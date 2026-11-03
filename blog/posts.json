@@ -19,5 +19,19 @@
     "google_quality_passed": true,
     "eeat_score": 100,
     "seo_aeo_score": 9.79
+  },
+  {
+    "keyword": "Home medical supplies complete guide: what to have and how to choose",
+    "title": "Home Medical Supplies Complete Guide: What to Have",
+    "description": "This home medical supplies complete guide: what to have and how to choose helps caregivers choose gloves, masks, and mobility aids with confidence.",
+    "file": "home-medical-supplies-complete-guide-what-to-have-and-how-to-choose.html",
+    "date": "2026-10-31",
+    "archetype": "buying_guide",
+    "archetype_confidence": 0.76,
+    "risk_level": "medium",
+    "requires_human_review": true,
+    "google_quality_passed": true,
+    "eeat_score": 100,
+    "seo_aeo_score": 8.97
   }
 ]
