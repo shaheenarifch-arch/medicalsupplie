@@ -261,7 +261,7 @@ function productCard(p, { eager = false } = {}) {
 }
 
 function feedCard(p, { rx = true } = {}) {
-  const short = p.description.length > 110 ? p.description.slice(0, 107).replace(/\s+\S*$/, '') + '…' : p.description;
+  const short = p.description.length > 110 && p.partnerObj.category !== 'Telehealth' ? p.description.slice(0, 107).replace(/\s+\S*$/, '') + '…' : p.description;
   return `<article class="card feed">
   <a class="card-media" href="${attr(p.url)}" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
     <img src="${attr(p.image)}" alt="${attr(p.name)}" width="400" height="400" loading="lazy" decoding="async"${p.imageFallback ? ` onerror="this.onerror=null;this.src='${attr(p.imageFallback)}'"` : ''}>
@@ -271,7 +271,7 @@ function feedCard(p, { rx = true } = {}) {
     <span class="card-partner">${esc(p.partnerObj.name)}</span>
     <h3>${esc(p.name)}</h3>
     <p>${esc(short)}</p>
-    <div class="price-row">${p.price != null ? `<span class="price"><small>From</small> ${money(p.price, p.currency)}</span>` : ''}${rx ? '<span class="rx">Clinician review</span>' : ''}</div>
+    <div class="price-row">${p.price != null ? `<span class="price"><small>From</small> ${money(p.price, p.currency)}</span>` : ''}</div>
     <a class="btn btn-primary btn-sm" href="${attr(p.url)}" target="_blank" rel="sponsored noopener">${rx ? 'View details' : 'View deal'} ${icon.ext}</a>
   </div>
 </article>`;
@@ -415,7 +415,7 @@ function homePage() {
 
   return head({
     title: 'MedicalSupplie — Medical Supplies, PPE & Telehealth Guide',
-    description: 'Compare trusted medical supplies: nitrile gloves, KN95 & KF94 masks, arch-support insoles, wellness devices, eyewear and U.S. telehealth. Plain-English guides and hand-picked partner deals.',
+    description: 'Compare medical supplies: nitrile gloves, KN95 & KF94 masks, insoles, wellness devices, eyewear and U.S. telehealth, with plain-English guides.',
     canonical: '/',
     preload,
     schema: [itemList, faqSchema(HOME_FAQS)],
@@ -424,7 +424,7 @@ function homePage() {
 <section class="hero">
   <div class="container hero-inner">
     <div>
-      <span class="eyebrow"><span class="dot"></span>Clinician-informed · Updated ${new Date().toLocaleString('en-US', { month: 'long', year: 'numeric' })}</span>
+      <span class="eyebrow"><span class="dot"></span>Updated ${new Date().toLocaleString('en-US', { month: 'long', year: 'numeric' })}</span>
       <h1>Medical supplies & telehealth, <em>made simple.</em></h1>
       <p class="lead">Compare trusted gloves, masks, foot-health gear and wellness devices, or see a licensed U.S. clinician online. Honest guides, hand-picked partners, zero jargon.</p>
       <div class="hero-cta">
@@ -433,7 +433,6 @@ function homePage() {
       </div>
       <ul class="hero-trust">
         <li>${icon.shield} Vetted partner stores</li>
-        <li>${icon.steth} Clinician-informed guides</li>
         <li>${icon.truck} U.S.-focused partners</li>
       </ul>
     </div>
@@ -456,7 +455,7 @@ function homePage() {
 <section class="section" id="shop" aria-labelledby="shop-title">
   <div class="container">
     <div class="section-head">
-      <div><span class="kicker">Top picks</span><h2 id="shop-title">Trending across every category</h2><p>A quick look at our most-clicked products this month. Tap any card to see today's price at the partner store.</p></div>
+      <div><span class="kicker">Top picks</span><h2 id="shop-title">Trending across every category</h2><p>A quick look at our most-clicked products this month. Tap any card to see today's price at the partner store.</p><p class="small muted" style="font-size:.85rem;color:var(--muted)">Some links on this page are affiliate links. We may earn a commission if you buy through them, at no extra cost to you. <a href="/affiliate-disclosure.html">Affiliate disclosure</a>.</p></div>
     </div>
     ${carousel((() => { const pools = feed.partners.map((pt) => [...byPartner(pt.id).map((p) => productCard(p, { eager: false })), ...feedItems(pt.id).map(feedCard)]); const out = []; for (let i = 0; out.length < 20 && pools.some((l) => l[i]); i++) for (const l of pools) if (l[i] && out.length < 20) out.push(l[i]); return out; })(), 'Top picks', 'car-top')}
   </div>
@@ -641,7 +640,7 @@ function catalogPage(id) {
   const list = [['/', 'Home'], ['/#partners', 'Partners'], [catalogPath(id), pt.name]];
   const prices = items.map((i) => i.price).filter((v) => v != null);
   const title = rx ? `${pt.name} Treatments & Prices (${items.length} options)` : `${pt.name} ${pt.category}: ${items.length} Products & Prices`;
-  const description = !rx ? `Shop ${items.length} ${pt.name} products: ${cats.filter((c) => c !== 'Top picks').slice(0, 4).join(', ').toLowerCase() || pt.category.toLowerCase()} and more${prices.length ? `, from ${money(Math.min(...prices))}` : ''}. Compare and buy at ${pt.domain}.` : `Browse ${items.length} ${pt.name} telehealth treatments: ${cats.slice(0, 4).join(', ').toLowerCase()} and more, with prices from ${money(Math.min(...prices))}. Every treatment requires a licensed clinician review.`;
+  const description = !rx ? `Shop ${items.length} ${pt.name} products: ${cats.filter((c) => c !== 'Top picks').slice(0, 4).join(', ').toLowerCase() || pt.category.toLowerCase()} and more${prices.length ? `, from ${money(Math.min(...prices))}` : ''}. Compare and buy at ${pt.domain}.` : `Browse ${items.length} ${pt.name} telehealth treatments: ${cats.slice(0, 3).join(', ').toLowerCase()} and more, from ${money(Math.min(...prices))}.`;
   const schema = [crumbSchema(list), { '@type': 'ItemList', name: title, numberOfItems: items.length, itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: p.url })) }];
   const guide = shopGuides[id];
   if (guide?.faqs?.length) schema.push(faqSchema(guide.faqs));
