@@ -33,5 +33,19 @@
     "google_quality_passed": true,
     "eeat_score": 100,
     "seo_aeo_score": 8.97
+  },
+  {
+    "keyword": "best home first aid kit under $50",
+    "title": "Best Home First Aid Kit Under $50: A Caregiver's Guide",
+    "description": "Find the best home first aid kit under $50 with this caregiver guide covering must-have supplies, decision tips, and common mistakes to avoid.",
+    "file": "best-home-first-aid-kit-under-50.html",
+    "date": "2026-11-06",
+    "archetype": "authority_guide",
+    "archetype_confidence": 0.62,
+    "risk_level": "medium",
+    "requires_human_review": true,
+    "google_quality_passed": true,
+    "eeat_score": 100,
+    "seo_aeo_score": 9.7
   }
 ]
