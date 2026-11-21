@@ -1,6 +1,6 @@
-# Product Hub carousel (romeo-studio#48): adds the "Recommended Products" script tag
-# before </body> on every page, including pages added later (e.g. by the blog bot).
-# Affiliate links, reviews and page content are not changed.
+# Chambelli product carousel: adds the Chambelli widget to every page, including
+# pages added later (e.g. by the blog bot), and removes the old atlas-api hub
+# carousel tag (its feed is empty). Affiliate links and page content are not changed.
 name: Product carousel
 on:
   push:
@@ -13,23 +13,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Add the carousel tag to every page
+      - name: Add the Chambelli carousel to every page
         run: |
           python3 - <<'PY'
           import pathlib, re
-          tag = '<script src="https://atlas-api-v2.python-tester.workers.dev/hub/carousel.js" data-site="medicalsupplie.com" async></script>'
+          tag = '<script async src="https://chambelli.getservices.ai/widget.js" data-api="https://chambelli.getservices.ai" data-site="medicalsupplie" data-placement="article-footer" data-title="Shop Chambelli picks"></script>\n'
+          old = re.compile(r'[ \t]*<script[^>]*src="https://atlas-api-v2\.python-tester\.workers\.dev/hub/carousel\.js"[^>]*>\s*</script>\n?')
           skip = re.compile(r"(^|/)(404|privacy|terms|disclosure|cookie|google[0-9a-f]+)[^/]*\.html$", re.I)
+          bottom = re.compile(r"(contact|checkout|thank|accessib|disclaim|dmca|refund|return)", re.I)
           changed = 0
           for p in pathlib.Path(".").rglob("*.html"):
               rel = p.as_posix()
-              if any(part.startswith(".") or part == "node_modules" for part in p.parts) or skip.search(rel):
+              if any(part.startswith(".") or part == "node_modules" for part in p.parts):
                   continue
-              s = p.read_text(encoding="utf-8", errors="ignore")
-              i = s.lower().rfind("</body>")
-              if "/hub/carousel.js" in s or i < 0:
-                  continue
-              p.write_text(s[:i] + tag + "\n" + s[i:], encoding="utf-8")
-              changed += 1
+              s0 = s = p.read_text(encoding="utf-8", errors="ignore")
+              s = old.sub("", s)
+              if "chambelli.getservices.ai/widget.js" not in s and not skip.search(rel):
+                  m = re.search(r"<main[^>]*>\n?", s)
+                  if m and not bottom.search(rel):
+                      s = s[:m.end()] + tag + s[m.end():]
+                  else:
+                      i = s.lower().rfind("</body>")
+                      if i >= 0:
+                          s = s[:i] + tag + s[i:]
+              if s != s0:
+                  p.write_text(s, encoding="utf-8")
+                  changed += 1
           print("pages updated:", changed)
           PY
       - name: Save
@@ -37,4 +46,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet || (git commit -m "Add the product carousel to new pages" && git push)
+          git diff --cached --quiet || (git commit -m "Add the Chambelli product carousel to new pages" && git push)
