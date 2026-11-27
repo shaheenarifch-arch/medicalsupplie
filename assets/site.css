@@ -368,7 +368,7 @@ body{overflow-x:clip}
 .home .hero h1{font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1.05}
 .home .cat-row{grid-template-columns:repeat(7,1fr)}
 @media (max-width:900px){.home .cat-row{grid-template-columns:repeat(4,1fr)}}
-@media (max-width:520px){.home .cat-row{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.home .cat-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}.home .cat-row::-webkit-scrollbar{display:none}.home .cat{flex:0 0 31%;scroll-snap-align:start}}
 .home .section{padding:64px 0}
 @media (max-width:600px){.home .section{padding:44px 0}}
 .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
