@@ -385,3 +385,4 @@ body{overflow-x:clip}
 .pcard-go{margin-top:6px;font-weight:700;font-size:.88rem;color:var(--teal-800)}
 .ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media (max-width:900px){.ggrid{grid-template-columns:1fr}}
+.chambelli-carousel,.chambelli-store{max-width:100%;overflow:hidden}
