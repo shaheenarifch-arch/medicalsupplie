@@ -360,3 +360,4 @@ p{margin:0 0 1em}
 .card.amz .amz-ic{width:84px;height:84px;border-radius:24px;background:#fff;display:grid;place-items:center;color:var(--teal-600);box-shadow:var(--shadow)}
 .card.amz .amz-ic svg{width:42px;height:42px}
 .amz-note{margin-top:14px;font-size:.85rem}
+body{overflow-x:clip}
